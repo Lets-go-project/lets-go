@@ -1,8 +1,8 @@
-package com.example.letsgo.domain;
+package com.example.letsgo.domain.Market;
 
 import java.io.Serializable;
 
-public class Product  implements Serializable {
+public class Product implements Serializable {
     private int productId;
     private int productType;
     private String productName;
