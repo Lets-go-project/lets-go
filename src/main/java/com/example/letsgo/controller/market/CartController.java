@@ -25,14 +25,14 @@ public class CartController {
     }
 
     @PostMapping
-    public String addToCart(@RequestBody Cart cart) {
-        marketService.addToCart(cart);
-        return "redirect:/cart"; // 상품을 장바구니에 추가한 후 모든 장바구니 정보를 보여주는 페이지로 리다이렉트
+    public String addToCart(@RequestBody int cartId) {
+        marketService.addToCart(cartId);
+        return "redirect:/cart";
     }
 
     @DeleteMapping("/{cartId}")
     public String removeFromCart(@PathVariable int cartId) {
         marketService.removeFromCart(cartId);
-        return "redirect:/cart"; // 장바구니에서 상품을 삭제한 후 모든 장바구니 정보를 보여주는 페이지로 리다이렉트
+        return "redirect:/cart";
     }
 }

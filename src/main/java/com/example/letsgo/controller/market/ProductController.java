@@ -11,21 +11,33 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.annotation.PostConstruct;
 
 @Controller
 @RequestMapping("/market")
 public class ProductController {
     private final MarketService marketService;
 
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
+
     @Autowired
     public ProductController(MarketService marketService) {
         this.marketService = marketService;
     }
-
-     @GetMapping
+    @PostConstruct
+    public void init() {
+        logger.info("ProductController initialized.");
+    }
+    @GetMapping
     public String getAllProduct(Model model) {
         List<Product> productList = marketService.getAllProducts();
         model.addAttribute("productList", productList);
+
+        logger.info("Request to /market received. Number of products retrieved: {}", productList.size());
+
         return "market/Market";
     }
 }

@@ -10,21 +10,21 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
     @Autowired
-    private OrderService orderService;
+    private OrderDao orderDao;
 
     public List<Order> getAllOrders() {
-        return orderService.getAllOrders();
+        return orderDao.getAllOrders();
     }
 
     public Order addOrder(int orderId) {
-        return orderService.addOrder(orderId);
+        return orderDao.addOrder(orderId);
     }
 
-    public Boolean updateOrder(Order order) {
-        return orderService.updateOrder(order);
+    public Boolean updateOrder(int orderId) {
+        return orderDao.updateOrder(orderId);
     }
 
     public Boolean cancelOrder(int orderId) {
-        return orderService.cancelOrder(orderId);
+        return orderDao.cancelOrder(orderId);
     }
 }

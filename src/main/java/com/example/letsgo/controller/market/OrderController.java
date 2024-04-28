@@ -42,10 +42,10 @@ public class OrderController {
         return "redirect:/orders";
     }
 
-    @PutMapping("/{orderId}")
-    public String updateOrder(@PathVariable int orderId, @RequestBody Order order) {
-        order.setOrderId(orderId);
-        orderService.updateOrder(order);
+    @PutMapping("/{oId}")
+    public String updateOrder(@PathVariable int oId, @RequestBody int orderId) {
+//        order.setOrderId(orderId);
+        orderService.updateOrder(orderId);
         return "redirect:/orders";
     }
 

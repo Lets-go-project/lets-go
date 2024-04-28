@@ -14,45 +14,44 @@ import java.util.List;
 @Service
 public class MarketServiceImpl implements MarketService {
     @Autowired
-    MarketService marketService;
+    private ProductDao productDao;
+    @Autowired
+    private ManagerDao managerDao;
+    @Autowired
+    private CartDao cartDao;
 
     public List<Product> getAllProducts() {
-        return marketService.getAllProducts();
+        return productDao.getAllProducts();
     }
-
     public Product getDetailProduct(int productId) {
-        return marketService.getDetailProduct(productId);
+        return productDao.getDetailProduct(productId);
     }
-
     public List<Product> searchProductByName(String productName) {
-        return marketService.searchProductByName(productName);
+        return productDao.searchProductByName(productName);
+    }
+    public List<Product> searchProductByProductType(int productType) {
+        return productDao.searchProductByProductType(productType);
     }
 
-    public List<Product> searchProductByProductType(int productType) {
-        return marketService.searchProductByProductType(productType);
-    }
 
     public Product addProduct(Product product) {
-        return marketService.addProduct(product);
+        return managerDao.addProduct(product);
     }
-
-    public Boolean updateProduct(Product product) {
-        return marketService.updateProduct(product);
+    public Boolean updateProduct(int productId) {
+        return managerDao.updateProduct(productId);
     }
-
     public Boolean deleteProduct(int productId) {
-        return marketService.deleteProduct(productId);
+        return managerDao.deleteProduct(productId);
     }
+
 
     public List<Cart> getAllCarts() {
-        return marketService.getAllCarts();
+        return cartDao.getAllCarts();
     }
-
-    public Cart addToCart(Cart cart) {
-        return marketService.addToCart(cart);
+    public Cart addToCart(int cartId) {
+        return cartDao.addToCart(cartId);
     }
-
     public Boolean removeFromCart(int cartId) {
-        return marketService.removeFromCart(cartId);
+        return cartDao.removeFromCart(cartId);
     }
 }
