@@ -1,4 +1,4 @@
-package com.example.letsgo.domain.Market;
+package com.example.letsgo.domain.market;
 
 import java.io.Serializable;
 
