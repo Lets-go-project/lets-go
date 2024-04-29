@@ -1,9 +1,7 @@
 package com.example.letsgo.service;
 
-import com.example.letsgo.dao.ProductDao;
 import com.example.letsgo.domain.market.Cart;
 import com.example.letsgo.domain.market.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 

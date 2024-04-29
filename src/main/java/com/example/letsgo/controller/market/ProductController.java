@@ -1,6 +1,5 @@
 package com.example.letsgo.controller.market;
 
-import com.example.letsgo.dao.ProductDao;
 import com.example.letsgo.domain.market.Product;
 import com.example.letsgo.domain.member.User;
 import com.example.letsgo.service.MarketService;

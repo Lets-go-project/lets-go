@@ -1,7 +1,6 @@
 package com.example.letsgo.dao;
 
 import com.example.letsgo.domain.market.Product;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
