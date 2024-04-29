@@ -20,23 +20,24 @@ public class MyBatisProductDao implements ProductDao {
         this.productMapper = productMapper;
     }
 
-    @Override
     public List<Product> getAllProducts() {
         return productMapper.getAllProducts();
     }
 
-    @Override
     public Product getDetailProduct(int productId) {
         return productMapper.getDetailProduct(productId);
     }
 
-    @Override
     public List<Product> searchProductByName(String productName) {
         return productMapper.searchProductByName(productName);
     }
 
-    @Override
     public List<Product> searchProductByProductType(int productType) {
         return productMapper.searchProductByProductType(productType);
     }
+
+    public Boolean scrapProduct(int productId, int userId) {
+        return productMapper.scrapProduct(productId, userId);
+    }
+
 }

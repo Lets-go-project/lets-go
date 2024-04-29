@@ -27,9 +27,14 @@
     select
       PRODUCTID,
       PRODUCTNAME as name,
-      CATEGORY as type
+      PRODUCTTYPE as type
     from PRODUCT
-    WHERE lower(name) like #{value}
+    WHERE lower(PRODUCTNAME) like #{value}
+  </select>
+
+  <select id="scrapProduct" resultType="Product">
+    INSERT INTO PRODUCTSCRAP (productId, userId)
+    VALUES (?, ?)
   </select>
 
 </mapper>
