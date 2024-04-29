@@ -32,6 +32,9 @@ public class MarketServiceImpl implements MarketService {
     public List<Product> searchProductByProductType(int productType) {
         return productDao.searchProductByProductType(productType);
     }
+    public Boolean scrapProduct(int productId, int userId) {
+        return productDao.scrapProduct(productId, userId);
+    }
 
 
     public Product addProduct(Product product) {

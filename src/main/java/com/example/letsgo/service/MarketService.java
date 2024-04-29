@@ -1,9 +1,7 @@
 package com.example.letsgo.service;
 
-import com.example.letsgo.dao.ProductDao;
 import com.example.letsgo.domain.market.Cart;
 import com.example.letsgo.domain.market.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -12,6 +10,7 @@ public interface MarketService {
     Product getDetailProduct(int productId); // 상품 상세페이지 조회
     List<Product> searchProductByName(String productName); // 상품 검색
     List<Product> searchProductByProductType(int productType); // 상품 타입별 조회
+    Boolean scrapProduct(int productId, int userId);
 
     Product addProduct(Product product); // 상품 등록
     Boolean updateProduct(int productId); // 상품 정보 업데이트
