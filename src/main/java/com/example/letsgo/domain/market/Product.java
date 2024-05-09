@@ -12,6 +12,15 @@ public class Product implements Serializable {
     private String productDescription;
     private String productImg;
     private String productSemiImg;
+    private int isAccess; // 관리자가 관리하는 상품 등록 여부 (대기, 수락, 반려)
+
+    public int getIsAccess() {
+        return isAccess;
+    }
+
+    public void setIsAccess(int isAccess) {
+        this.isAccess = isAccess;
+    }
 
     public int getProductId() {
         return productId;
