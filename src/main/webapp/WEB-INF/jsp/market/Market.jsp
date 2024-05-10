@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +6,9 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
     <title>Lets GO</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
-    <!-- Bootstrap icons-->
+    <link rel="icon" type="image/x-icon" href="../../../resources/static/images/favicon.ico"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"/>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="../../../resources/static/css/style.css" rel="stylesheet"/>
     <style>
             .card-img-top {
                 width: auto;
@@ -83,7 +79,7 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="WEB-INF/MarketDetail.jsp">상세 페이지</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="${pageContext.request.contextPath}/ProductDetailView.jsp">상세 페이지</a></div>
                     </div>
                 </div>
             </div>
@@ -206,7 +202,7 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="WEB-INF/MarketDetail.jsp">상세 페이지</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="${pageContext.request.contextPath}/market/MarketDetail.jsp">상세 페이지</a></div>
                     </div>
                 </div>
             </div>
@@ -278,9 +274,8 @@
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="../../../resources/static/js/market.js"></script>
 <script type="text/javascript">
-    <%@include file="js/shop.js" %>
 </script>
 </body>
 </html>
