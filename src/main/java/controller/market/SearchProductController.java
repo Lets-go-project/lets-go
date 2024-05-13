@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class SearchProductController {
-    private MarketService marketService;
+    private final MarketService marketService;
 
     @Autowired
     public SearchProductController(MarketService marketService) {

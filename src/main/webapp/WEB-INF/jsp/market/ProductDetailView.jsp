@@ -1,25 +1,14 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kyxxx
-  Date: 2024-04-01
-  Time: 오전 1:58
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
     <head>
-        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Shop Item - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="../../../assets/favicon.ico" />
-        <!-- Bootstrap icons-->
+        <link rel="icon" type="image/x-icon" href="../../../../resources/static/images/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../../../css/styles.css" rel="stylesheet" />
+        <link href="../../../../resources/static/css/style.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Navigation-->
@@ -65,7 +54,7 @@
                         </div>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                         <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+<%--                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />--%>
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Add to cart
@@ -188,8 +177,8 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="../../../js/scripts.js"></script>
-        <script type="text/javascript" src="../../../js/shop.js"/>
+        <script src="../../../../resources/static/js/market.js"></script>
+        <script type="text/javascript" src="../../../../resources/static/js/market.js"></script>
     </body>
 </html>
 
