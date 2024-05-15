@@ -83,7 +83,7 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="./ProductDetailView.jsp">상세 페이지</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/market/detail">상세 페이지</a></div>
                     </div>
                 </div>
             </div>

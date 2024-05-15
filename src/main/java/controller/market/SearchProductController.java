@@ -1,6 +1,5 @@
 package controller.market;
 
-import dao.ProductDao;
 import domain.market.Product;
 import service.MarketService;
 import org.springframework.beans.factory.annotation.Autowired;
