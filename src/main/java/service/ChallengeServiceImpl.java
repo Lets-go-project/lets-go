@@ -1,6 +1,6 @@
 package service;
 
-import dao.challenge.ChallengeDao;
+import dao.ChallengeDao;
 import domain.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
