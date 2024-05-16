@@ -18,7 +18,6 @@ import org.slf4j.LoggerFactory;
 @RequestMapping("/market")
 public class ProductController {
     private final MarketService marketService;
-
     private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
