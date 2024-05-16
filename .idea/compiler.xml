@@ -2,7 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+<<<<<<< HEAD
       <profile default="true" name="Default" enabled="true" />
+=======
+>>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,7 +16,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+<<<<<<< HEAD
       <module name="letsGo" options="-parameters" />
+=======
+      <module name="letsGo" options="-Xlint:all" />
+>>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
     </option>
   </component>
 </project>

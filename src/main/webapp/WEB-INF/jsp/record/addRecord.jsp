@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -6,6 +7,19 @@
     <meta charset="UTF-8">
     <title>addRecord</title>
 
+=======
+<%--
+  Created by IntelliJ IDEA.
+  User: jenny
+  Date: 2024-04-30
+  Time: 오전 11:59
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>AddRecord</title>
+>>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
     <style>
         body {
             text-align: center;
@@ -52,7 +66,10 @@
             color: white;
 
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
     </style>
 </head>
 <body bgcolor='#E7EEF9'>
@@ -85,4 +102,8 @@
     </form></div>
 </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
