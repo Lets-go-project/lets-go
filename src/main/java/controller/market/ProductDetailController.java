@@ -23,6 +23,7 @@ public class ProductDetailController {
     public String getDetailProduct(@RequestParam("productId") int productId, Model model) {
         Product product = marketService.getDetailProduct(productId);
         model.addAttribute("product", product);
+
         return "market/ProductDetailView";
     }
 }

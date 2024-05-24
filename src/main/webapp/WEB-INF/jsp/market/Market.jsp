@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<%@ page pageEncoding="utf-8" %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
@@ -15,19 +15,27 @@
                 width: auto;
                 height: 200px;
             }
+
+            .cart {
+                padding: 10px;
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+                z-index: 1000;
+            }
     </style>
 </head>
 <body>
 <%@ include file="../common/Navibar.jsp" %>
 
 <!-- 장바구니 -->
-<%--<form class="d-flex ms-auto">
-    <button class="btn btn-outline-dark ms-auto" type="submit">
+<form class="cart">
+    <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
         <i class="bi-cart-fill me-1"></i>
         장바구니
         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
     </button>
-</form>--%>
+</form>
 
 <!-- Header-->
 <header class="py-5" style="background-color: #BDCDD6">
@@ -147,8 +155,8 @@
     </div>
 </section>
 <!-- Footer-->
-<footer class="py-5 bg-dark">
-    <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+<footer class="py-5" style="background-color: #BDCDD6">
+    <div class="container"><p class="m-0 text-center text-white">Software System &copy; 240105 marin-girls</p></div>
 </footer>
 </body>
 </html>
