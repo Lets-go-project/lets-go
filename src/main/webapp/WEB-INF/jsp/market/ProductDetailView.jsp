@@ -1,6 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page pageEncoding="utf-8" %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -8,8 +7,30 @@
         <meta name="author" content="" />
         <title>Shop Item - Start Bootstrap Template</title>
     </head>
+    <style>
+            .card-img-top {
+                width: auto;
+                height: 200px;
+            }
+
+            .cart {
+                padding: 10px;
+                position: fixed;
+                right: 10px;
+                bottom: 10px;
+                z-index: 1000;
+            }
+    </style>
     <body>
-    <%@ include file="../common/Navibar.jsp" %>
+        <%@ include file="../common/Navibar.jsp" %>
+        <!-- 장바구니 -->
+        <form class="cart">
+            <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
+                <i class="bi-cart-fill me-1"></i>
+                장바구니
+                <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+            </button>
+        </form>
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
@@ -23,7 +44,7 @@
                         </div>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                         <div class="d-flex">
-<%--                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />--%>
+                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             <button class="btn btn-outline-dark flex-shrink-0" type="button">
                                 <i class="bi-cart-fill me-1"></i>
                                 Add to cart
@@ -143,11 +164,7 @@
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
         </footer>
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../../../../resources/static/js/market.js"></script>
-        <script type="text/javascript" src="../../../../resources/static/js/market.js"></script>
     </body>
 </html>
 
