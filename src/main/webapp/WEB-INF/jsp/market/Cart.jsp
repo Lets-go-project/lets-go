@@ -4,6 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-
+    <%@ include file="../common/Navibar.jsp" %>
+    장바구니
 </body>
 </html>
