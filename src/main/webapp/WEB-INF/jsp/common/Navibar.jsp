@@ -14,10 +14,10 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">마이페이지</a></li>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">수영장 정보</a></li>
-                <li class="nav-item"><a class="nav-link" href="record/view">기록</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">챌린지</a></li>
+                <li class="nav-item"><a class="nav-link" href="/record/view">기록</a></li>
+                <li class="nav-item"><a class="nav-link" href="/challenge/all">챌린지</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="market/list" role="button"
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="/market/list" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">마켓</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">All Products</a></li>
