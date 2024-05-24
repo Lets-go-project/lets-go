@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>updateRecord</title>
-=======
-<%--
-  Created by IntelliJ IDEA.
-  User: jenny
-  Date: 2024-04-30
-  Time: 오후 12:00
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>UpdateRecord</title>
->>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
     <style>
         body {
             text-align: center;
@@ -99,8 +82,4 @@
     </form></div>
 </div>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 1b9f4425984f60396887d6916882e133559ce45c

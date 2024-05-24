@@ -1,86 +1,8 @@
-<<<<<<< HEAD
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>viewRecord</title>
-
-=======
-<%--
-  Created by IntelliJ IDEA.
-  User: jenny
-  Date: 2024-04-30
-  Time: 오전 11:56
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>ViewRecord</title>
->>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
-    <style>
-        body {
-            text-align: center;
-        }
-
-        div.main {
-            background-color: white;
-            width: 80%;
-            height: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid black;
-            padding-bottom: 30px;
-        }
-
-        h1 {
-            color: #5F8BD7;
-        }
-
-        hr {
-            width: 90%;
-        }
-
-        #left {
-            margin-left: 50px;
-            display: inline-block;
-            float: left;
-        }
-        #right {
-            margin-right: 50px;
-            display: inline-block;
-            float: right;
-        }
-
-        .btn {
-            background-color: #6BBBD8;
-            color: white;
-
-        }
-
-        .records {
-            padding: 5px 10px 5px 10px;
-            margin-top: 10px;
-            margin-top: 10px;
-        }
-        .records:hover {
-            background-color: lightgray;
-            cursor: pointer;
-        }
-
-        a {
-            text-decoration-line: none;
-            color: inherit;
-        }
-    </style>
-</head>
-<<<<<<< HEAD
-<body bgcolor='#E7EEF9'>
-=======
 <body bgcolor="#E7EEF9">
->>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
 <div class='main'>
     &nbsp;
     <h1>기록 보기</h1><hr color='#E7EEF9'>
@@ -108,8 +30,4 @@
     <div class='records'><a href="updateRecord.jsp">날짜 | 수영장 이름 | 시간 | 거리</a></div>
 </div>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 1b9f4425984f60396887d6916882e133559ce45c
