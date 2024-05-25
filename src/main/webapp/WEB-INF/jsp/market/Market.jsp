@@ -29,7 +29,7 @@
 <%@ include file="../common/Navibar.jsp" %>
 
 <!-- 장바구니 -->
-<form class="cart">
+<form class="cart" action="/market/cart">
     <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
         <i class="bi-cart-fill me-1"></i>
         장바구니
