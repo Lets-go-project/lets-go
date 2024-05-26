@@ -124,7 +124,7 @@
         font-size: 12pt;
     }
 
-    aa:hover {
+    .aa:hover {
         cursor: pointer;
     }
 </style>
@@ -143,7 +143,7 @@
                 <table class="calculation1">
                     <tr>
                         <th class="aa">구매 상품</th>
-                        <th class="aa">해외 상품</th>
+<%--                        <th class="aa">해외 상품</th>--%>
                         <th style="width: 700px;"></th>
                     </tr>
                 </table>
