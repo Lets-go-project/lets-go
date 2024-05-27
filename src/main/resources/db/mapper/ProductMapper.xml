@@ -11,7 +11,6 @@
       PRODUCTNAME,
       PRODUCTTYPE as type
     FROM PRODUCT
-    WHERE PRODUCTID = #{productId}
   </select>
 
   <select id="searchProductByProductType" resultType="Product">
@@ -29,7 +28,7 @@
       PRODUCTNAME as name,
       PRODUCTTYPE as type
     from PRODUCT
-    WHERE lower(name) like #{value}
+    WHERE lower(PRODUCTNAME) like #{value}
   </select>
 
 </mapper>
