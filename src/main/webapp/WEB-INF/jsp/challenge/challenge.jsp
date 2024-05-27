@@ -5,6 +5,9 @@
   Time: 오후 6:36
   To change this template use File | Settings | File Templates.
 --%>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -147,7 +150,18 @@
     </style>
 </head>
 <body>
-<h1 class="ch">CHELLENGE</h1>
+<%@ include file="../common/Navibar.jsp" %>
+
+<!-- Header-->
+<header class="py-5" style="background-color: #BDCDD6">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Let's Go Challenge</h1>
+            <p class="lead fw-normal text-white-50 mb-0">수영 기록 챌린지</p>
+        </div>
+    </div>
+</header>
+
 <div class="choose">
     <h3>리그 선택</h3>
     <input type="button" value="여자" class="o">
@@ -171,5 +185,10 @@
 <div class="button-wrap">
     <input type="button" value="참가하기" class="cham">
 </div>
+
+<!-- Footer-->
+<footer class="py-5" style="background-color: #BDCDD6">
+    <div class="container"><p class="m-0 text-center text-white">Software System &copy; 240105 marin-girls</p></div>
+</footer>
 </body>
 </html>
