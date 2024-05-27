@@ -1,9 +1,21 @@
 spring:
-  datasource:         # Oracle dataSource 
+  datasource:         # Oracle dataSource
     driver-class-name: oracle.jdbc.driver.OracleDriver
     url: jdbc:oracle:thin:@dblab.dongduk.ac.kr:1521/orclpdb
     username: ss240105
     password: 125816
+#    hikari:          # HikariCP settings
+#      minimumIdle: 5
+#      maximumPoolSize: 20
+#      idleTimeout: 30000
+#      connectionTimeout: 30000
+#      maxLifetime: 2000000
+#      poolName: HikariPool
+  thymeleaf:
+    check-template-location: true
+    prefix: /WEB-INF/jsp/
+    suffix: .jsp
+    cache: false
   mvc:
     view:             # JSP views
       prefix: /WEB-INF/jsp/
@@ -15,8 +27,8 @@ spring:
 mybatis:
   type-aliases-package: com.example.letsGo.domain
   configuration:
-    cache-enabled: false            #true    #default    
-#    mapper-locations: com/example//dao/mybatis/mapper/**/*.xml
+    cache-enabled: false            #true    #default
+    mapper-locations: com/example/letsGo/dao/mybatis/mapper/**/*.xml
 
 logging:
   level:
