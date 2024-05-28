@@ -1,5 +1,5 @@
 package domain.enums;
 
 public enum ProductsType {
-    CLOTHES, BAG, FINS
+    SWIMSUIT, BAG, FINS
 }
