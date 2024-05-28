@@ -25,10 +25,10 @@
     </style>
 </head>
 <body>
-    <div th:insert="common/Navibar :: body"></div>
+    <div th:replace="~{common/Navibar :: body}"></div>
 
     <!-- 장바구니 -->
-    <form class="cart" action="/market/cart">
+    <form class="cart" action="market/cart">
         <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
             <i class="bi-cart-fill me-1"></i>
             장바구니
@@ -50,23 +50,20 @@
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5" th:each="product : ${productList}">
+                <div class="col mb-5" th:each="product: ${productList}">
                     <div class="card h-100">
-                        <!-- Product image -->
-                        <img class="card-img-top" th:src="${product.productImg}" alt="..."/>
-                        <!-- Product details -->
+                        <img class="card-img-top" th:src="@{product.productImg}" alt="..."/>
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name -->
                                 <h5 class="fw-bolder" th:text="${product.productName}">Product Name</h5>
-                                <!-- Product price -->
-                                <span th:text="${product.productSellprice}">Product Price</span>
+                                <span th:text="${product.productSellPrice}">Product Price</span>
                             </div>
                         </div>
-                        <!-- Product actions -->
+<%--
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(id=${product.id})}">상세 페이지</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(id=${product.productId})}">상세 페이지</a></div>
                         </div>
+--%>
                     </div>
                 </div>
             </div>

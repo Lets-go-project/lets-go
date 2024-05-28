@@ -1,8 +1,7 @@
-<%@ page contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <html>
 <head>
-    <title>Title</title>
+    <title>Lets go market - Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style type="text/css">
@@ -129,7 +128,8 @@
     }
 </style>
 <body>
-    <%@ include file="../common/Navibar.jsp" %>
+    <div th:replace="~{common/Navibar :: body}"></div>
+
     <div id="frame">
         <form>
             <div id="frame2">

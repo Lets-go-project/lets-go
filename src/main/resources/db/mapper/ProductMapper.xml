@@ -9,7 +9,10 @@
     SELECT
       PRODUCTID,
       PRODUCTNAME,
-      PRODUCTTYPE as type
+      PRODUCTTYPE as type,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
     FROM PRODUCT
   </select>
 

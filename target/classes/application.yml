@@ -28,7 +28,7 @@ mybatis:
   type-aliases-package: com.example.letsGo.domain
   configuration:
     cache-enabled: false            #true    #default
-    mapper-locations: com/example/letsGo/dao/mybatis/mapper/**/*.xml
+#    mapper-locations: com/example/letsGo/dao/mybatis/mapper/**/*.xml
 
 logging:
   level:

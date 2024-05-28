@@ -22,7 +22,8 @@
             }
     </style>
     <body>
-        <%@ include file="../common/Navibar.jsp" %>
+        <div th:replace="~{common/Navibar :: body}"></div>
+
         <!-- 장바구니 -->
         <form class="cart">
             <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
