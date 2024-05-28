@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <div th:insert="common/Navibar :: body"></div>
+    <div th:replace="~{common/Navibar :: body}"></div>
 
     <!-- 장바구니 -->
     <form class="cart" action="/market/cart">
@@ -53,7 +53,7 @@
                 <div class="col mb-5" th:each="product : ${productList}">
                     <div class="card h-100">
                         <!-- Product image -->
-                        <img class="card-img-top" th:src="${product.productImg}" alt="..."/>
+                        <img class="card-img-top" th:src="${product.productImg}" alt="no image"/>
                         <!-- Product details -->
                         <div class="card-body p-4">
                             <div class="text-center">
