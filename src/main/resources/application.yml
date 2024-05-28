@@ -13,8 +13,8 @@ spring:
 #      poolName: HikariPool
   thymeleaf:
     check-template-location: true
-    prefix: /WEB-INF/jsp/
-    suffix: .jsp
+    prefix: classpath:/templates/thyme/
+    suffix: .html
     cache: false
   mvc:
     view:             # JSP views
