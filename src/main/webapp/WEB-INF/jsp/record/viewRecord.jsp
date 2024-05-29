@@ -13,7 +13,7 @@
 
         div.main {
             background-color: white;
-            width: 80%;
+            width: 60%;
             height: 80%;
             margin-left: auto;
             margin-right: auto;
@@ -42,9 +42,9 @@
         }
 
         .records {
+            width: 90%;
             padding: 5px 10px 5px 10px;
-            margin-top: 10px;
-            margin-top: 10px;
+            margin: 10px auto;
         }
         .records:hover {
             background-color: lightgray;
@@ -87,6 +87,7 @@
 		<option>거리</option>
 	</select>
 </span></div>
+    <p>&nbsp;</p>
     <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
     <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
     <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>

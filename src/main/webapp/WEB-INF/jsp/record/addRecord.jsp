@@ -55,6 +55,13 @@
 
         }
     </style>
+
+    <script>
+        function addRecord() {
+            window.alert('기록이 추가되었습니다.');
+            window.location.href = "/record/view";
+        }
+    </script>
 </head>
 <body>
 <%@ include file="../common/Navibar.jsp" %>
@@ -94,7 +101,8 @@
                 <td><input type="text" size=1>KM</td>
             </tr>
             <tr>
-                <td colspan="2" class="sub"><input type="submit" value="기록 추가" class="btn"></td>
+                <td colspan="2" class="sub">
+                    <input type="submit" value="기록 추가" onclick="addRecord()" class="btn"></td>
             </tr>
         </table>
     </form></div>
