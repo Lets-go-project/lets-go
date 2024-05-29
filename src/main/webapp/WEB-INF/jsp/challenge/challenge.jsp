@@ -156,12 +156,16 @@
 <header class="py-5" style="background-color: #BDCDD6">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Let's Go Challenge</h1>
-            <p class="lead fw-normal text-white-50 mb-0">수영 기록 챌린지</p>
+            <h1 class="display-4 fw-bolder">Let's Go Record</h1>
+            <p class="lead fw-normal text-white-50 mb-0">수영 기록 보기</p>
         </div>
     </div>
 </header>
 
+&nbsp;
+&nbsp;
+
+<h1 class="ch">CHELLENGE</h1>
 <div class="choose">
     <h3>리그 선택</h3>
     <input type="button" value="여자" class="o">
