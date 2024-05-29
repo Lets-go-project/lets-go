@@ -22,8 +22,7 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">마이페이지</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="/pool/search">수영장 정보</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">수영장 정보</a></li>
                 <li class="nav-item"><a class="nav-link" href="/record/view">기록</a></li>
                 <li class="nav-item"><a class="nav-link" href="/challenge/all">챌린지</a></li>
                 <li class="nav-item dropdown">
@@ -37,6 +36,10 @@
                         <li><a class="dropdown-item" href="#!">Popular Items</a></li>
                     </ul>
                 </li>
+                <!--<li class="nav-item"><a class="nav-link" href="#">Button</a></li>-->
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#">마이페이지</a></li>
             </ul>
         </div>
     </div>
