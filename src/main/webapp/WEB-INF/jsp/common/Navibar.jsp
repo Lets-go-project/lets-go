@@ -39,7 +39,9 @@
                 <!--<li class="nav-item"><a class="nav-link" href="#">Button</a></li>-->
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="member/mypage">마이페이지</a></li>
+                <li class="nav-item"><a class="nav-link" href="mypage/mypage">마이페이지</a></li>
+                <li class="nav-item"><a class="nav-link" href="member/signin">로그인</a></li>
+                <li class="nav-item"><a class="nav-link" href="member/signup">회원가입</a></li>
             </ul>
         </div>
     </div>
