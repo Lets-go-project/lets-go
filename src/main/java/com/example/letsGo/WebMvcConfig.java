@@ -25,6 +25,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/challenge/woman").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/man").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/filtering").setViewName("/challenge/challenge");
+
+        registry.addViewController("/mypage/mypage").setViewName("/mypage/mypage");
+        registry.addViewController("/mypage/memberinfo").setViewName("/mypage/memberinfo");
+        registry.addViewController("/mypage/poolscrap").setViewName("/mypage/poolscrap");
+        registry.addViewController("/mypage/postscrap").setViewName("/mypage/postscrap");
     }
 }
 
