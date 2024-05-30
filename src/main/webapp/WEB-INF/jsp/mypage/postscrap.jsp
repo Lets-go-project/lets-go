@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5EEFA;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .image-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .image-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Web Scraps</h1>
+    <div class="image-grid">
+        <div class="image-item">
+            <img src="https://via.placeholder.com/150" alt="Image 1">
+            <div class="overlay">
+                <div class="overlay-content">게시물 1</div>
+            </div>
+        </div>
+        <div class="image-item">
+            <img src="https://via.placeholder.com/150" alt="Image 2">
+            <div class="overlay">
+                <div class="overlay-content">게시물 2</div>
+            </div>
+        </div>
+        <!-- 여러 개의 이미지를 추가하고 각각에 대한 게시물 정보를 입력하세요 -->
+    </div>
+</div>
+</body>
+</html>
