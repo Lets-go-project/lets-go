@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/cart")
 public class CartController {
-    private MarketService marketService;
+    private final MarketService marketService;
     @Autowired
     public CartController(MarketService marketService) {
         this.marketService = marketService;

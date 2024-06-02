@@ -1,6 +1,7 @@
 package com.example.letsGo.service;
 
 import com.example.letsGo.dao.RecordDao;
+import com.example.letsGo.dao.mybatis.MyBatisRecordDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +9,12 @@ import java.util.List;
 
 @Service
 public class RecordServiceImpl implements RecordService {
+    private final MyBatisRecordDao recordDao;
+
     @Autowired
-    private RecordDao recordDao;
+    public RecordServiceImpl(MyBatisRecordDao recordDao) {
+        this.recordDao = recordDao;
+    }
 
     @Override
     public Record getRecord(int recordId) {

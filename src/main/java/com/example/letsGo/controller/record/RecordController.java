@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 public class RecordController {
-    private RecordService recordService;
+    private final RecordService recordService;
 
     public RecordController(RecordService recordService) {
         this.recordService = recordService;
@@ -15,7 +15,7 @@ public class RecordController {
     @GetMapping
     public String getRecord(int recordId) {
         recordService.getRecord(recordId);
-        return "/record/view";
+        return "record/view";
     }
 
     @GetMapping

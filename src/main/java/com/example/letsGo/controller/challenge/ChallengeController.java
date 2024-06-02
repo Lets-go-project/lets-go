@@ -11,34 +11,34 @@ import java.util.List;
 @Controller
 @RequestMapping("/challenge")
 public class ChallengeController {
-    private ChallengeService challengeService;
+    private final ChallengeService challengeService;
 
     @Autowired
     public ChallengeController(ChallengeService challengeService) {
         this.challengeService = challengeService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public String getPubAllRecords(int isPublic) {
         challengeService.getPubAllRecords(isPublic);
-        return "/challenge/all";
+        return "challenge/challenge";
     }
 
-    @GetMapping
+/*    @GetMapping
     public String getPubWomanRecords(int isPublic, int gender) {
         challengeService.getPubWomanRecords(isPublic, gender);
-        return "/challenge/woman";
+        return "challenge/woman";
     }
 
     @GetMapping
     public String getPubManRecords(int ispublic, int gender) {
         challengeService.getPubManRecords(ispublic, gender);
-        return "/challenge/man";
+        return "challenge/man";
     }
 
     @GetMapping
     public String filteringRecords(List<Record> records, int filter) {
         challengeService.filteringRecords(records, filter);
-        return "/challenge/filtering";
-    }
+        return "challenge/filtering";
+    }*/
 }

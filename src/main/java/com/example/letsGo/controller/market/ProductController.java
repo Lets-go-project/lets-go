@@ -27,15 +27,13 @@ public class ProductController {
     @PostConstruct
     public void init() {
         log.info("ProductController initialized.");
-        log.info("컨트롤러 호출 됨");
+        log.info("ProductController: 호출 성공~");
     }
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
         List<Product> productList = marketService.getAllProducts();
         model.addAttribute("productList", productList);
-
-        log.info("ProductController: 상품 조회");
 
         return "market/Market";
     }

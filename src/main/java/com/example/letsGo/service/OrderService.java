@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface OrderService {
     List<Order> getAllOrders(); // 모든 주문 조회
     Order addOrder(int orderId); // 주문 추가

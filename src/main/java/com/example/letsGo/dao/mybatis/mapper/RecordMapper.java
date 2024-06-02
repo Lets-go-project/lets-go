@@ -1,11 +1,11 @@
-package com.example.letsGo.dao;
+package com.example.letsGo.dao.mybatis.mapper;
 
-import jakarta.persistence.Entity;
-import lombok.*;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
-public interface RecordDao {
+@Mapper
+public interface RecordMapper {
     Record addRecord(Record record);
     Record updateRecord(int recordId, Record record);
     void deleteRecord(int recordId);
