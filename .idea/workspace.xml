@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" afterDir="false" />
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 로그인 타임리프 이동 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/signup/signup.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -21,21 +27,21 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Hanminjoo72"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Hanminjoo72&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lets-go-project/lets-go.git",
-    "accountId": "52b50f99-5320-49c5-956b-8cd35a5305e9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lets-go-project/lets-go.git&quot;,
+    &quot;accountId&quot;: &quot;52b50f99-5320-49c5-956b-8cd35a5305e9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hTDVNEv1QD7mR2e5JcJ0XOjxjT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,8 +51,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.LetsGoApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "sign-in",
+    "git-widget-placeholder": "sign-up",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
@@ -100,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
+    <MESSAGE value="[FEAT] 로그인 타임리프 이동 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 로그인 타임리프 이동 수정" />
   </component>
 </project>
