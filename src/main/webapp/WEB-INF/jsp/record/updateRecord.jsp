@@ -4,29 +4,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>UpdateRecord</title>
+    <title>Lets go Record</title>
     <style>
         body {
             text-align: center;
         }
-
         div.main {
-            background-color: white;
             width: 80%;
             height: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 30px;
+            margin: 50px auto;
         }
-
-        hr {
-            width: 90%;
-        }
-
         #form {
             display: inline-block;
         }
-
         th, td {
             height: 50px;
             text-align: left;
@@ -40,7 +30,6 @@
         td.sub {
             text-align: center;
         }
-
         .btn {
             background-color: #6BBBD8;
             color: white;

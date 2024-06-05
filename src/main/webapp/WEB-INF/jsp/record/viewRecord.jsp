@@ -4,43 +4,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>ViewRecord</title>
+    <title>Lets go Record</title>
 
     <style>
         body {
             text-align: center;
         }
-
         div.main {
-            background-color: white;
             width: 60%;
             height: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 30px;
+            margin: auto;
         }
-
-        hr {
+        .top-choose {
             width: 90%;
+            margin: 50px auto 20px;
         }
-
         #left {
-            margin-left: 50px;
-            display: inline-block;
-            float: left;
+            text-align: left;
         }
         #right {
-            margin-right: 50px;
-            display: inline-block;
-            float: right;
+            text-align: right;
         }
-
         .btn {
             background-color: #6BBBD8;
             color: white;
-
+        }
+        div.list {
+            margin-bottom: 30px;
         }
 
+        .recTitle {
+            width: 90%;
+            padding: 5px 10px 5px 10px;
+            margin: auto;
+        }
         .records {
             width: 90%;
             padding: 5px 10px 5px 10px;
@@ -54,6 +51,21 @@
         a {
             text-decoration-line: none;
             color: inherit;
+        }
+        table {
+            text-align: center;
+            width: 100%;
+        }
+        .title {
+            border-top: solid 2px;
+            border-bottom: solid 1px;
+            height: 35px;
+        }
+        .underline {
+            margin: auto;
+            width: 90%;
+            border-bottom: solid 2px;
+            height: 7px;
         }
     </style>
 
@@ -70,34 +82,51 @@
     </div>
 </header>
 
-&nbsp;
-&nbsp;
-
 <div class='main'>
-    &nbsp;
-    &nbsp;
-    <div id="left"><span><button type="button" class="btn" onclick="location.href='/record/add'">기록 추가</button></span></div>
-    <div style="display:inline-block;">&nbsp;</div>
-    <div id="right"><span>
-	<label>정렬</label>
-	<select>
-		<option>기본</option>
-		<option>날짜</option>
-		<option>시간</option>
-		<option>거리</option>
-	</select>
-</span></div>
-    <p>&nbsp;</p>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
-    <div class='records'><a href="/record/update">날짜 | 수영장 이름 | 시간 | 거리</a></div>
+    <div class="top-choose">
+        <table><tr>
+            <td id="left"><button type="button" class="btn" onclick="location.href='/record/add'">기록 추가</button></td>
+            <td id="right">
+                <label>정렬</label>
+                <label>
+                    <select>
+                        <option>기본</option>
+                        <option>날짜</option>
+                        <option>시간</option>
+                        <option>거리</option>
+                    </select>
+                </label>
+            </td>
+        </tr></table>
+    </div>
+    <div class='recTitle'>
+        <table class="title"><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></div>
+    <div class="list">
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class='records'><a href="/record/update">
+            <table><tr><td>날짜</td> <td>수영장 이름</td> <td>시간</td> <td>거리</td></tr></table></a></div>
+        <div class="underline"><table><tr><td></td></tr></table></div>
+    </div>
+<%--    <div class="page">--%>
+<%--        나중에 하자--%>
+<%--    </div>--%>
 </div>
 
 <!-- Footer-->
