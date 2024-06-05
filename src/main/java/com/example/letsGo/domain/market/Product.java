@@ -22,8 +22,6 @@ public class Product extends BaseEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
 
-//    @Enumerated(EnumType.STRING)
-//    private ProductsType productType;
     private int productType;
 
     private String productName;
