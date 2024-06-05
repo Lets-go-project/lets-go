@@ -9,7 +9,7 @@ public interface MarketService {
     List<Product> getAllProducts(); // 모든 상품 조회
     Product getDetailProduct(int productId); // 상품 상세페이지 조회
     List<Product> searchProductByName(String productName); // 상품 검색
-    List<Product> searchProductByProductType(int productType); // 상품 타입별 조회
+    List<Product> getProductByProductType(int productType); // 상품 타입별 조회
     Boolean scrapProduct(int productId, int userId);
 
     Product addProduct(Product product); // 상품 등록
