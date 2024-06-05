@@ -6,4 +6,5 @@
 <body>
 <!-- Navigation-->
 <%@ include file="common/Navibar.jsp" %>
+<%@ include file="swimpool/Search.jsp" %>
 </body>
