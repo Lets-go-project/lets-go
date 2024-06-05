@@ -2,6 +2,7 @@ package com.example.letsGo.controller.market;
 
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.service.MarketService;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,8 +20,8 @@ public class ProductDetailController {
         this.marketService = marketService;
     }
 
-    @GetMapping("/detail")
-    public String getDetailProduct(@RequestParam("productId") int productId, Model model) {
+    @GetMapping("/detail/{productId}")
+    public String getDetailProduct(@PathVariable("productId") int productId, Model model) {
         Product product = marketService.getDetailProduct(productId);
         model.addAttribute("product", product);
 
