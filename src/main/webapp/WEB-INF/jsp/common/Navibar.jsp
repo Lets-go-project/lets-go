@@ -1,4 +1,5 @@
-<%@ page pageEncoding="utf-8" %>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Lets go</title>
 </head>
@@ -22,7 +23,6 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">마이페이지</a></li>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">수영장 정보</a></li>
                 <li class="nav-item"><a class="nav-link" href="/record/view">기록</a></li>
                 <li class="nav-item"><a class="nav-link" href="/challenge/all">챌린지</a></li>
@@ -37,8 +37,15 @@
                         <li><a class="dropdown-item" href="#!">Popular Items</a></li>
                     </ul>
                 </li>
+                <!--<li class="nav-item"><a class="nav-link" href="#">Button</a></li>-->
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="mypage/mypage">마이페이지</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin/signin">로그인</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup/signup">회원가입</a></li>
             </ul>
         </div>
     </div>
 </nav>
 </body>
+</html>
