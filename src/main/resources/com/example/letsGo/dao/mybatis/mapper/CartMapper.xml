@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.letsGo.dao.mybatis.mapper.CartMapper">
+
+  <cache />
+
+  <!-- 장바구니 조회 -->
+  <select id="getAllCarts" resultType="Cart">
+    SELECT * FROM Cart;
+  </select>
+
+  <!-- 장바구니 상품 추가 -->
+  <insert id="addToCart" parameterType="Cart">
+    INSERT INTO Cart (cartId, productId)
+    VALUES (#{cartId}, #{productId});
+  </insert>
+
+  <!-- 장바구니 선택/전체 삭제 -->
+  <delete id="removeFromCart" parameterType="int">
+    DELETE FROM Cart WHERE cartId = #{cartId};
+  </delete>
+
+</mapper>
