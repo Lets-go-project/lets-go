@@ -6,7 +6,7 @@ import com.example.letsGo.dao.mybatis.MyBatisManagerDao;
 import com.example.letsGo.dao.mybatis.MyBatisProductDao;
 import com.example.letsGo.domain.market.Cart;
 import com.example.letsGo.domain.market.Product;
-import com.example.letsGo.repository.ProductRepository;
+//import com.example.letsGo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +17,8 @@ public class MarketServiceImpl implements MarketService {
     private final MyBatisManagerDao managerDao;
     private final MyBatisCartDao cartDao;
 
-    @Autowired
-    private ProductRepository productRepository;
+    /*@Autowired
+    private ProductRepository productRepository;*/
 
     @Autowired
     public MarketServiceImpl(MyBatisProductDao productDao, MyBatisManagerDao managerDao, MyBatisCartDao cartDao) {

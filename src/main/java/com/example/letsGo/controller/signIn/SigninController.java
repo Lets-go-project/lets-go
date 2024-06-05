@@ -1,4 +1,4 @@
-package controller.signIn;
+package com.example.letsGo.controller.signIn;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
