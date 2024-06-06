@@ -27,7 +27,7 @@ public class SearchProductController {
     }
 
 /*    @GetMapping("/market/searchByType")
-    public String searchProductByType(@RequestParam("type") int productType, Model model) {
+    public String getProductByProductType(@RequestParam("type") int productType, Model model) {
         List<Product> productList = marketService.searchProductByProductType(productType);
         model.addAttribute("productList", productList);
         return "market/SearchView";
