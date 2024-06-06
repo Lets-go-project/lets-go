@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.letsGo.dao.mybatis.mapper.ProductMapper">
+
+  <cache />
+
+  <select id="getAllProducts" resultType="com.example.letsGo.domain.market.Product">
+    SELECT
+      PRODUCTID,
+      PRODUCTNAME,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+  </select>
+
+  <select id="getDetailProduct" resultType="com.example.letsGo.domain.market.Product">
+    SELECT
+      PRODUCTID,
+      PRODUCTNAME,
+      PRODUCTTYPE as type,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+    WHERE PRODUCTID = #{productId}
+  </select>
+
+  <select id="getProductByProductType" resultType="com.example.letsGo.domain.market.Product">
+    SELECT
+      PRODUCTID,
+      PRODUCTNAME,
+      PRODUCTTYPE,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+    WHERE PRODUCTTYPE = #{productType}
+  </select>
+
+  <select id="searchProductByName" resultType="Product">
+    select
+      PRODUCTID,
+      PRODUCTNAME as name,
+      PRODUCTTYPE as type
+    from PRODUCT
+    WHERE lower(PRODUCTNAME) like #{value}
+  </select>
+
+</mapper>

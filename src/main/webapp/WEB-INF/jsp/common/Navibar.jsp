@@ -1,4 +1,5 @@
-<%@ page pageEncoding="utf-8" %>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Lets go</title>
 </head>
@@ -46,3 +47,4 @@
     </div>
 </nav>
 </body>
+</html>
