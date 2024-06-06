@@ -1,8 +1,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.letsGo.dao.mybatis.mapper.UserMapper">
     <insert id="save" parameterType="com.example.letsGo.domain.member.User">
-        INSERT INTO Member (USERID, ADDRESS, ID, PASSWORD, GENDER, EMAIL, NAME, BIRTH, ISSALESMANAGER)
-        VALUES (#{userId}, #{address}, #{id}, #{password}, #{gender}, #{email}, #{name}, #{birth}, #{isSalesManager})
+        INSERT INTO Member ( ADDRESS, ID, PASSWORD, GENDER, EMAIL, NAME, BIRTH, ISSALESMANAGER)
+        VALUES (#{address}, #{id}, #{password}, #{gender}, #{email}, #{name}, #{birth}, #{isSalesManager})
     </insert>
     <select id="findById" parameterType="string" resultType="com.example.letsGo.domain.member.User">
         SELECT * FROM Member WHERE ID = #{id}
