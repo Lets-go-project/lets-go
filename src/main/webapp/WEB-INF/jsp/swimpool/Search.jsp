@@ -112,6 +112,7 @@
                 <option value="전북">전북</option>
                 <option value="제주">제주</option>
             </select>
+            </form>
         </div>
         <div class="button-box">
             <button class="view-scrap-button" onclick="changeBorderColor(this)">스크랩 보기</button>
