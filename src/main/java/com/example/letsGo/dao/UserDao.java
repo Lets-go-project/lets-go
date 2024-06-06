@@ -9,4 +9,6 @@ public interface UserDao {
     User findByEmail(String email);
 
     User findByPassword(String password);
+
+    void update(User user);
 }
