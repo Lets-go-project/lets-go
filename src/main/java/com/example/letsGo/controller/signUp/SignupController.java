@@ -5,24 +5,16 @@ import com.example.letsGo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.SimpleDateFormat;
 
 @Controller
-//@RequestMapping("/signup")
 public class SignupController {
 
     @Autowired
     private UserService userService;
-
-    /*@GetMapping
-    public String getSignup() {
-        return "signup/signup";
-    }*/
 
     @PostMapping("/signup")
     public String register(@RequestParam("name") String name,
@@ -36,6 +28,27 @@ public class SignupController {
                            @RequestParam("day") int day,
                            Model model) {
         try {
+            // 아이디 중복 확인
+            User existingIdUser = userService.getUserById(id);
+            if (existingIdUser != null) {
+                System.out.println("이미 사용 중인 아이디입니다: " + id);
+                return "signup/signup";
+            }
+
+// 비밀번호 중복 확인
+            User existingPasswordUser = userService.getUserByPassword(password);
+            if (existingPasswordUser != null) {
+                System.out.println("이미 사용 중인 비밀번호입니다: " + password);
+                return "signup/signup";
+            }
+
+            // 이메일 중복 확인
+            User existingEmailUser = userService.getUserByEmail(email);
+            if (existingEmailUser != null) {
+                System.out.println("이미 사용 중인 이메일입니다: " + email);
+                return "signup/signup";
+            }
+
             // 생년월일을 yyyy/MM/dd 형식의 Date 객체로 변환
             String birthString = String.format("%d/%02d/%02d", year, month, day);
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
@@ -51,16 +64,6 @@ public class SignupController {
             user.setEmail(email);
             user.setName(name);
             user.setBirth(sqlBirthDate);
-
-
-            System.out.println("회원가입 데이터:");
-            System.out.println("이름: " + name);
-            System.out.println("성별: " + gender);
-            System.out.println("아이디: " + id);
-            System.out.println("비밀번호: " + password);
-            System.out.println("이메일: " + email);
-            System.out.println("주소: " + address);
-            System.out.println("생년월일: " + sqlBirthDate);
 
             userService.saveUser(user);
 

@@ -25,4 +25,14 @@ public class MyBatisUserDao implements UserDao {
     public void save(User user) {
         userMapper.save(user);
     }
+
+    @Override
+    public User findByEmail(String email) {
+        return userMapper.findByEmail(email);
+    }
+
+    @Override
+    public User findByPassword(String password) {
+        return userMapper.findByPassword(password);
+    }
 }
