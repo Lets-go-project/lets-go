@@ -35,4 +35,9 @@ public class UserServiceImpl implements UserService {
     public User getUserByPassword(String password) {
         return userDao.findByPassword(password);
     }
+
+    @Override
+    public void updateUser(User user) {
+        userDao.update(user);
+    }
 }

@@ -16,4 +16,8 @@
     <select id="findByPassword" parameterType="string" resultType="com.example.letsGo.domain.member.User">
         SELECT * FROM Member WHERE PASSWORD = #{password}
     </select>
+
+    <update id="update" parameterType="com.example.letsGo.domain.member.User">
+        UPDATE Member SET NAME = #{name}, ADDRESS = #{address} WHERE ID = #{id}
+    </update>
 </mapper>

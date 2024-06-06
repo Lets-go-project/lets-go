@@ -35,4 +35,9 @@ public class MyBatisUserDao implements UserDao {
     public User findByPassword(String password) {
         return userMapper.findByPassword(password);
     }
+
+    @Override
+    public void update(User user) {
+        userMapper.update(user);
+    }
 }
