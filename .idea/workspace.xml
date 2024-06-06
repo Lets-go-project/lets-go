@@ -4,6 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 마이페이지 타임리프 이동 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisUserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" afterDir="false" />
     <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 회원가입 페이지 이동 타임리프">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -53,12 +63,11 @@
     "Application.LetsGoApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ysBranch",
-    "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "git-widget-placeholder": "my-page",
+    "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.LetsGoApplication">
+  <component name="RunManager">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
@@ -73,14 +82,6 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="letsGo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +119,6 @@
     <MESSAGE value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
     <MESSAGE value="[FEAT] 로그인 타임리프 이동 수정" />
     <MESSAGE value="[FEAT] 회원가입 페이지 이동 타임리프" />
-    <MESSAGE value="[ADD] Search.jsp 지도 api추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Search.jsp 지도 api추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 회원가입 페이지 이동 타임리프" />
   </component>
 </project>
