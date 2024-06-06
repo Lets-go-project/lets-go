@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +63,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript 디버그.index.html.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "market",
+    "git-widget-placeholder": "sign-in",
     "kotlin-language-version-configured": "true",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "모듈",
