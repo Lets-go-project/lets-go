@@ -31,13 +31,15 @@ public class SignupController {
             // 아이디 중복 확인
             User existingIdUser = userService.getUserById(id);
             if (existingIdUser != null) {
+                model.addAttribute("error", "이미 사용 중인 아이디입니다.");
                 System.out.println("이미 사용 중인 아이디입니다: " + id);
                 return "signup/signup";
             }
 
-// 비밀번호 중복 확인
+            // 비밀번호 중복 확인
             User existingPasswordUser = userService.getUserByPassword(password);
             if (existingPasswordUser != null) {
+                model.addAttribute("error", "이미 사용 중인 비밀번호입니다.");
                 System.out.println("이미 사용 중인 비밀번호입니다: " + password);
                 return "signup/signup";
             }
@@ -45,6 +47,7 @@ public class SignupController {
             // 이메일 중복 확인
             User existingEmailUser = userService.getUserByEmail(email);
             if (existingEmailUser != null) {
+                model.addAttribute("error", "이미 사용 중인 이메일입니다.");
                 System.out.println("이미 사용 중인 이메일입니다: " + email);
                 return "signup/signup";
             }
