@@ -4,4 +4,5 @@ import com.example.letsGo.domain.member.User;
 
 public interface UserDao {
     User findById(String id);
+    void save(User user);
 }
