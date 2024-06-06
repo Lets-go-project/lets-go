@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[MOD] 네비바, 인덱스, 서치html 수정">
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[MOD] index에 search추가, search.html 추가, navibar수정">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_26__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29_오후_7_26,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/Navibar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/Navibar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTTP Request" />
         <option value="HTML File" />
       </list>
     </option>
@@ -44,12 +41,17 @@
     &quot;assignee&quot;: &quot;Hanminjoo72&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Lets-go-project/lets-go.git&quot;,
-    &quot;accountId&quot;: &quot;52b50f99-5320-49c5-956b-8cd35a5305e9&quot;
-  }
-}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c41ac258-325a-4d29-9f7b-026ac1bfc03e" />
+        <option name="url" value="https://github.com/Lets-go-project/lets-go.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -63,18 +65,28 @@
   "keyToString": {
     "Application.LetsGoApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript 디버그.index.html.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "sign-up",
-    "kotlin-language-version-configured": "true"
+    "git-widget-placeholder": "ysBranch",
+    "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "애플리케이션.LetsGoApplication.executor": "Debug"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="애플리케이션.LetsGoApplication">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lets-go/src/main/resources/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -87,6 +99,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript 디버그.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -113,15 +130,47 @@
       <option name="project" value="LOCAL" />
       <updated>1717609517421</updated>
     </task>
-    <task id="LOCAL-00003" summary="[MOD] 네비바, 인덱스, 서치html 수정">
+    <task id="LOCAL-00003" summary="[FEAT] 마이페이지 타임리프 이동 수정">
       <option name="closed" value="true" />
-      <created>1717672414669</created>
+      <created>1717662312467</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1717672414669</updated>
+      <updated>1717662312467</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
+      <option name="closed" value="true" />
+      <created>1717667115609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717667115610</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
+      <option name="closed" value="true" />
+      <created>1717667197623</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717667197623</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
+      <option name="closed" value="true" />
+      <created>1717667284284</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717667284284</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
+      <option name="closed" value="true" />
+      <created>1717667404115</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717667404115</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,8 +188,6 @@
     <MESSAGE value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
     <MESSAGE value="[FEAT] 로그인 타임리프 이동 수정" />
     <MESSAGE value="[FEAT] 회원가입 페이지 이동 타임리프" />
-    <MESSAGE value="[FEAT] 회원가입 구현" />
-    <MESSAGE value="[MOD] 네비바, 인덱스, 서치html 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] 네비바, 인덱스, 서치html 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 회원가입 페이지 이동 타임리프" />
   </component>
 </project>
