@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>form</title>
+    <title>회원가입</title>
     <script>
         function populateYears() {
             var yearDropdown = document.getElementById("year");
@@ -34,79 +34,80 @@
         }
     </script>
     <style>
-        *{
-            margin: 0px;
-            padding:0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        body{
-            background:#EEE9DA;
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
-        .wrap h1{
-            font-size:32px;color:#6096B4;
+
+        .wrap {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
             text-align: center;
-            margin-bottom:50px;
+            margin-bottom: 20px;
         }
-        .wrap{
-            width:750px;
-            margin:0 auto;
-            padding:50px;
-            box-sizing:border-box;
-            background:#fff;
+
+        form dl {
+            margin-bottom: 15px;
         }
-        .wrap h1{
-            padding-bottom:12px;
-            border-bottom:3px solid#E5EEFA;
-            font-size:32px;
-            letter-spacing:-2px;
-        }
-        .wrap form {
-            margin-top: 30px;
-        }
-        .wrap input[type="text"],
-        .wrap input[type="password"],
-        .wrap input[type="email"]{
-            padding:10px;
-        }
-        .wrap input[type="submit"]{
-            width:100%; height:50px;
-            background:#BDCDD6;
-            color :#fff;
-            font-size:20px;
-            border:none;
-            border-radius:25px;
-            margin-top:35px;
-        }
-        .wrap input[type="button"]{
-            padding:6px 10px;
-            border: none;
-            border-radius:25px;
-            background:#4BBDDC;
-            font-weight: 600;
-            color:#fff;
-            cursor:pointer;
-        }
-        .wrap dt,
-        .wrap dd {
+
+        form dl dt,
+        form dl dd {
             display: inline-block;
-            font-size:14px;
-            vertical-align:middle;
+            vertical-align: middle;
         }
-        .wrap dl{
-            margin-top:10px;
-            font-size: 0;
+
+        form dl dt {
+            width: 100px;
+            font-weight: bold;
         }
-        .wrap dt {
-            width: 20%;
+
+        form dl dd {
+            margin-left: 10px;
         }
-        .wrap dd{
-            width: 80%;
+
+        form input[type="text"],
+        form input[type="password"],
+        form input[type="email"],
+        form select {
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body onload="populateYears(); populateDays()">
 <div class="wrap">
     <h1>회원가입</h1>
-    <form th:action="@{/register}" method="post">
+    <!-- 세션에 사용자 정보가 없을 때만 회원가입 폼을 보여줍니다. -->
+    <form th:action="@{/signup}" method="post" th:unless="${session.user}">
         <dl>
             <dt>이름</dt>
             <dd><input type="text" name="name" placeholder="이름 입력" required></dd>
@@ -130,9 +131,7 @@
         </dl>
         <dl>
             <dt>이메일</dt>
-            <dd>
-                <input type="email" name="email" placeholder="이메일 입력" required>
-            </dd>
+            <dd><input type="email" name="email" placeholder="이메일 입력" required></dd>
         </dl>
         <dl>
             <dt>주소</dt>
@@ -155,6 +154,11 @@
         </dl>
         <input type="submit" value="회원가입">
     </form>
+    <!-- 세션에 사용자 정보가 있으면 이미 로그인되어 있다는 메시지를 보여줍니다. -->
+    <p th:if="${session.user}" style="text-align: center;">이미 로그인되어 있습니다.</p>
+    <div th:if="${session.user}" style="text-align: center;">
+        <a href="/letsGo"><button>메인으로 이동</button></a>
+    </div>
 </div>
 </body>
 </html>
