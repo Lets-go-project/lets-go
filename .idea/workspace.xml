@@ -14,9 +14,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signIn/SigninController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signin/signin.html" afterDir="false" />
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 회원가입 페이지 이동 타임리프">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
