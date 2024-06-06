@@ -9,4 +9,8 @@ import org.apache.ibatis.annotations.Select;
 public interface UserMapper {
     User findById(String id);
     void save(User user);
+
+    User findByEmail(String email);
+
+    User findByPassword(String password);
 }

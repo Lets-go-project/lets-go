@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-<section class="login-form">
+<section class="login-form" th:unless="${session.user}">
     <h1>LETSGO</h1>
     <form th:action="@{/signin}" method="post">
         <div class="input">
@@ -61,5 +61,9 @@
         </div>
     </form>
 </section>
+<p th:if="${session.user}" style="text-align: center;">이미 로그인되어 있습니다.</p>
+<div th:if="${session.user}" style="text-align: center;">
+    <a href="/letsGo"><button>메인으로 이동</button></a>
+</div>
 </body>
 </html>

@@ -155,7 +155,10 @@
         <input type="submit" value="회원가입">
     </form>
     <!-- 세션에 사용자 정보가 있으면 이미 로그인되어 있다는 메시지를 보여줍니다. -->
-    <p th:if="${session.user}">이미 로그인되어 있습니다.</p>
+    <p th:if="${session.user}" style="text-align: center;">이미 로그인되어 있습니다.</p>
+    <div th:if="${session.user}" style="text-align: center;">
+        <a href="/letsGo"><button>메인으로 이동</button></a>
+    </div>
 </div>
 </body>
 </html>
