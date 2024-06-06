@@ -92,6 +92,7 @@
 <div class='main'>
     <div class="filter-bar">
         <div class="select-box">
+            <form id="myForm" action="" method="post">
             <select name="area1" required>
                 <option value="">전국</option>
                 <option value="서울">서울</option>
