@@ -35,5 +35,7 @@ public interface UserService {
     User getUserByEmail(String email);
 
     User getUserByPassword(String password);
+
+    void updateUser(User user);
 }
 
