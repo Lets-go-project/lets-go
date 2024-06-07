@@ -6,11 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/market")
 public class SearchProductController {
     private final MarketService marketService;
 
@@ -19,18 +21,11 @@ public class SearchProductController {
         this.marketService = marketService;
     }
 
-    @GetMapping("/market/searchByName")
+    @GetMapping("/searchByName")
     public String searchProductByName(@RequestParam("keyword") String productName, Model model) {
-        List<Product> productList = marketService.searchProductByName(productName);
-        model.addAttribute("productList", productList);
-        return "market/SearchView";
+        List<Product> searchProductList = marketService.searchProductByName(productName);
+        model.addAttribute("productList", searchProductList);
+        return "market/Market";
     }
-
-/*    @GetMapping("/market/searchByType")
-    public String getProductByProductType(@RequestParam("type") int productType, Model model) {
-        List<Product> productList = marketService.searchProductByProductType(productType);
-        model.addAttribute("productList", productList);
-        return "market/SearchView";
-    }*/
 
 }

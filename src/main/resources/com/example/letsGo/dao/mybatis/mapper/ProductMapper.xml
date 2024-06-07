@@ -40,12 +40,14 @@
   </select>
 
   <select id="searchProductByName" resultType="Product">
-    select
+    SELECT
       PRODUCTID,
-      PRODUCTNAME as name,
-      PRODUCTTYPE as type
-    from PRODUCT
-    WHERE lower(PRODUCTNAME) like #{value}
+      PRODUCTNAME,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+    WHERE lower(PRODUCTNAME) LIKE '%' || LOWER(#{keyword}) || '%'
   </select>
 
 </mapper>
