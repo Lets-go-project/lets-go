@@ -21,30 +21,11 @@
             width: auto;
             height: 200px;
         }
-
-        .cart {
-            padding: 10px;
-            position: fixed;
-            right: 10px;
-            bottom: 10px;
-            z-index: 1000;
-        }
     </style>
 </head>
 <body>
     <!-- 상단 내비바 -->
     <div th:replace="~{common/Navibar :: body}"></div>
-
-    <!-- 장바구니 -->
-    <!--
-    <form class="cart" th:action="@{/market/cart}">
-        <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
-            <i class="bi-cart-fill me-1"></i>
-            장바구니
-            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-    </form>
-    -->
 
     <!-- 우측 메뉴바 -->
     <div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>
@@ -53,15 +34,24 @@
     <header class="py-5" style="background-color: #0E46A3">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Let's Go Market</h1>
-                <form th:action="@{/market/searchByName}" method="get" class="search">
-                    <div class="search">
-                        <label>
+                <div class="search-bar">
+                    <h1 class="display-4 fw-bolder">Let's Go Market</h1>
+                    <form th:action="@{/market/searchByType}" method="get" class="select-box">
+                        <select name="productType" required onchange="this.form.submit()">
+                          <option value="0" th:selected="${selectedProductType == 0}">종류</option>
+                          <option value="1" th:selected="${selectedProductType == 1}">수영복</option>
+                          <option value="2" th:selected="${selectedProductType == 2}">수경</option>
+                          <option value="3" th:selected="${selectedProductType == 3}">가방</option>
+                          <option value="4" th:selected="${selectedProductType == 4}">기타</option>
+                        </select>
+                    </form>
+                    <form th:action="@{/market/searchByName}" method="get" class="search">
+                        <div class="search">
                             <input type="text" name="keyword" placeholder="구매하고자 하는 상품을 검색하세요">
-                            <img type="submit" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" alt="...">
-                        </label>
-                    </div>
-                </form>
+                            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png" alt="...">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </header>

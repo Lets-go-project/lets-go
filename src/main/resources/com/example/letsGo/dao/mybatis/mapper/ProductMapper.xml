@@ -50,4 +50,14 @@
     WHERE lower(PRODUCTNAME) LIKE '%' || LOWER(#{keyword}) || '%'
   </select>
 
+  <select id="searchProductByType" resultType="Product">
+    SELECT
+      PRODUCTID,
+      PRODUCTNAME,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+    WHERE PRODUCTTYPE = #{productType}
+  </select>
 </mapper>
