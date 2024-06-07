@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5df1ece-5203-4411-97f0-92b5c709fd96" name="Changes" comment="[FEAT] 로그아웃 구현">
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] market 상품명 검색 기능 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/mypage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mypage/memberinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mypage/memberinfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +25,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
+        <option value="CSS File" />
         <option value="HTML File" />
-        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sign-in" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +52,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
@@ -65,19 +67,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LetsGoApplication.executor": "Run",
-    "git-widget-placeholder": "my-page"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LetsGoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript 디버그.index.html.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;market&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;애플리케이션.LetsGoApplication.executor&quot;: &quot;Debug&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.LetsGoApplication">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lets-go/src/main/resources/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -99,6 +120,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717609196223</updated>
+      <workItem from="1717740116347" duration="1476000" />
+      <workItem from="1717741631756" duration="12000" />
+      <workItem from="1717741664756" duration="2037000" />
+      <workItem from="1717751622695" duration="1682000" />
     </task>
     <task id="LOCAL-00001" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
       <option name="closed" value="true" />
@@ -156,16 +181,35 @@
       <option name="project" value="LOCAL" />
       <updated>1717667404115</updated>
     </task>
-    <task id="LOCAL-00008" summary="[FEAT] 로그아웃 구현">
+    <task id="LOCAL-00008" summary="[MOD] index 에러 해결">
       <option name="closed" value="true" />
-      <created>1717692107670</created>
+      <created>1717688376225</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1717692107670</updated>
+      <updated>1717688376226</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[MOD] index 에러 해결">
+      <option name="closed" value="true" />
+      <created>1717691399352</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691399352</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[FEAT] market 상품명 검색 기능 구현">
+      <option name="closed" value="true" />
+      <created>1717741361842</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717741361842</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -182,7 +226,8 @@
     <MESSAGE value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
     <MESSAGE value="[FEAT] 로그인 타임리프 이동 수정" />
     <MESSAGE value="[FEAT] 회원가입 페이지 이동 타임리프" />
-    <MESSAGE value="[FEAT] 로그아웃 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 로그아웃 구현" />
+    <MESSAGE value="[MOD] index 에러 해결" />
+    <MESSAGE value="[FEAT] market 상품명 검색 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market 상품명 검색 기능 구현" />
   </component>
 </project>
