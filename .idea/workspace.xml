@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="24353a31-987a-40dc-8417-a874f1b9c63d" name="Changes" comment="[MOD] challenge ui 수정">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gyulhongsy&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lets-go-project/lets-go.git&quot;,
+    &quot;accountId&quot;: &quot;8ffefd82-9c62-4aa9-973a-d92ef2b70865&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2gtIac5Ls2jUq1TZEfwSe2uP0Z0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LetsGoApplication.executor": "Run",
+    "git-widget-placeholder": "challenge",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Study/Universe/4-1/SWPro/Project/lets-go/src/main/resources/templates/challenge",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Study\Universe\4-1\SWPro\Project\lets-go\src\main\resources\templates\challenge" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ALTERNATIVE_JRE_PATH" value="17 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="letsGo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24353a31-987a-40dc-8417-a874f1b9c63d" name="Changes" comment="" />
+      <created>1716510514334</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716510514334</updated>
+      <workItem from="1716510515118" duration="174000" />
+      <workItem from="1716796867521" duration="6134000" />
+      <workItem from="1716807681001" duration="1252000" />
+      <workItem from="1716975498658" duration="6158000" />
+      <workItem from="1717069197021" duration="3707000" />
+      <workItem from="1717111761159" duration="3727000" />
+      <workItem from="1717580389850" duration="3724000" />
+      <workItem from="1717585040409" duration="1662000" />
+    </task>
+    <task id="LOCAL-00001" summary="[MOD] challenge ui 수정">
+      <option name="closed" value="true" />
+      <created>1716807328213</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716807328213</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[MOD] challenge ui 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="[MOD] challenge ui 수정" />
+  </component>
+</project>

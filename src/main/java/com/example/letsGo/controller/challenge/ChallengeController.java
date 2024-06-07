@@ -24,21 +24,21 @@ public class ChallengeController {
         return "challenge/challenge";
     }
 
-/*    @GetMapping
-    public String getPubWomanRecords(int isPublic, int gender) {
-        challengeService.getPubWomanRecords(isPublic, gender);
-        return "challenge/woman";
-    }
-
-    @GetMapping
-    public String getPubManRecords(int ispublic, int gender) {
-        challengeService.getPubManRecords(ispublic, gender);
-        return "challenge/man";
-    }
-
-    @GetMapping
-    public String filteringRecords(List<Record> records, int filter) {
-        challengeService.filteringRecords(records, filter);
-        return "challenge/filtering";
-    }*/
+//    @GetMapping
+//    public String getPubWomanRecords(int isPublic, int gender) {
+//        challengeService.getPubWomanRecords(isPublic, gender);
+//        return "challenge/woman";
+//    }
+//
+//    @GetMapping
+//    public String getPubManRecords(int isPublic, int gender) {
+//        challengeService.getPubManRecords(isPublic, gender);
+//        return "challenge/man";
+//    }
+//
+//    @GetMapping
+//    public String filteringRecords(List<Record> records, int filter) {
+//        challengeService.filteringRecords(records, filter);
+//        return "challenge/filtering";
+//    }
 }

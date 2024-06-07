@@ -7,7 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface ChallengeMapper {
-    List<Record> getPubAllRecords(int isPublic);
+    List<Record> getPubAllRecords(Integer isPublic);
     List<Record> getPubWomanRecords(int isPublic, int gender);
     List<Record> getPubManRecords(int isPublic, int gender);
 
