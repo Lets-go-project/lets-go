@@ -2,6 +2,8 @@ package com.example.letsGo.controller.market;
 
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.service.MarketService;
+import jakarta.annotation.PostConstruct;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/market")
+@Log4j2
 public class ProductDetailController {
     private final MarketService marketService;
 
@@ -19,11 +24,22 @@ public class ProductDetailController {
     public ProductDetailController(MarketService marketService) {
         this.marketService = marketService;
     }
-
-    @GetMapping("/detail/{productId}")
-    public String getDetailProduct(@PathVariable("productId") int productId, Model model) {
+    @PostConstruct
+    public void init() {
+        log.info("productDetailController: 호출 성공~");
+    }
+    @GetMapping("/detail")
+    public String getDetailProduct(
+            @RequestParam("productId") int productId,
+            @RequestParam("productType") int productType,
+            Model model
+    ) {
         Product product = marketService.getDetailProduct(productId);
+        List<Product> relatedProductList = marketService.getProductByProductType(productType);
         model.addAttribute("product", product);
+        model.addAttribute("relatedProductList", relatedProductList);
+
+        log.info("productDetailController: "+productId);
 
         return "market/ProductDetailView";
     }

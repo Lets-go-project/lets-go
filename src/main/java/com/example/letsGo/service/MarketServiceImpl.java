@@ -6,6 +6,7 @@ import com.example.letsGo.dao.mybatis.MyBatisManagerDao;
 import com.example.letsGo.dao.mybatis.MyBatisProductDao;
 import com.example.letsGo.domain.market.Cart;
 import com.example.letsGo.domain.market.Product;
+//import com.example.letsGo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,9 @@ public class MarketServiceImpl implements MarketService {
     private final MyBatisProductDao productDao;
     private final MyBatisManagerDao managerDao;
     private final MyBatisCartDao cartDao;
+
+    /*@Autowired
+    private ProductRepository productRepository;*/
 
     @Autowired
     public MarketServiceImpl(MyBatisProductDao productDao, MyBatisManagerDao managerDao, MyBatisCartDao cartDao) {
@@ -30,6 +34,7 @@ public class MarketServiceImpl implements MarketService {
 
     @Override
     public Product getDetailProduct(int productId) {
+//        productRepository.findById((long) productId);
         return productDao.getDetailProduct(productId);
     }
 
@@ -39,8 +44,8 @@ public class MarketServiceImpl implements MarketService {
     }
 
     @Override
-    public List<Product> searchProductByProductType(int productType) {
-        return productDao.searchProductByProductType(productType);
+    public List<Product> getProductByProductType(int productType) {
+        return productDao.getProductByProductType(productType);
     }
 
     @Override

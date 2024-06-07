@@ -12,7 +12,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/letsGo").setViewName("index");
 
         registry.addViewController("/market/list").setViewName("market/Market");
-        registry.addViewController("/market/detail/{productId}").setViewName("market/ProductDetailView");
+        registry.addViewController("/market/detail").setViewName("market/ProductDetailView");
         registry.addViewController("/market/cart").setViewName("market/Cart");
         registry.addViewController("/market/order").setViewName("market/Order");
 
@@ -25,6 +25,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/challenge/woman").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/man").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/filtering").setViewName("/challenge/challenge");
+
+       registry.addViewController("/swimpool/search").setViewName("/swimpool/Search");
 
         registry.addViewController("/mypage/mypage").setViewName("/mypage/mypage");
         registry.addViewController("/mypage/memberinfo").setViewName("/mypage/memberinfo");

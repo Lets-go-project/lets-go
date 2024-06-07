@@ -26,11 +26,11 @@ public class SearchProductController {
         return "market/SearchView";
     }
 
-    @GetMapping("/market/searchByType")
-    public String searchProductByType(@RequestParam("type") int productType, Model model) {
+/*    @GetMapping("/market/searchByType")
+    public String getProductByProductType(@RequestParam("type") int productType, Model model) {
         List<Product> productList = marketService.searchProductByProductType(productType);
         model.addAttribute("productList", productList);
         return "market/SearchView";
-    }
+    }*/
 
 }

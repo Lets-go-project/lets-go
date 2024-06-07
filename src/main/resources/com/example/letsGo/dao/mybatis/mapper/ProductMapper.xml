@@ -9,20 +9,34 @@
     SELECT
       PRODUCTID,
       PRODUCTNAME,
-      PRODUCTTYPE as type,
       PRODUCTIMG,
       PRODUCTPRICE,
       PRODUCTSELLPRICE
     FROM PRODUCT
   </select>
 
-  <select id="searchProductByProductType" resultType="Product">
+  <select id="getDetailProduct" resultType="com.example.letsGo.domain.market.Product">
     SELECT
       PRODUCTID,
       PRODUCTNAME,
-      PRODUCTTYPE as type
+      PRODUCTTYPE as type,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
     FROM PRODUCT
-    WHERE PRODUCTTYPE = #{value}
+    WHERE PRODUCTID = #{productId}
+  </select>
+
+  <select id="getProductByProductType" resultType="com.example.letsGo.domain.market.Product">
+    SELECT
+      PRODUCTID,
+      PRODUCTNAME,
+      PRODUCTTYPE,
+      PRODUCTIMG,
+      PRODUCTPRICE,
+      PRODUCTSELLPRICE
+    FROM PRODUCT
+    WHERE PRODUCTTYPE = #{productType}
   </select>
 
   <select id="searchProductByName" resultType="Product">
