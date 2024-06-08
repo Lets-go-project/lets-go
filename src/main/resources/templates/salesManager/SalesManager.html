@@ -45,13 +45,12 @@
     <table width="1000" border="0" cellspacing="0">
         <tr>
             <td width="149">
-                <a href="http://www.aladin.co.kr/home/welcome.aspx"><img
-                    src="https://ifh.cc/g/fQrmjz.png" alt="알라딘 웰컴" width="65" height="65" border="0" style="margin-left: 10px; margin-top: 10px;"/>
+                <a th:href="@{/market/manager}"><img
+                    src="https://ifh.cc/g/fQrmjz.png" alt="레쑤고 웰컴" width="65" height="65" border="0" style="margin-left: 10px; margin-top: 10px;"/>
                 </a>
             </td>
             <td>
                 <div id="scm2012_header2">
-                    <div><a href='http://www.aladin.co.kr/shop/usedshop/MyShop.aspx'>내 판매자샵 보기</a></div>
                     <div><a href='https://www.aladin.co.kr/account/wSubPayInfo.aspx?pType=SubPayDepositMoney'>예치금 조회 (<strong style="color:#FF9933">0</strong>원)</a></div>
                     <div><a th:href="@{/market/list}">마켓 메인</a></div>
                     <div><a th:href="@{/letsGo}">레쑤고 메인</a></div>
@@ -67,14 +66,16 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #ffffff">
     <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #0E46A3;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                   data-bs-toggle="dropdown" aria-expanded="false">중고 상품 등록</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="openPopup()">중고 상품 등록</a></li>
             <li class="nav-item"><a class="nav-link" th:href="@{/record/view}">상품 조회/수정</a></li>
             <li class="nav-item"><a class="nav-link" th:href="@{/challenge/all}">판매관리</a></li>
         </ul>
     </div>
 </nav>
 </body>
+<script>
+function openPopup() {
+    window.open("/market/manager/add", "popup", "width=800,height=600");
+}
+</script>
 </html>

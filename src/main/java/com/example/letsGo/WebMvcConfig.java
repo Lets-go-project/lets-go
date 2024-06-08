@@ -22,6 +22,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/market/order").setViewName("market/Order");
 
         registry.addViewController("/market/manager").setViewName("salesManager/SalesManager");
+        registry.addViewController("/market/manager/add").setViewName("salesManager/SalesManager");
 
         /*
         진희: 기록 & 챌린지
