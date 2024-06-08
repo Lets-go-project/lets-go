@@ -11,6 +11,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/letsGo").setViewName("index");
 
+        /*
+        규민: 마켓 & 판매 관리자
+        */
         registry.addViewController("/market/list").setViewName("market/Market");
         registry.addViewController("/market/searchByName").setViewName("market/Market");
         registry.addViewController("/market/searchByType").setViewName("market/Market");
@@ -18,6 +21,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/market/cart").setViewName("market/Cart");
         registry.addViewController("/market/order").setViewName("market/Order");
 
+        registry.addViewController("/market/manager").setViewName("salesManager/SalesManager");
+        registry.addViewController("/market/manager/add").setViewName("salesManager/SalesManager");
+
+        /*
+        진희: 기록 & 챌린지
+        */
         registry.addViewController("/record/view").setViewName("/record/viewRecord");
         registry.addViewController("/record/add").setViewName("/record/addRecord");
         registry.addViewController("/record/update").setViewName("/record/updateRecord");
@@ -28,8 +37,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/challenge/man").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/filtering").setViewName("/challenge/challenge");
 
-       registry.addViewController("/swimpool/search").setViewName("/swimpool/Search");
+        /*
+        예슬: 수영장 정보 & 관리자
+        */
+        registry.addViewController("/swimpool/search").setViewName("/swimpool/Search");
 
+        /*
+        민주: 로그인 & 회원가입 & 마이페이지
+        */
         registry.addViewController("/mypage/mypage").setViewName("/mypage/mypage");
         registry.addViewController("/mypage/memberinfo").setViewName("/mypage/memberinfo");
         registry.addViewController("/mypage/poolscrap").setViewName("/mypage/poolscrap");
