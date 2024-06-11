@@ -37,8 +37,8 @@ public class ProductController {
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
-//        List<Product> productList = marketService.getAllProducts();
-          List<Product> productList = productRepository.findAll();
+        List<Product> productList = marketService.getAllProducts();
+//          List<Product> productList = productRepository.findAll();
           model.addAttribute("productList", productList);
 
         return "market/Market";

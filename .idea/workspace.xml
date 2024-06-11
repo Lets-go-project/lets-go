@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] market 판매자 매니저 물품 등록 페이지 임시 구현">
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] market JPA 적용 중...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/letsGo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/letsGo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +135,8 @@
       <workItem from="1717828800153" duration="167000" />
       <workItem from="1717837887197" duration="4751000" />
       <workItem from="1717901275597" duration="597000" />
-      <workItem from="1718088014709" duration="1546000" />
+      <workItem from="1718088014709" duration="1673000" />
+      <workItem from="1718090659826" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
       <option name="closed" value="true" />
@@ -243,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717823967668</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[FEAT] market JPA 적용 중...">
+      <option name="closed" value="true" />
+      <created>1718089685238</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718089685238</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +288,7 @@
     <MESSAGE value="[FEAT] market 종류별 필터링 구현" />
     <MESSAGE value="[FEAT] market 판매자 매니저 페이지 이동 연결" />
     <MESSAGE value="[FEAT] market 판매자 매니저 물품 등록 페이지 임시 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market 판매자 매니저 물품 등록 페이지 임시 구현" />
+    <MESSAGE value="[FEAT] market JPA 적용 중..." />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market JPA 적용 중..." />
   </component>
 </project>
