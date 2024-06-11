@@ -1,17 +1,16 @@
 package com.example.letsGo.domain.market;
 
 import com.example.letsGo.domain.common.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Builder
+@Table
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Product extends BaseEntity implements Serializable {
@@ -37,6 +36,12 @@ public class Product extends BaseEntity implements Serializable {
     private String productImg;
 
     private String productSemiImg;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 
     @Override
     public String toString() {

@@ -2,6 +2,7 @@ package com.example.letsGo.controller.market;
 
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.member.User;
+import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.service.MarketService;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpSession;
@@ -25,6 +26,9 @@ public class ProductController {
         this.marketService = marketService;
     }
 
+    @Autowired
+    public ProductRepository productRepository;
+
     @PostConstruct
     public void init() {
         log.info("ProductController initialized.");
@@ -33,8 +37,9 @@ public class ProductController {
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
-        List<Product> productList = marketService.getAllProducts();
-        model.addAttribute("productList", productList);
+//        List<Product> productList = marketService.getAllProducts();
+          List<Product> productList = productRepository.findAll();
+          model.addAttribute("productList", productList);
 
         return "market/Market";
     }
