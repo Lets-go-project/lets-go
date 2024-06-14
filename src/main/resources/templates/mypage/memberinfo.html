@@ -87,9 +87,20 @@
 <body>
 <div class="wrap">
     <h1>MYPAGE</h1>
-    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150301_3%2Fsalesclub_1425214359787MF16i_JPEG%2F755d87adb77a56db8a97590853cd331b.jpg&type=a340" alt="프로필 사진">
-    <input type="button" value="삭제">
-    <input type="button" value="변경">
+    <div>
+        <img th:src="@{${user.profilePicture != null ? '/uploads/' + user.profilePicture : '/images/default-profile.jpeg'}}" alt="User Profile Picture" width="200">
+    </div>
+    <!-- 프로필 사진 업로드 폼 -->
+    <form th:action="@{/mypage/uploadProfilePicture}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <button type="submit">프로필 사진 변경</button>
+    </form>
+
+    <!-- 프로필 사진 삭제 폼 -->
+    <form th:action="@{/mypage/deleteProfilePicture}" method="post">
+        <button type="submit">프로필 사진 삭제</button>
+    </form>
+
     <form th:action="@{/mypage/update}" method="post">
         <dl>
             <dt>이름</dt>
@@ -109,4 +120,3 @@
 </div>
 </body>
 </html>
-
