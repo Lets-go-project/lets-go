@@ -12,6 +12,7 @@ public class User {
     private Date birth;
     private String address;
     private boolean isSalesManager;
+    private String profilePicture;
 
     public int getUserId() {
         return userId;
@@ -77,11 +78,17 @@ public class User {
         this.address = address;
     }
 
-    public boolean isSalesManager() {
+    public boolean getIsSalesManager() {
         return isSalesManager;
     }
+    public void setIsSalesManager(boolean isSalesManager) {
+        this.isSalesManager = isSalesManager;
+    }
+    public String getProfilePicture() {
+        return profilePicture;
+    }
 
-    public void setSalesManager(boolean salesManager) {
-        isSalesManager = salesManager;
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
     }
 }
