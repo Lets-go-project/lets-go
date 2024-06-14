@@ -121,29 +121,34 @@ public class MypageController {
         if (user != null) {
             if (file.isEmpty()) {
                 redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-                return "redirect:/mypage";
+                return "redirect:/mypage/memberinfo";
             }
             try {
+                // 실제 서버의 업로드 디렉토리를 설정합니다.
+                String uploadDir = "C:/uploads/";
+                File dir = new File(uploadDir);
+                if (!dir.exists()) {
+                    dir.mkdirs(); // 디렉토리가 없으면 생성합니다.
+                }
+
                 String filename = System.currentTimeMillis() + "_" + file.getOriginalFilename();
-                Path path = Paths.get(uploadPath + filename);
-                Files.createDirectories(path.getParent());
+                Path path = Paths.get(uploadDir + filename);
                 Files.write(path, file.getBytes());
 
-                user.setProfilePicture(filename);
+                user.setProfilePicture("/uploads/" + filename);
                 userService.updateUser(user);
 
                 redirectAttributes.addFlashAttribute("message",
                         "You successfully uploaded '" + filename + "'");
             } catch (IOException e) {
                 e.printStackTrace();
-                redirectAttributes.addFlashAttribute("message", "File upload failed");
+                redirectAttributes.addFlashAttribute("message", "Failed to upload file");
             }
-            return "redirect:/mypage";
+            return "redirect:/mypage/memberinfo";
         } else {
             return "redirect:/signin";
         }
     }
-
     @PostMapping("/deleteProfilePicture")
     public String deleteProfilePicture(HttpSession session,
                                        RedirectAttributes redirectAttributes) {
