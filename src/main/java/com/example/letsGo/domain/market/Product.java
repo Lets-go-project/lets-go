@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Table
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Product extends BaseEntity implements Serializable{
+public class Product extends BaseEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -35,7 +35,7 @@ public class ProductDetailController {
     }
     @GetMapping("/detail")
     public String getDetailProduct(
-            @RequestParam("productId") int productId,
+            @RequestParam("productId") Long productId,
             @RequestParam("productType") int productType,
             Model model
     ) {
