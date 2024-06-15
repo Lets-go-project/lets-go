@@ -69,14 +69,15 @@ public class SignupController {
             Date birthDate = parseDate(year, month, day);
 
             // User 객체 생성
-            User user = new User();
-            user.setAddress(address);
-            user.setId(id);
-            user.setPassword(password);
-            user.setGender(gender);
-            user.setEmail(email);
-            user.setName(name);
-            user.setBirth(birthDate);
+            User user = User.builder()
+                    .address(address)
+                    .id(id)
+                    .password(password)
+                    .gender(gender)
+                    .email(email)
+                    .name(name)
+                    .birth(birthDate)
+                    .build();
 
             // 프로필 사진 설정
             if (profilePicture == null || profilePicture.isEmpty()) {

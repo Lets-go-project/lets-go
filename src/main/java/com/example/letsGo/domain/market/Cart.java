@@ -1,8 +1,7 @@
 package com.example.letsGo.domain.market;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.example.letsGo.domain.member.User;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
@@ -15,8 +14,18 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class Cart implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cart_id")
     private Long cartId;
+
+    @Column(name = "amount")
     private int amount;
 
+     @ManyToOne(fetch = FetchType.LAZY)
+     @JoinColumn(name = "product_id")
+     private Product product;
 
+     @ManyToOne(fetch = FetchType.LAZY)
+     @JoinColumn(name = "user_id")
+     private User user;
 }
