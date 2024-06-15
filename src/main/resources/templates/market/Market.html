@@ -28,7 +28,7 @@
     <div th:replace="~{common/Navibar :: body}"></div>
 
     <!-- 우측 메뉴바 -->
-    <div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>
+    <div class="market-menu" th:insert="~{/market/MarketMenubar :: body}"></div>
 
     <!-- Header -->
     <header class="py-5" style="background-color: #0E46A3">
@@ -60,10 +60,12 @@
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5" th:each="product : ${productList}">
+                <div class="col mb-5" th:if="${product != null}" th:each="product : ${productList}">
                     <div class="card h-100">
                         <!-- Product image -->
-                        <img class="card-img-top" th:src="@{${product.productImg}}" alt="..."/>
+                        <div th:if="${product != null}">
+                            <img class="card-img-top" th:src="${product.productImg}" alt="Product Image" />
+                        </div>
                         <!-- Product details -->
                         <div class="card-body p-4">
                             <div class="text-center">
