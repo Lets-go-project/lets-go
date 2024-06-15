@@ -21,12 +21,12 @@ public class ProductController {
     private final MarketService marketService;
 
     @Autowired
+    public ProductRepository productRepository;
+
+    @Autowired
     public ProductController(MarketService marketService) {
         this.marketService = marketService;
     }
-
-    @Autowired
-    public ProductRepository productRepository;
 
     @PostConstruct
     public void init() {

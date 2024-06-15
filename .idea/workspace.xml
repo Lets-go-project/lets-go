@@ -4,16 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] market JPA 적용 중...">
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] market 상품 전체 조회 jpa 적용">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/letsGo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/letsGo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,29 +73,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.LetsGoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript 디버그.index.html.executor&quot;: &quot;Coverage&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;market&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kyxxx/Desktop/kyu/2024/4-1/web-code-secure-final/final-project-20210783&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;애플리케이션.LetsGoApplication.executor&quot;: &quot;Debug&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LetsGoApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript 디버그.index.html.executor": "Coverage",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "market",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kyxxx/Desktop/kyu/2024/4-1/web-code-secure-final/final-project-20210783",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.LetsGoApplication.executor": "Debug"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kyxxx\Desktop\kyu\2024\4-1\ss-letsGo\src\main\resources\templates\salesManager" />
@@ -116,6 +126,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="letsGo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -137,6 +155,12 @@
       <workItem from="1717901275597" duration="597000" />
       <workItem from="1718088014709" duration="1673000" />
       <workItem from="1718090659826" duration="872000" />
+      <workItem from="1718091879612" duration="30000" />
+      <workItem from="1718168299604" duration="16000" />
+      <workItem from="1718207068292" duration="1365000" />
+      <workItem from="1718266530058" duration="365000" />
+      <workItem from="1718366406025" duration="2528000" />
+      <workItem from="1718427136284" duration="8053000" />
     </task>
     <task id="LOCAL-00001" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
       <option name="closed" value="true" />
@@ -250,7 +274,55 @@
       <option name="project" value="LOCAL" />
       <updated>1718089685238</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="[ADD] market 테이블 timestamp 추가">
+      <option name="closed" value="true" />
+      <created>1718091905824</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1718091905824</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[ADD] validation 의존성 추가">
+      <option name="closed" value="true" />
+      <created>1718430281481</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718430281481</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[ADD] market 엔티티 재설정">
+      <option name="closed" value="true" />
+      <created>1718431734777</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1718431734777</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[FEAT] market에 상품 없을 때 null 처리">
+      <option name="closed" value="true" />
+      <created>1718432827754</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1718432827754</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[ADD] 서버 재시작 없이 프론트에 반영하기">
+      <option name="closed" value="true" />
+      <created>1718433994502</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1718433994502</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[FEAT] market 상품 전체 조회 jpa 적용">
+      <option name="closed" value="true" />
+      <created>1718434033293</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1718434033293</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +361,12 @@
     <MESSAGE value="[FEAT] market 판매자 매니저 페이지 이동 연결" />
     <MESSAGE value="[FEAT] market 판매자 매니저 물품 등록 페이지 임시 구현" />
     <MESSAGE value="[FEAT] market JPA 적용 중..." />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market JPA 적용 중..." />
+    <MESSAGE value="[ADD] market 테이블 timestamp 추가" />
+    <MESSAGE value="[ADD] validation 의존성 추가" />
+    <MESSAGE value="[ADD] market 엔티티 재설정" />
+    <MESSAGE value="[FEAT] market에 상품 없을 때 null 처리" />
+    <MESSAGE value="[ADD] 서버 재시작 없이 프론트에 반영하기" />
+    <MESSAGE value="[FEAT] market 상품 전체 조회 jpa 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market 상품 전체 조회 jpa 적용" />
   </component>
 </project>

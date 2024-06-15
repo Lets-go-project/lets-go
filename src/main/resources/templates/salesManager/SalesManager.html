@@ -15,6 +15,10 @@
     * {
         font-family: 'Pretendard-Regular', 'sans-serif';
     }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
     #scm2012_header2 {
 		float: right;
 		list-style: none;
@@ -39,14 +43,22 @@
     .navbar-nav .dropdown-menu .dropdown-item {
             color: white !important;
     }
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 </style>
 <body>
 <div id="scmC2CtopHeader">
     <table width="1000" border="0" cellspacing="0">
         <tr>
-            <td width="149">
-                <a th:href="@{/market/manager}"><img
-                    src="https://ifh.cc/g/fQrmjz.png" alt="레쑤고 웰컴" width="65" height="65" border="0" style="margin-left: 10px; margin-top: 10px;"/><h3>Lets go</h3>
+            <td>
+                <a th:href="@{/market/manager}">
+                    <div class="logo-container">
+                        <img src="https://ifh.cc/g/fQrmjz.png" alt="레쑤고 웰컴" width="65" height="65" border="0" />
+                        <h3 style="margin: 0;">Lets go</h3>
+                    </div>
                 </a>
             </td>
             <td>

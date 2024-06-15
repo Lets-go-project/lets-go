@@ -19,6 +19,16 @@
             bottom: 10px;
             z-index: 1000;
         }
+
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        * {
+            font-family: 'Pretendard-Regular', 'sans-serif';
+        }
     </style>
 </head>
 <body>
@@ -50,22 +60,20 @@
                     <img class="card-img-top mb-5 mb-md-0" th:src="@{${product.productImg}}" alt="Product Image" style="width: 300px; height: 300px; object-fit: cover;" />
                 </div>
                 <div class="col-md-6">
-    <!--                <div class="small mb-1" th:text="'SKU: ' + ${product.sku}">SKU: BST-498</div>-->
+<!--                    <div class="small mb-1" th:text="'갯수: ' + ${product.productQuantity}"></div>-->
                     <h1 class="display-7 fw-bolder" th:text="${product.productName}">Shop item template</h1>
                     <div class="fs-5 mb-5">
                         <span class="text-decoration-line-through" th:text="${product.productPrice}">$45.00</span>
                         <span th:text="${product.productSellPrice}">$40.00</span>
                     </div>
                     <p class="lead" th:text="${product.productDescription}">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi.
-                        Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam
-                        minima ea iste laborum vero?
+                        상품 설명
                     </p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
                         <button class="btn btn-outline-dark flex-shrink-0" type="button">
                             <i class="bi-cart-fill me-1"></i>
-                            Add to cart
+                            장바구니 담기
                         </button>
                     </div>
                 </div>

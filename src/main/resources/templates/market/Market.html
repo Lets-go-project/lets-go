@@ -63,29 +63,24 @@
                 <div class="col mb-5" th:if="${product != null}" th:each="product : ${productList}">
                     <div class="card h-100">
                         <!-- Product image -->
-                        <div th:if="${product != null}">
-                            <img class="card-img-top" th:src="${product.productImg}" alt="Product Image" />
-                        </div>
+                        <img class="card-img-top" th:src="${product.productImg}" alt="Product Image" />
                         <!-- Product details -->
                         <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name -->
-                                <h5 class="fw-bolder" th:text="${product.productName}">Product Name</h5>
-                                <!-- Product price -->
-                                <span th:text="${product.productSellPrice}">원</span>
-                            </div>
+                            <!-- Product name -->
+                            <h5 class="fw-bolder" th:text="${product.productName}">Product Name</h5>
+                            <!-- Product price -->
+                            <span th:text="${product.productSellPrice}">원</span>
                         </div>
                         <!-- Product actions -->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${product.productId}, productType=${product.productType})}">상세 페이지</a>
-                            </div>
+                            <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${product.productId}, productType=${product.productType})}">상세 페이지</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="py-5" style="background-color: #0E46A3">

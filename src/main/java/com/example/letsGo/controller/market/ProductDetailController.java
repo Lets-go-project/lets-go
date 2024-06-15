@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/market")
@@ -39,10 +40,13 @@ public class ProductDetailController {
             @RequestParam("productType") int productType,
             Model model
     ) {
-        Optional<Product> product = productRepository.findByProductId(productId);
-//        List<Product> relatedProductList = marketService.getProductByProductType(productType);
+        Product product = productRepository.findByProductId(productId);
+        List<Product> relatedProductList =  productRepository.findByProductType(productType).stream()
+            .filter(p -> !p.getProductId().equals(productId))
+            .collect(Collectors.toList());
+
         model.addAttribute("product", product);
-//        model.addAttribute("relatedProductList", relatedProductList);
+        model.addAttribute("relatedProductList", relatedProductList);
 
         log.info("productDetailController: "+productId);
 
