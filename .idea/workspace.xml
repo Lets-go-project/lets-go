@@ -17,6 +17,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
     </list>
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 마이페이지 프로필 임시">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/uploadProfile.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +38,8 @@
         <option value="HTTP Request" />
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,14 +57,12 @@
     &quot;assignee&quot;: &quot;Hanminjoo72&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c41ac258-325a-4d29-9f7b-026ac1bfc03e" />
-        <option name="url" value="https://github.com/Lets-go-project/lets-go.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lets-go-project/lets-go.git&quot;,
+    &quot;accountId&quot;: &quot;52b50f99-5320-49c5-956b-8cd35a5305e9&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -81,6 +86,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "market",
+    "git-widget-placeholder": "my-page",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/kyxxx/Desktop/kyu/2024/4-1/web-code-secure-final/final-project-20210783",
     "list.type.of.created.stylesheet": "CSS",
@@ -88,16 +94,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true",
     "애플리케이션.LetsGoApplication.executor": "Debug"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hanminjoo\IdeaProjects\1letsgo\src\main\resources\static\images" />
       <recent name="C:\Users\kyxxx\Desktop\kyu\2024\4-1\ss-letsGo\src\main\resources\templates\salesManager" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -323,6 +330,15 @@
       <updated>1718434033293</updated>
     </task>
     <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00013" summary="[FEAT] 마이페이지 프로필 임시">
+      <option name="closed" value="true" />
+      <created>1718374853968</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718374853968</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,5 +384,8 @@
     <MESSAGE value="[ADD] 서버 재시작 없이 프론트에 반영하기" />
     <MESSAGE value="[FEAT] market 상품 전체 조회 jpa 적용" />
     <option name="LAST_COMMIT_MESSAGE" value="[FEAT] market 상품 전체 조회 jpa 적용" />
+    <MESSAGE value="[FEAT] 마이페이지 이름,주소 조회 및 수정 기능 구현" />
+    <MESSAGE value="[FEAT] 마이페이지 프로필 임시" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 마이페이지 프로필 임시" />
   </component>
 </project>
