@@ -1,24 +1,31 @@
 package com.example.letsGo.domain.market;
 
+import com.example.letsGo.domain.member.User;
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.io.Serializable;
 
+@Entity
+@Getter
+@Builder
+@Table
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Cart implements Serializable {
-    private int cartId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "cart_id")
+    private Long cartId;
+
+    @Column(name = "amount")
     private int amount;
 
-    public int getCartId() {
-        return cartId;
-    }
+     @ManyToOne(fetch = FetchType.LAZY)
+     @JoinColumn(name = "product_id")
+     private Product product;
 
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
-    }
-
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
+     @ManyToOne(fetch = FetchType.LAZY)
+     @JoinColumn(name = "user_id")
+     private User user;
 }

@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" afterDir="false" />
+    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/SalesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/SalesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,62 +25,47 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTTP Request" />
-        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Hanminjoo72&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c41ac258-325a-4d29-9f7b-026ac1bfc03e" />
-        <option name="url" value="https://github.com/Lets-go-project/lets-go.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
-  <component name="ProjectId" id="2hTDVNEv1QD7mR2e5JcJ0XOjxjT" />
+  <component name="ProjectId" id="2huSxdDgeYXZZWP7rXR8wRxJxrG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LetsGoApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript 디버그.index.html.executor": "Coverage",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "market",
-    "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "애플리케이션.LetsGoApplication.executor": "Debug"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LetsGoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.LetsGoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;market&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.LetsGoApplication">
+}</component>
+  <component name="RunManager">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
@@ -84,104 +73,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lets-go/src/main/resources/templates/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="" />
-      <created>1717609196223</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1717609196223</updated>
-    </task>
-    <task id="LOCAL-00001" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
+    <task id="LOCAL-00001" summary="[DEL] 오류로 인한 workspace.xml 삭제">
       <option name="closed" value="true" />
-      <created>1717609461247</created>
+      <created>1718441624929</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1717609461247</updated>
+      <updated>1718441624929</updated>
     </task>
-    <task id="LOCAL-00002" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
-      <option name="closed" value="true" />
-      <created>1717609517421</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1717609517421</updated>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제" />
+      <created>1718442723756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718442723756</updated>
+      <workItem from="1718442731566" duration="2094000" />
+      <workItem from="1718454589333" duration="1957000" />
+      <workItem from="1718456698439" duration="2625000" />
     </task>
-    <task id="LOCAL-00003" summary="[FEAT] 마이페이지 타임리프 이동 수정">
-      <option name="closed" value="true" />
-      <created>1717662312467</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1717662312467</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <option name="closed" value="true" />
-      <created>1717667115609</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1717667115610</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <option name="closed" value="true" />
-      <created>1717667197623</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1717667197623</updated>
-    </task>
-    <task id="LOCAL-00006" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <option name="closed" value="true" />
-      <created>1717667284284</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1717667284284</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[MOD] index에 search추가, search.html 추가, navibar수정">
-      <option name="closed" value="true" />
-      <created>1717667404115</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1717667404115</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동" />
-    <MESSAGE value="[FEAT] 로그인 타임리프 이동 수정" />
-    <MESSAGE value="[FEAT] 회원가입 페이지 이동 타임리프" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 회원가입 페이지 이동 타임리프" />
+    <MESSAGE value="[DEL] 오류로 인한 workspace.xml 삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DEL] 오류로 인한 workspace.xml 삭제" />
   </component>
 </project>

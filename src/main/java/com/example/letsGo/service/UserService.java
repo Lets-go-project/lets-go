@@ -26,6 +26,7 @@ public class UserService {
 package com.example.letsGo.service;
 
 import com.example.letsGo.domain.member.User;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService {
     void saveUser(User user);
@@ -35,5 +36,11 @@ public interface UserService {
     User getUserByEmail(String email);
 
     User getUserByPassword(String password);
+
+    void updateUser(User user);
+
+    String uploadProfilePicture(User user, MultipartFile profilePictureFile);
+
+    void deleteProfilePicture(User user);
 }
 

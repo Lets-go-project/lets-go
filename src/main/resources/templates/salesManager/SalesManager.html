@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Lets Go - salesManager</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style type="text/css">
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    * {
+        font-family: 'Pretendard-Regular', 'sans-serif';
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    #scm2012_header2 {
+		float: right;
+		list-style: none;
+		display: inline;
+		margin: 5px 0 0 0;
+		font-size: 11px;
+        padding-right: 5px;
+		padding-bottom: 9px;
+	}
+
+	#scm2012_header2 div {
+		float: right;
+		padding: 8px 0 0 8px;
+	}
+
+	#scm2012_header2 div a:link {
+		color: #666666;text-decoration: none;
+	}
+
+	.navbar-nav .nav-link,
+	.navbar-nav .dropdown-toggle,
+    .navbar-nav .dropdown-menu .dropdown-item {
+            color: white !important;
+    }
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+</style>
+<body>
+<div id="scmC2CtopHeader">
+    <table width="1000" border="0" cellspacing="0">
+        <tr>
+            <td>
+                <a th:href="@{/market/manager}">
+                    <div class="logo-container">
+                        <img src="https://ifh.cc/g/fQrmjz.png" alt="레쑤고 웰컴" width="65" height="65" border="0" />
+                        <h3 style="margin: 0;">Lets go</h3>
+                    </div>
+                </a>
+            </td>
+            <td>
+                <div id="scm2012_header2">
+                    <div><a href='https://www.aladin.co.kr/account/wSubPayInfo.aspx?pType=SubPayDepositMoney'>예치금 조회 (<strong style="color:#FF9933">0</strong>원)</a></div>
+                    <div><a th:href="@{/market/list}">마켓 메인</a></div>
+                    <div><a th:href="@{/letsGo}">레쑤고 메인</a></div>
+                </div>
+            </td>
+            <td width="160" align="right" style="padding-top:5px;">
+                <a href='https://www.aladin.co.kr/scm/wC2Cuser_logout.aspx'><img src='//image.aladin.co.kr/img/scm/2012_scmheader_bu01.gif' border='0' align='absmiddle'></a>&nbsp;<a href='https://www.aladin.co.kr/scm/wC2Cuser_account_make.aspx?action=2'><img src='//image.aladin.co.kr/img/scm/2012_scmheader_bu02.gif' border='0' align='absmiddle'></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<nav class="navbar navbar-expand-lg" style="background-color: #ffffff">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #0E46A3;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="openPopup()">중고 상품 등록</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/record/view}">상품 조회/수정</a></li>
+            <li class="nav-item"><a class="nav-link" th:href="@{/challenge/all}">판매관리</a></li>
+        </ul>
+    </div>
+</nav>
+</body>
+<script>
+function openPopup() {
+    window.open("/market/manager/add", "popup", "width=800,height=600");
+}
+</script>
+</html>

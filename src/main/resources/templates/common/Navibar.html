@@ -27,7 +27,7 @@
                 <li class="nav-item"><a class="nav-link" th:href="@{/record/view}">기록</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/challenge/all}">챌린지</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" th:href="@{/market/list}" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">마켓</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" th:href="@{/market/list}">All Products</a></li>
@@ -42,7 +42,8 @@
                 <li class="nav-item" th:if="${session.user}">
                     <a class="nav-link" th:href="@{/logout}">로그아웃</a>
                 </li>
-                <li class="nav-item" th:if="${session.user}"><a class="nav-link" th:href="@{/mypage/mypage}">마이페이지</a></li>
+                <li class="nav-item" th:if="${session.user}">
+                    <a class="nav-link" th:href="@{/mypage/mypage}">마이페이지</a></li>
                 <li class="nav-item" th:unless="${session.user}">
                     <a class="nav-link" th:href="@{/signin/signin}">로그인</a>
                 </li>

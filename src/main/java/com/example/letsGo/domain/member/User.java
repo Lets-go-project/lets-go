@@ -1,9 +1,22 @@
 package com.example.letsGo.domain.member;
 
+import com.example.letsGo.domain.market.SalesManager;
+import jakarta.persistence.*;
+import lombok.*;
+
 import java.util.Date;
 
+@Entity
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@Table(name = "Member")
 public class User {
+    @Id
     private int userId;
+
     private String id;
     private String password;
     private String name;
@@ -12,6 +25,38 @@ public class User {
     private Date birth;
     private String address;
     private boolean isSalesManager;
+    private String profilePicture;
+
+    @OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private SalesManager salesManager;
+}
+
+/*
+package com.example.letsGo.domain.member;
+
+import com.example.letsGo.domain.market.SalesManager;
+import jakarta.persistence.*;
+
+import java.util.Date;
+
+@Entity
+@Table(name = "Memeber")
+public class User {
+    @Id
+    private int userId;
+
+    private String id;
+    private String password;
+    private String name;
+    private String gender;
+    private String email;
+    private Date birth;
+    private String address;
+    private boolean isSalesManager;
+    private String profilePicture;
+
+    @OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private SalesManager salesManager;
 
     public int getUserId() {
         return userId;
@@ -77,11 +122,18 @@ public class User {
         this.address = address;
     }
 
-    public boolean isSalesManager() {
+    public boolean getIsSalesManager() {
         return isSalesManager;
     }
+    public void setIsSalesManager(boolean isSalesManager) {
+        this.isSalesManager = isSalesManager;
+    }
+    public String getProfilePicture() {
+        return profilePicture;
+    }
 
-    public void setSalesManager(boolean salesManager) {
-        isSalesManager = salesManager;
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
     }
 }
+*/
