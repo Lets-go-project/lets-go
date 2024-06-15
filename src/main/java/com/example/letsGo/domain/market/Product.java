@@ -3,46 +3,65 @@ package com.example.letsGo.domain.market;
 import com.example.letsGo.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.context.annotation.Primary;
 
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
 @Builder
+@Setter
+@Getter
 @Table
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Product extends BaseEntity implements Serializable {
+public class Product extends BaseEntity implements Serializable{
 
-    @Setter
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    @Column(name = "product_id")
+    private Long productId;
 
-    @Column(name = "product_type")
-    private int productType;
-
+    @Size(max = 100)
+    @Column(name = "product_name", nullable = false, length = 100)
     private String productName;
 
-    private int productPrice;
+    @Size(max = 50)
+    @Column(name = "product_type", nullable = false, length = 50)
+    private int productType;
 
-    private int productSellPrice;
+    @Column(name = "product_quantity", nullable = false)
+    private Integer productQuantity;
 
-    private int productState;
-
+    @Size(max = 500)
+    @Column(name = "product_description", length = 500)
     private String productDescription;
 
+    @Column(name = "product_price", nullable = false)
+    private Double productPrice;
+
+    @Column(name = "product_sell_price", nullable = false)
+    private Double productSellPrice;
+
+    @Column(name = "product_img")
     private String productImg;
 
+    @Column(name = "product_semi_img")
     private String productSemiImg;
 
-    @Column(name = "created_at")
+    @Size(max = 50)
+    @Column(name = "product_state", nullable = false, length = 50)
+    private String productState;
+
+    @NotNull
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "updated_at")
+    @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
 
     @Override
     public String toString() {
