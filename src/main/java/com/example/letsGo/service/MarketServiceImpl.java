@@ -44,6 +44,11 @@ public class MarketServiceImpl implements MarketService {
     }
 
     @Override
+    public List<Product> searchProductByType(int productType) {
+        return productDao.searchProductByType(productType);
+    }
+
+    @Override
     public List<Product> getProductByProductType(int productType) {
         return productDao.getProductByProductType(productType);
     }

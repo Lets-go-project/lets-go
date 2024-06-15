@@ -8,13 +8,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Controller
 public class SignupController {
 
     @Autowired
     private UserService userService;
+
+    // 프로필 사진 기본 경로
+    private static final String DEFAULT_PROFILE_PICTURE = "/images/default-profile.jpeg";
 
     @PostMapping("/signup")
     public String register(@RequestParam("name") String name,
@@ -26,7 +31,9 @@ public class SignupController {
                            @RequestParam("year") int year,
                            @RequestParam("month") int month,
                            @RequestParam("day") int day,
+                           @RequestParam(value = "profilepicture", required = false) String profilePicture,
                            Model model) {
+
         try {
             // 아이디 중복 확인
             User existingIdUser = userService.getUserById(id);
@@ -52,11 +59,14 @@ public class SignupController {
                 return "signup/signup";
             }
 
-            // 생년월일을 yyyy/MM/dd 형식의 Date 객체로 변환
-            String birthString = String.format("%d/%02d/%02d", year, month, day);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-            java.util.Date birthDate = dateFormat.parse(birthString);
-            java.sql.Date sqlBirthDate = new java.sql.Date(birthDate.getTime());
+            // 생년월일 유효성 검사
+            if (!isValidDate(year, month, day)) {
+                model.addAttribute("error", "올바른 생년월일을 입력하세요.");
+                return "signup/signup";
+            }
+
+            // 생년월일을 Date 객체로 변환
+            Date birthDate = parseDate(year, month, day);
 
             // User 객체 생성
             User user = new User();
@@ -66,7 +76,14 @@ public class SignupController {
             user.setGender(gender);
             user.setEmail(email);
             user.setName(name);
-            user.setBirth(sqlBirthDate);
+            user.setBirth(birthDate);
+
+            // 프로필 사진 설정
+            if (profilePicture == null || profilePicture.isEmpty()) {
+                user.setProfilePicture(DEFAULT_PROFILE_PICTURE);
+            } else {
+                user.setProfilePicture(profilePicture);
+            }
 
             userService.saveUser(user);
 
@@ -82,5 +99,21 @@ public class SignupController {
             // 에러가 발생한 경우 회원가입 페이지를 다시 표시
             return "signup/signup";
         }
+    }
+
+    // 생년월일 유효성 검사 메서드
+    private boolean isValidDate(int year, int month, int day) {
+        // 간단한 유효성 검사 예시
+        if (year < 1900 || year > 2024 || month < 1 || month > 12 || day < 1 || day > 31) {
+            return false;
+        }
+        return true;
+    }
+
+    // 생년월일을 Date 객체로 변환하는 메서드
+    private Date parseDate(int year, int month, int day) throws ParseException {
+        String birthString = String.format("%d/%02d/%02d", year, month, day);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        return dateFormat.parse(birthString);
     }
 }

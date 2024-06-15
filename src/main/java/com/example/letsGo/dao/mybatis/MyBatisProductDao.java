@@ -30,7 +30,9 @@ public class MyBatisProductDao implements ProductDao {
     public List<Product> searchProductByName(String productName) {
         return productMapper.searchProductByName(productName);
     }
-
+    public List<Product> searchProductByType(int productType) {
+        return productMapper.searchProductByType(productType);
+    }
     public List<Product> getProductByProductType(int productType) {
         return productMapper.getProductByProductType(productType);
     }
