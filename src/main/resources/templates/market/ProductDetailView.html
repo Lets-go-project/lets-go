@@ -16,7 +16,6 @@
             padding: 10px;
             position: fixed;
             right: 10px;
-            bottom: 10px;
             z-index: 1000;
         }
 
@@ -32,16 +31,7 @@
     </style>
 </head>
 <body>
-    <div th:replace="~{common/navibar :: body}"></div>
-
-    <!-- 장바구니 -->
-    <form class="cart">
-        <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
-            <i class="bi-cart-fill me-1"></i>
-            장바구니
-            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-    </form>
+    <div th:insert="~{common/navibar :: body}"></div>
 
     <!-- Header -->
     <header class="py-5" style="background-color: #0E46A3">
@@ -70,10 +60,10 @@
                         상품 설명
                     </p>
                     <div class="d-flex">
-                        <label for="inputQuantity">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
-                        </label>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button"
+                                onclick="swal('로그인 후 이용해 주세요.', 'ㅎㅎ','info')"
+                                th:if="${session.user == null}">
                             <i class="bi-cart-fill me-1"></i>
                             장바구니 담기
                         </button>
@@ -103,8 +93,11 @@
                         </div>
                         <!-- Product actions -->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${relatedProduct.productId})}">View options</a>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <a class="btn btn-outline-dark mt-auto"
+                                   th:href="@{/market/detail(productId=${relatedProduct.productId}, productType=${product.productType})}">
+                                    상세 페이지
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -117,5 +110,6 @@
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 </html>

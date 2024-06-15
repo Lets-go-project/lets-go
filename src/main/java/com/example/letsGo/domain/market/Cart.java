@@ -14,7 +14,6 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Cart implements Serializable {
-
     @Id
     private Long cartId;
     private int amount;

@@ -62,19 +62,8 @@ public class Product extends BaseEntity implements Serializable {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "sales_manager_id", nullable = false)
+//    private SalesManager salesManager;
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productId=" + productId +
-                ", productType=" + productType +
-                ", productName='" + productName + '\'' +
-                ", productPrice=" + productPrice +
-                ", productSellPrice=" + productSellPrice +
-                ", productState=" + productState +
-                ", productDescription='" + productDescription + '\'' +
-                ", productImg='" + productImg + '\'' +
-                ", productSemiImg='" + productSemiImg + '\'' +
-                '}';
-    }
 }
