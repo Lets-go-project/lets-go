@@ -23,7 +23,6 @@ public class Record extends BaseEntity {
     private String swimName;
     private String swimTime;
     private float swimDist;
-    private int isPublic;
     private int userId;
 
     public int getRecordId() {
@@ -56,14 +55,6 @@ public class Record extends BaseEntity {
 
     public void setSwimDist(float swimDist) {
         this.swimDist = swimDist;
-    }
-
-    public int getIsPublic() {
-        return isPublic;
-    }
-
-    public void setIsPublic(int isPublic) {
-        this.isPublic = isPublic;
     }
 
     public int getUserId() {

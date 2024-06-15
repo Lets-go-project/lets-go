@@ -1,13 +1,12 @@
 package com.example.letsGo.dao.mybatis.mapper;
 
-import com.example.letsGo.domain.market.Product;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface ChallengeMapper {
-    List<Record> getPubAllRecords(Integer isPublic);
+    List<Record> getPubAllRecords();
     List<Record> getPubWomanRecords(int isPublic, int gender);
     List<Record> getPubManRecords(int isPublic, int gender);
 

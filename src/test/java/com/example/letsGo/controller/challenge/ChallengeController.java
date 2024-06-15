@@ -19,8 +19,8 @@ public class ChallengeController {
     }
 
     @GetMapping("/all")
-    public String getPubAllRecords(int isPublic) {
-        challengeService.getPubAllRecords(isPublic);
+    public String getPubAllRecords() {
+        challengeService.getPubAllRecords();
         return "challenge/challenge";
     }
 
@@ -31,8 +31,8 @@ public class ChallengeController {
     }
 
     @GetMapping
-    public String getPubManRecords(int ispublic, int gender) {
-        challengeService.getPubManRecords(ispublic, gender);
+    public String getPubManRecords( int gender) {
+        challengeService.getPubManRecords(gender);
         return "challenge/man";
     }
 

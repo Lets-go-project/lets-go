@@ -15,13 +15,13 @@ public class RecordController {
     @GetMapping
     public String getRecord(int recordId) {
         recordService.getRecord(recordId);
-        return "record/view";
+        return "/record/view";
     }
 
     @GetMapping
     public String getAllRecords(int userId) {
         recordService.getAllRecords(userId);
-        return "record/view";
+        return "/record/view";
     }
 
     @PostMapping

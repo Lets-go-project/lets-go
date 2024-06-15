@@ -16,18 +16,18 @@ public class ChallengeServiceImpl implements ChallengeService {
     }
 
     @Override
-    public List<Record> getPubAllRecords(int isPublic) {
-        return challengeDao.getPubAllRecords(isPublic);
+    public List<Record> getPubAllRecords() {
+        return challengeDao.getPubAllRecords();
     }
 
     @Override
-    public List<Record> getPubWomanRecords(int isPublic, int gender) {
-        return challengeDao.getPubWomanRecords(isPublic, gender);
+    public List<Record> getPubWomanRecords(int gender) {
+        return challengeDao.getPubWomanRecords(gender);
     }
 
     @Override
-    public List<Record> getPubManRecords(int isPublic, int gender) {
-        return challengeDao.getPubManRecords(isPublic, gender);
+    public List<Record> getPubManRecords(int gender) {
+        return challengeDao.getPubManRecords(gender);
     }
 
     @Override

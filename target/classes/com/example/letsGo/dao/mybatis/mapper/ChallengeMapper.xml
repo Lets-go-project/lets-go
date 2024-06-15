@@ -5,6 +5,7 @@
 
   <cache />
     <select id="getPubAllRecords" resultType="String">
-
+        select userId, r.swimDist, r.swimTime, u.gender
+        from Record r join User u on r.userId = u.userId
     </select>
 </mapper>

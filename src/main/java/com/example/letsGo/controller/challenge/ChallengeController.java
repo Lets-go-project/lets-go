@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -19,19 +20,19 @@ public class ChallengeController {
     }
 
     @GetMapping("/all")
-    public String getPubAllRecords(int isPublic) {
-        challengeService.getPubAllRecords(isPublic);
+    public String getPubAllRecords() {
+        challengeService.getPubAllRecords();
         return "challenge/challenge";
     }
 
 //    @GetMapping
-//    public String getPubWomanRecords(int isPublic, int gender) {
+//    public String getPubWomanRecords(int gender) {
 //        challengeService.getPubWomanRecords(isPublic, gender);
 //        return "challenge/woman";
 //    }
 //
 //    @GetMapping
-//    public String getPubManRecords(int isPublic, int gender) {
+//    public String getPubManRecords(int gender) {
 //        challengeService.getPubManRecords(isPublic, gender);
 //        return "challenge/man";
 //    }

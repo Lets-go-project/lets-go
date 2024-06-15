@@ -15,29 +15,31 @@ public class MyBatisRecordDao implements RecordDao {
         this.recordMapper = recordMapper;
     }
 
-
     @Override
     public Record addRecord(Record record) {
-        return null;
+        recordMapper.addRecord(record);
+        return record;
     }
 
     @Override
     public Record updateRecord(int recordId, Record record) {
-        return null;
+        recordMapper.updateRecord(recordId, record);
+        return record;
     }
 
     @Override
     public void deleteRecord(int recordId) {
-
+        recordMapper.deleteRecord(recordId);
     }
 
     @Override
     public Record getRecord(int recordId) {
-        return null;
+        return recordMapper.getRecord(recordId);
     }
 
     @Override
     public List<Record> getAllRecords(int userId) {
-        return null;
+        return recordMapper.getAllRecords(userId);
     }
+
 }
