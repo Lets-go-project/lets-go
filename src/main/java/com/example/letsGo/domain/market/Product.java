@@ -62,8 +62,7 @@ public class Product extends BaseEntity implements Serializable {
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "sales_manager_id", nullable = false)
-//    private SalesManager salesManager;
-
+    @ManyToOne
+    @JoinColumn(name = "sales_manager_id")
+    private SalesManager salesManager;
 }

@@ -61,12 +61,20 @@
                     </p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
-                        <button class="btn btn-outline-dark flex-shrink-0" type="button"
-                                onclick="swal('로그인 후 이용해 주세요.', 'ㅎㅎ','info')"
-                                th:if="${session.user == null}">
-                            <i class="bi-cart-fill me-1"></i>
-                            장바구니 담기
-                        </button>
+                        <button class="btn btn-outline-dark flex-shrink-0"
+                            type="button"
+                            th:if="${session.user == null}"
+                            onclick="alert('로그인 후 이용해 주세요.')">
+                        <i class="bi-cart-fill me-1"></i>
+                        장바구니 담기
+                    </button>
+
+                    <button class="btn btn-outline-dark flex-shrink-0"
+                            type="button"
+                            th:unless="${session.user == null}">
+                        <i class="bi-cart-fill me-1"></i>
+                        장바구니 담기
+                    </button>
                     </div>
                 </div>
             </div>
