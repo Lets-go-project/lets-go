@@ -43,4 +43,3 @@ public interface UserService {
 
     void deleteProfilePicture(User user);
 }
-

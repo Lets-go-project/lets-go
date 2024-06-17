@@ -7,18 +7,18 @@
 
   <!-- 장바구니 조회 -->
   <select id="getAllCarts" resultType="Cart">
-    SELECT * FROM Cart;
+    SELECT * FROM Cart
   </select>
 
   <!-- 장바구니 상품 추가 -->
   <insert id="addToCart" parameterType="Cart">
-    INSERT INTO Cart (cartId, productId)
-    VALUES (#{cartId}, #{productId});
+    INSERT INTO Cart (CART_ID, PRODUCT_ID)
+    VALUES (#{cartId}, #{productId})
   </insert>
 
   <!-- 장바구니 선택/전체 삭제 -->
   <delete id="removeFromCart" parameterType="int">
-    DELETE FROM Cart WHERE cartId = #{cartId};
+    DELETE FROM Cart WHERE CART_ID = #{cartId}
   </delete>
 
 </mapper>

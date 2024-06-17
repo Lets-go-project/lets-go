@@ -23,7 +23,6 @@ public class SignupController {
 
     @PostMapping("/signup")
     public String register(
-                           @RequestParam("userid") int userid,
                            @RequestParam("name") String name,
                            @RequestParam("gender") String gender,
                            @RequestParam("id") String id,
@@ -72,7 +71,6 @@ public class SignupController {
 
             // User 객체 생성
             User user = User.builder()
-                    .userId(userid)
                     .address(address)
                     .id(id)
                     .password(password)
