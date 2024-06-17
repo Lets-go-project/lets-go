@@ -7,57 +7,55 @@
 
   <select id="getAllProducts" resultType="com.example.letsGo.domain.market.Product">
     SELECT
-      PRODUCTID,
-      PRODUCTNAME,
-      PRODUCTIMG,
-      PRODUCTPRICE,
-      PRODUCTSELLPRICE
+      PRODUCT_ID,
+      PRODUCT_NAME,
+      PRODUCT_TYPE,
+      PRODUCT_IMG,
+      PRODUCT_PRICE,
+      PRODUCT_SELL_PRICE
     FROM PRODUCT
   </select>
 
   <select id="getDetailProduct" resultType="com.example.letsGo.domain.market.Product">
     SELECT
-      PRODUCTID,
-      PRODUCTNAME,
-      PRODUCTTYPE as type,
-      PRODUCTIMG,
-      PRODUCTPRICE,
-      PRODUCTSELLPRICE
+      *
     FROM PRODUCT
-    WHERE PRODUCTID = #{productId}
+    WHERE PRODUCT_ID = #{productId}
   </select>
 
   <select id="getProductByProductType" resultType="com.example.letsGo.domain.market.Product">
     SELECT
-      PRODUCTID,
-      PRODUCTNAME,
-      PRODUCTTYPE,
-      PRODUCTIMG,
-      PRODUCTPRICE,
-      PRODUCTSELLPRICE
+      PRODUCT_ID,
+      PRODUCT_NAME,
+      PRODUCT_TYPE,
+      PRODUCT_IMG,
+      PRODUCT_PRICE,
+      PRODUCT_SELL_PRICE
     FROM PRODUCT
-    WHERE PRODUCTTYPE = #{productType}
+    WHERE PRODUCT_TYPE = #{productType}
   </select>
 
   <select id="searchProductByName" resultType="Product">
     SELECT
-      PRODUCTID,
-      PRODUCTNAME,
-      PRODUCTIMG,
-      PRODUCTPRICE,
-      PRODUCTSELLPRICE
+      PRODUCT_ID,
+      PRODUCT_NAME,
+      PRODUCT_TYPE,
+      PRODUCT_IMG,
+      PRODUCT_PRICE,
+      PRODUCT_SELL_PRICE
     FROM PRODUCT
-    WHERE lower(PRODUCTNAME) LIKE '%' || LOWER(#{keyword}) || '%'
+    WHERE lower(PRODUCT_NAME) LIKE '%' || LOWER(#{keyword}) || '%'
   </select>
 
   <select id="searchProductByType" resultType="Product">
     SELECT
-      PRODUCTID,
-      PRODUCTNAME,
-      PRODUCTIMG,
-      PRODUCTPRICE,
-      PRODUCTSELLPRICE
+      PRODUCT_ID,
+      PRODUCT_NAME,
+      PRODUCT_TYPE,
+      PRODUCT_IMG,
+      PRODUCT_PRICE,
+      PRODUCT_SELL_PRICE
     FROM PRODUCT
-    WHERE PRODUCTTYPE = #{productType}
+    WHERE PRODUCT_TYPE = #{productType}
   </select>
 </mapper>

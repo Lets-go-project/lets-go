@@ -23,18 +23,18 @@ public class SignupController {
 
     @PostMapping("/signup")
     public String register(
-            @RequestParam("userid") int userid,
-            @RequestParam("name") String name,
-            @RequestParam("gender") String gender,
-            @RequestParam("id") String id,
-            @RequestParam("password") String password,
-            @RequestParam("email") String email,
-            @RequestParam("address") String address,
-            @RequestParam("year") int year,
-            @RequestParam("month") int month,
-            @RequestParam("day") int day,
-            @RequestParam(value = "profilepicture", required = false) String profilePicture,
-            Model model) {
+                           @RequestParam("userid") int userid,
+                           @RequestParam("name") String name,
+                           @RequestParam("gender") String gender,
+                           @RequestParam("id") String id,
+                           @RequestParam("password") String password,
+                           @RequestParam("email") String email,
+                           @RequestParam("address") String address,
+                           @RequestParam("year") int year,
+                           @RequestParam("month") int month,
+                           @RequestParam("day") int day,
+                           @RequestParam(value = "profilepicture", required = false) String profilePicture,
+                           Model model) {
 
         try {
             // 아이디 중복 확인

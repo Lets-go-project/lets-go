@@ -2,7 +2,8 @@ package com.example.letsGo.controller.market;
 
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.service.MarketService;
+import com.example.letsGo.repository.ProductRepository;
+import com.example.letsGo.service.ProductService;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
@@ -10,7 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -18,11 +18,14 @@ import java.util.List;
 @RequestMapping("/market")
 @Log4j2
 public class ProductController {
-    private final MarketService marketService;
+    private final ProductService productService;
 
     @Autowired
-    public ProductController(MarketService marketService) {
-        this.marketService = marketService;
+    public ProductRepository productRepository;
+
+    @Autowired
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @PostConstruct
@@ -33,8 +36,8 @@ public class ProductController {
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
-        List<Product> productList = marketService.getAllProducts();
-        model.addAttribute("productList", productList);
+          List<Product> productList = productRepository.findAll();
+          model.addAttribute("productList", productList);
 
         return "market/Market";
     }
@@ -48,7 +51,7 @@ public class ProductController {
             return "redirect:/login";
         }
 
-        marketService.scrapProduct(productId, currentUser.getUserId());
+//        marketService.scrapProduct(productId, currentUser.getUserId());
 
         return "redirect:/market";
     }
