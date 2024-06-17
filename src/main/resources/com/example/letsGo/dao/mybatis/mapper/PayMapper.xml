@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.letsGo.dao.mybatis.mapper.PayMapper">
+
+  <cache />
+
+  <!-- 모든 주문 조회 <!--&ndash;&gt;
+  <select id="getAllPays" resultType="Pay">
+    SELECT * FROM Pay;
+  </select>
+
+  &lt;!&ndash; 특정 사용자의 주문 조회 &ndash;&gt;
+  <select id="getOrdersByUserId" resultType="Pay" parameterType="int">
+    SELECT * FROM Pay WHERE userId = #{userId};
+  </select>
+
+  &lt;!&ndash; 주문 추가 &ndash;&gt;
+  <insert id="addOrder" parameterType="Pay">
+    INSERT INTO Pay (orderId, userId, orderDate, ADDRESS, ADDRESS2, PHONE, REQ, PRODUCTCOUNT)
+    VALUES (#{orderId}, #{userId}, #{orderDate}, #{address}, #{address2}, #{phone}, #{req}, #{PRODUCTCOUNT});
+  </insert>
+
+  &lt;!&ndash; 주문 정보 업데이트 &ndash;&gt;
+  <update id="updateOrder" parameterType="Order">
+    UPDATE Pay
+    SET ? = #{?}
+    WHERE orderId = #{orderId};
+  </update>
+
+  &lt;!&ndash; 주문 취소 &ndash;&gt;
+  <delete id="cancelOrder" parameterType="int">
+    DELETE FROM Pay WHERE pay = #{pay};
+  </delete>
+-->
+</mapper>

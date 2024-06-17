@@ -3,7 +3,7 @@ package com.example.letsGo.controller.market;
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.service.MarketService;
+import com.example.letsGo.service.ProductService;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
@@ -18,14 +18,14 @@ import java.util.List;
 @RequestMapping("/market")
 @Log4j2
 public class ProductController {
-    private final MarketService marketService;
+    private final ProductService productService;
 
     @Autowired
     public ProductRepository productRepository;
 
     @Autowired
-    public ProductController(MarketService marketService) {
-        this.marketService = marketService;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @PostConstruct
@@ -51,7 +51,7 @@ public class ProductController {
             return "redirect:/login";
         }
 
-        marketService.scrapProduct(productId, currentUser.getUserId());
+//        marketService.scrapProduct(productId, currentUser.getUserId());
 
         return "redirect:/market";
     }
