@@ -16,7 +16,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Table(name = "SalesManager")
+@Table(name = "SALES_MANAGER")
 public class SalesManager extends BaseEntity implements Serializable {
 
     @Id
@@ -32,6 +32,6 @@ public class SalesManager extends BaseEntity implements Serializable {
     private List<Product> products = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
+//    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User member;
 }

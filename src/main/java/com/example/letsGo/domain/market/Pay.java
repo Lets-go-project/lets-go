@@ -15,9 +15,9 @@ import java.util.Date;
 @Table
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Order implements Serializable {
+public class Pay implements Serializable {
     @Id
-    private Long orderId;
+    private Long payId;
     private Double price;
     private Date date;
     private int status;

@@ -22,7 +22,9 @@ public class SignupController {
     private static final String DEFAULT_PROFILE_PICTURE = "/images/default-profile.jpeg";
 
     @PostMapping("/signup")
-    public String register(@RequestParam("name") String name,
+    public String register(
+                           @RequestParam("userid") int userid,
+                           @RequestParam("name") String name,
                            @RequestParam("gender") String gender,
                            @RequestParam("id") String id,
                            @RequestParam("password") String password,
@@ -70,6 +72,7 @@ public class SignupController {
 
             // User 객체 생성
             User user = User.builder()
+                    .userId(userid)
                     .address(address)
                     .id(id)
                     .password(password)
