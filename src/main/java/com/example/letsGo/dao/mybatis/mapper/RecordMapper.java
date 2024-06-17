@@ -1,5 +1,6 @@
 package com.example.letsGo.dao.mybatis.mapper;
 
+import com.example.letsGo.domain.record.Record;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

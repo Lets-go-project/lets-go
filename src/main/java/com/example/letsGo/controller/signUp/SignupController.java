@@ -22,17 +22,19 @@ public class SignupController {
     private static final String DEFAULT_PROFILE_PICTURE = "/images/default-profile.jpeg";
 
     @PostMapping("/signup")
-    public String register(@RequestParam("name") String name,
-                           @RequestParam("gender") String gender,
-                           @RequestParam("id") String id,
-                           @RequestParam("password") String password,
-                           @RequestParam("email") String email,
-                           @RequestParam("address") String address,
-                           @RequestParam("year") int year,
-                           @RequestParam("month") int month,
-                           @RequestParam("day") int day,
-                           @RequestParam(value = "profilepicture", required = false) String profilePicture,
-                           Model model) {
+    public String register(
+            @RequestParam("userid") int userid,
+            @RequestParam("name") String name,
+            @RequestParam("gender") String gender,
+            @RequestParam("id") String id,
+            @RequestParam("password") String password,
+            @RequestParam("email") String email,
+            @RequestParam("address") String address,
+            @RequestParam("year") int year,
+            @RequestParam("month") int month,
+            @RequestParam("day") int day,
+            @RequestParam(value = "profilepicture", required = false) String profilePicture,
+            Model model) {
 
         try {
             // 아이디 중복 확인
@@ -69,14 +71,16 @@ public class SignupController {
             Date birthDate = parseDate(year, month, day);
 
             // User 객체 생성
-            User user = new User();
-            user.setAddress(address);
-            user.setId(id);
-            user.setPassword(password);
-            user.setGender(gender);
-            user.setEmail(email);
-            user.setName(name);
-            user.setBirth(birthDate);
+            User user = User.builder()
+                    .userId(userid)
+                    .address(address)
+                    .id(id)
+                    .password(password)
+                    .gender(gender)
+                    .email(email)
+                    .name(name)
+                    .birth(birthDate)
+                    .build();
 
             // 프로필 사진 설정
             if (profilePicture == null || profilePicture.isEmpty()) {

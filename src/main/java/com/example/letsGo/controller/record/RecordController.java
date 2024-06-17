@@ -1,42 +1,63 @@
 package com.example.letsGo.controller.record;
 
+import com.example.letsGo.domain.member.User;
+import com.example.letsGo.domain.record.Record;
 import com.example.letsGo.service.RecordService;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@Slf4j
+@Controller
+@RequestMapping("/record")
 public class RecordController {
     private final RecordService recordService;
 
+    @Autowired
     public RecordController(RecordService recordService) {
         this.recordService = recordService;
     }
 
-    @GetMapping
+    @GetMapping("/view")
     public String getRecord(int recordId) {
         recordService.getRecord(recordId);
-        return "/record/view";
+        return "/record/viewRecord";
     }
 
-    @GetMapping
-    public String getAllRecords(int userId) {
-        recordService.getAllRecords(userId);
-        return "/record/view";
+    @GetMapping("/all")
+    public String getAllRecords(HttpSession session, Model model) {
+        log.info("-----들어엄");
+
+        User user = (User) session.getAttribute("user");
+        int userId = user.getUserId();
+
+        List<Record> records = recordService.getAllRecords(userId);
+
+        log.info("-----edfef");
+
+        model.addAttribute("records", records);
+
+        return "record/viewRecord";
     }
 
-    @PostMapping
+    @PostMapping("/add")
     public String addRecord(Record rec) {
         recordService.addRecord(rec);
         return "redirect:/record/add";
     }
 
-    @PostMapping
+    @PostMapping("/update")
     public String updateRecord(int recordId, Record rec) {
         recordService.updateRecord(recordId, rec);
         return "redirect:/record/update";
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete")
     public String deleteRecord(int recordId) {
         recordService.deleteRecord(recordId);
         return "redirect:/record/delete";

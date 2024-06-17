@@ -20,20 +20,20 @@ public class ChallengeController {
     }
 
     @GetMapping("/all")
-    public String getPubAllRecords() {
-        challengeService.getPubAllRecords();
+    public String getAllRecords() {
+        challengeService.getAllRecords();
         return "challenge/challenge";
     }
 
 //    @GetMapping
-//    public String getPubWomanRecords(int gender) {
-//        challengeService.getPubWomanRecords(isPublic, gender);
+//    public String getWomanRecords(int gender) {
+//        challengeService.getWomanRecords(isPublic, gender);
 //        return "challenge/woman";
 //    }
 //
 //    @GetMapping
-//    public String getPubManRecords(int gender) {
-//        challengeService.getPubManRecords(isPublic, gender);
+//    public String getManRecords(int gender) {
+//        challengeService.getManRecords(isPublic, gender);
 //        return "challenge/man";
 //    }
 //

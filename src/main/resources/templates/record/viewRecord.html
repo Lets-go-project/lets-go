@@ -68,7 +68,7 @@
     </style>
 </head>
 <body>
-<div th:insert="common/Navibar :: navibar"></div>
+<div th:replace="~{common/Navibar :: body}"></div>
 
 <!-- Header-->
 <header class="py-5" style="background-color: #BDCDD6">
@@ -115,19 +115,21 @@
 
     <div class="list">
         <div class="records" th:each="record : ${records}">
-            <a th:href="'/record/update/' + ${record.id}">
+            <a th:href="'/record/update/' + ${record.recordId}">
                 <table>
                     <tr>
-                        <td th:text="${record.date}">날짜</td>
-                        <td th:text="${record.poolName}">수영장 이름</td>
-                        <td th:text="${record.time}">시간</td>
-                        <td th:text="${record.distance}">거리</td>
+                        <td th:text="${record.swimDate}">날짜</td>
+                        <td th:text="${record.swimName}">수영장 이름</td>
+                        <td th:text="${record.swimTime}">시간</td>
+                        <td th:text="${record.swimDist}">거리</td>
                     </tr>
                 </table>
             </a>
         </div>
         <div class="underline"></div>
+
     </div>
+
 </div>
 
 <!-- Footer-->

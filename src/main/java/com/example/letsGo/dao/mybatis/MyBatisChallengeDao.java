@@ -18,17 +18,17 @@ public class MyBatisChallengeDao implements ChallengeDao {
     }
 
     @Override
-    public List<Record> getPubAllRecords() {
-        return challengeMapper.getPubAllRecords();
+    public List<Record> getAllRecords() {
+        return challengeMapper.getAllRecords();
     }
 
     @Override
-    public List<Record> getPubWomanRecords(int gender) {
+    public List<Record> getWomanRecords(int gender) {
         return null;
     }
 
     @Override
-    public List<Record> getPubManRecords(int gender) {
+    public List<Record> getManRecords(int gender) {
         return null;
     }
 

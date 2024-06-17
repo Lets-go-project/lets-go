@@ -33,6 +33,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         진희: 기록 & 챌린지
         */
         registry.addViewController("/record/view").setViewName("/record/viewRecord");
+        registry.addViewController("/record/all").setViewName("/record/viewRecord");
         registry.addViewController("/record/add").setViewName("/record/addRecord");
         registry.addViewController("/record/update").setViewName("/record/updateRecord");
         registry.addViewController("/record/delete").setViewName("/record/updateRecord");

@@ -1,5 +1,6 @@
 package com.example.letsGo.service;
 
+import com.example.letsGo.domain.record.Record;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

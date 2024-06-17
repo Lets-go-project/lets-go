@@ -3,9 +3,9 @@ package com.example.letsGo.dao;
 import java.util.List;
 
 public interface ChallengeDao {
-    List<Record> getPubAllRecords();
-    List<Record> getPubWomanRecords(int gender);
-    List<Record> getPubManRecords(int gender);
+    List<Record> getAllRecords();
+    List<Record> getWomanRecords(int gender);
+    List<Record> getManRecords(int gender);
 
     void filteringRecords(List<Record> records, int filter);
     void sortRecordsByDist(List<Record> records);

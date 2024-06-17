@@ -4,38 +4,129 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 로그아웃 구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/user/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/SalesManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/SalesManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/search.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/default-profile.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/RegisterProductForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="6bc359c0-a29b-411c-8227-e925e81e125b" name="Changes" comment="[FEAT] 마이페이지 프로필 임시">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordForm.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/MarketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/memberinfo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ChallengeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ChallengeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/RecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/RecordDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisRecordDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/RecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/RecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/Navibar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/Navibar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/record/viewRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/record/viewRecord.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/LetsGoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/WebMvcConfigTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/admin/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/challenge/ChallengeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/market/OrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/market/ProductDetailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/market/SearchProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/myPage/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/pool/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/record/RecordController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/record/RecordForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/salesManager/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/signIn/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/controller/signUp/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/CartDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/ChallengeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/ManagerDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/OrderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/ProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/RecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisCartDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisManagerDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisOrderDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/MyBatisRecordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/CartMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/ManagerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/OrderMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/dao/mybatis/mapper/RecordMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/common/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/enums/ProductsType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/market/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/market/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/market/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/member/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/domain/record/Record.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/ChallengeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/ChallengeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/MarketService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/MarketServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/RecordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/letsGo/service/RecordServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/mapper/CartMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/mapper/ChallengeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/mapper/OrderMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/mapper/ProductMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/db/oracle/jdbc.oracle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/static/css/cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/static/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/static/js/market.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/static/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/templates/thyme/common/Navibar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/templates/thyme/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/templates/thyme/market/Market.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/challenge/challenge.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/common/Navibar.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/Cart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/Market.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/MarketProductRegistration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/Order.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/ProductDetailView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/market/SearchView.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/record/addRecord.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/record/deleteRecord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/record/updateRecord.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/webapp/WEB-INF/jsp/record/viewRecord.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/wepbapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/challenge/ChallengeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/challenge/ChallengeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/SearchProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/SearchProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/record/RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/record/RecordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/ChallengeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/ChallengeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/RecordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/RecordDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisProductDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisProductDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisRecordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisRecordDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/RecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/RecordMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/member/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/member/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/market/Market.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,29 +179,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LetsGoApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript 디버그.index.html.executor": "Coverage",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging challenge",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/kyxxx/Desktop/kyu/2024/4-1/web-code-secure-final/final-project-20210783",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true",
-    "애플리케이션.LetsGoApplication.executor": "Debug"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LetsGoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript 디버그.index.html.executor&quot;: &quot;Coverage&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;challenge&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kyxxx/Desktop/kyu/2024/4-1/web-code-secure-final/final-project-20210783&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;애플리케이션.LetsGoApplication.executor&quot;: &quot;Debug&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hanminjoo\IdeaProjects\1letsgo\src\main\resources\static\images" />
@@ -143,6 +234,14 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -157,6 +256,7 @@
       <workItem from="1717751622695" duration="4663000" />
       <workItem from="1717769770157" duration="1782000" />
       <workItem from="1717775078488" duration="6727000" />
+      <workItem from="1718619024202" duration="9502000" />
     </task>
     <task id="LOCAL-00001" summary="[MOVE] 프로젝트 파일 및 코드 이동&#10;로그인, 회원가입, 마이페이지 컨트롤러 이동">
       <option name="closed" value="true" />

@@ -1,5 +1,6 @@
 package com.example.letsGo.dao;
 
+import com.example.letsGo.domain.record.Record;
 import jakarta.persistence.Entity;
 import lombok.*;
 
