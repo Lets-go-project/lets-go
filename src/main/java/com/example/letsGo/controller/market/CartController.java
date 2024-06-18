@@ -76,7 +76,6 @@ public class CartController {
 
         return "market/Cart";
     }
-
     @DeleteMapping("/remove/{cartId}")
     public String removeFromCart(@PathVariable Long cartId) {
         productRepository.deleteById(cartId);
