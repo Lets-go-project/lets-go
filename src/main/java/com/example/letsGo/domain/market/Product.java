@@ -40,10 +40,10 @@ public class Product extends BaseEntity implements Serializable {
     private String productDescription;
 
     @Column(name = "product_price", nullable = false)
-    private Double productPrice;
+    private int productPrice;
 
     @Column(name = "product_sell_price", nullable = false)
-    private Double productSellPrice;
+    private int productSellPrice;
 
     @Column(name = "product_img")
     private String productImg;
