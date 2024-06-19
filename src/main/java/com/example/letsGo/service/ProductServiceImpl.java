@@ -4,10 +4,12 @@ package com.example.letsGo.service;
 import com.example.letsGo.dao.mybatis.MyBatisCartDao;
 import com.example.letsGo.dao.mybatis.MyBatisManagerDao;
 import com.example.letsGo.dao.mybatis.MyBatisProductDao;
-import com.example.letsGo.domain.market.Cart;
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Cart;
+import com.example.letsGo.domain.product.Product;
 //import com.example.letsGo.repository.ProductRepository;
+import com.example.letsGo.domain.product.ProductScrap;
 import com.example.letsGo.repository.ProductRepository;
+import com.example.letsGo.repository.ProductScrapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ProductScrapRepository productScrapRepository;
+
 
     @Autowired
     public ProductServiceImpl(MyBatisProductDao productDao, MyBatisManagerDao managerDao, MyBatisCartDao cartDao) {

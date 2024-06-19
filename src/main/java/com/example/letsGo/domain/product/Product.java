@@ -1,10 +1,10 @@
-package com.example.letsGo.domain.market;
+package com.example.letsGo.domain.product;
 
 import com.example.letsGo.domain.common.BaseEntity;
+import com.example.letsGo.domain.salesmanager.SalesManager;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
-import org.springframework.context.annotation.Primary;
 
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -40,10 +40,10 @@ public class Product extends BaseEntity implements Serializable {
     private String productDescription;
 
     @Column(name = "product_price", nullable = false)
-    private Double productPrice;
+    private int productPrice;
 
     @Column(name = "product_sell_price", nullable = false)
-    private Double productSellPrice;
+    private int productSellPrice;
 
     @Column(name = "product_img")
     private String productImg;
@@ -65,4 +65,7 @@ public class Product extends BaseEntity implements Serializable {
     @ManyToOne
     @JoinColumn(name = "sales_manager_id")
     private SalesManager salesManager;
+
+//    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private ProductScrap productScrap;
 }

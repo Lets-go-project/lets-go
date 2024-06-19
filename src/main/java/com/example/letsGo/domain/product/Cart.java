@@ -1,4 +1,4 @@
-package com.example.letsGo.domain.market;
+package com.example.letsGo.domain.product;
 
 import com.example.letsGo.domain.member.User;
 import jakarta.persistence.*;
@@ -25,6 +25,7 @@ public class Cart implements Serializable {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    @Column(name = "user_id")
-    private int userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "USER_ID")
+    private User user;
 }

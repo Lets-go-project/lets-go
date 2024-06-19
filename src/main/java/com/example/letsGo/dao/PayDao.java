@@ -1,7 +1,7 @@
 package com.example.letsGo.dao;
 
 
-import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.domain.product.Pay;
 
 import java.util.List;
 

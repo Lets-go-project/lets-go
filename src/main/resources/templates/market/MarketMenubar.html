@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- 메뉴바 -->
-    <aside class="side-bar">
-      <section class="side-bar__icon-box">
+<!-- 메뉴바 -->
+<aside class="side-bar">
+    <section class="side-bar__icon-box">
         <section class="side-bar__icon-1">
-          <div></div>
-          <div></div>
-          <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
-      </section>
-      <ul>
+    </section>
+    <ul>
         <li>
-          <a th:href="@{/market/cart}"><i class="fa-solid fa-cat"></i>cart</a>
+            <div th:if="${session == null}">
+                <div style="text-align: center; margin-top: 50px;">
+                    <p>로그인이 필요한 서비스입니다.</p>
+                    <a th:href="@{/signin/signin}" class="btn btn-primary">로그인 하러 가기</a>
+                </div>
+            </div>
+            <a th:href="@{/cart/list}" th:if="${session != null}"><i class="fa-solid fa-cat"></i>cart</a>
         </li>
         <li>
-          <a href="#">wish</a>
-<!--          <ul>-->
-<!--            <li><a href="#">text1</a></li>-->
-<!--            <li><a href="#">text2</a></li>-->
-<!--          </ul>-->
+            <a href="#">wish</a>
         </li>
         <li>
-          <a th:href="@{/market/manager}">go to manager's page</a>
+            <a th:href="@{/market/manager}">go to manager's page</a>
         </li>
-      </ul>
-    </aside>
+    </ul>
+</aside>
 </body>
 </html>

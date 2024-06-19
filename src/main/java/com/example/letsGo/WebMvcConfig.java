@@ -10,7 +10,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")
-                .addResourceLocations("file:/C:/uploads/");
+                .addResourceLocations("file:/C:/uploads/"); // file:/ 또는 file:/// 으로 시작해야 함
     }
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -24,11 +24,14 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/market/searchByType").setViewName("market/Market");
         registry.addViewController("/market/detail").setViewName("market/ProductDetailView");
         registry.addViewController("/market/cart").setViewName("market/Cart");
-        registry.addViewController("/market/order").setViewName("market/Order");
+        registry.addViewController("/cart/view").setViewName("market/Cart");
+        registry.addViewController("/cart/list").setViewName("market/Cart");
+        registry.addViewController("/cart/add").setViewName("market/Cart");
+        registry.addViewController("/cart/remove/{cartId}").setViewName("market/Cart");
+        registry.addViewController("/market/order").setViewName("market/Pay");
 
         registry.addViewController("/market/manager").setViewName("salesManager/SalesManager");
         registry.addViewController("/market/manager/add").setViewName("salesManager/SalesManager");
-
         /*
         진희: 기록 & 챌린지
         */

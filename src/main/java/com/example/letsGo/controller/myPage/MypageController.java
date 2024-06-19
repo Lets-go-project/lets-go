@@ -2,9 +2,7 @@ package com.example.letsGo.controller.myPage;
 
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.service.UserService;
-import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.HttpSession;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,9 +23,6 @@ import java.nio.file.Paths;
 @RequestMapping("/mypage")
 public class MypageController {
     private final UserService userService;
-
-    @Value("${upload.path}")
-    private String uploadPath;
 
     public MypageController(UserService userService) {
         this.userService = userService;
@@ -82,7 +77,6 @@ public class MypageController {
         }
     }
 
-
     @GetMapping("/poolscrap")
     public String getPoolScrap(HttpSession session, Model model) {
         // 세션에서 사용자 정보 가져오기
@@ -113,64 +107,5 @@ public class MypageController {
         }
     }
 
-    @PostMapping("/uploadProfilePicture")
-    public String handleFileUpload(HttpSession session,
-                                   @RequestParam("file") MultipartFile file,
-                                   RedirectAttributes redirectAttributes) {
-        User user = (User) session.getAttribute("user");
-        if (user != null) {
-            if (file.isEmpty()) {
-                redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
-                return "redirect:/mypage/memberinfo";
-            }
-            try {
-                // 실제 서버의 업로드 디렉토리를 설정합니다.
-                String uploadDir = "C:/uploads/";
-                File dir = new File(uploadDir);
-                if (!dir.exists()) {
-                    dir.mkdirs(); // 디렉토리가 없으면 생성합니다.
-                }
 
-                String filename = System.currentTimeMillis() + "_" + file.getOriginalFilename();
-                Path path = Paths.get(uploadDir + filename);
-                Files.write(path, file.getBytes());
-
-                user.setProfilePicture("/uploads/" + filename);
-                userService.updateUser(user);
-
-                redirectAttributes.addFlashAttribute("message",
-                        "You successfully uploaded '" + filename + "'");
-            } catch (IOException e) {
-                e.printStackTrace();
-                redirectAttributes.addFlashAttribute("message", "Failed to upload file");
-            }
-            return "redirect:/mypage/memberinfo";
-        } else {
-            return "redirect:/signin";
-        }
-    }
-    @PostMapping("/deleteProfilePicture")
-    public String deleteProfilePicture(HttpSession session,
-                                       RedirectAttributes redirectAttributes) {
-        User user = (User) session.getAttribute("user");
-        if (user != null) {
-            String fileName = user.getProfilePicture();
-            if (fileName != null && !fileName.isEmpty()) {
-                Path path = Paths.get(uploadPath + fileName);
-                try {
-                    Files.deleteIfExists(path);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    redirectAttributes.addFlashAttribute("message", "Failed to delete profile picture");
-                    return "redirect:/mypage";
-                }
-                user.setProfilePicture(null);
-                userService.updateUser(user);
-                redirectAttributes.addFlashAttribute("message", "Profile picture deleted successfully");
-            }
-            return "redirect:/mypage";
-        } else {
-            return "redirect:/signin";
-        }
-    }
 }

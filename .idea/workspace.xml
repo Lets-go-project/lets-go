@@ -25,15 +25,27 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sales-manager" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2huSxdDgeYXZZWP7rXR8wRxJxrG" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2i6jluRkbBeOhn2VCsSEK8mtKZi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -62,6 +74,27 @@
     &quot;DatabaseDriversLRU&quot;: [
       &quot;oracle&quot;
     ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LetsGoApplication.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LetsGoApplication.executor": "Run",
+    "git-widget-placeholder": "market",
+    "git-widget-placeholder": "ysBranch",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/소시개/newSwim/lets-go",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.LetsGoApplication.executor": "Run"
   }
 }</component>
   <component name="RecentsManager">
@@ -72,7 +105,12 @@
   <component name="RunManager" selected="Application.LetsGoApplication">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
+}]]></component>
+  <component name="RunManager">
+    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="letsGo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,17 +134,9 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="[DEL] 오류로 인한 workspace.xml 삭제">
-      <option name="closed" value="true" />
-      <created>1718441624929</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718441624929</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제" />
-      <created>1718442723756</created>
+      <changelist id="10228099-54e9-4a33-808c-3c0d765ee6aa" name="Changes" comment="" />
+      <created>1718818079971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718442723756</updated>
@@ -168,10 +198,20 @@
       </map>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[DEL] 오류로 인한 workspace.xml 삭제" />
-    <MESSAGE value="[FEAT] market 장바구니 버튼 클릭 시 구현" />
-    <MESSAGE value="[ADD] 판매 매니저 매핑" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] 판매 매니저 매핑" />
+    <MESSAGE value="[ADD] search.html에 지도 검색기능 추가, admin파일 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] search.html에 지도 검색기능 추가, admin파일 생성" />
   </component>
 </project>
