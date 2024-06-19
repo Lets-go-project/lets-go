@@ -31,8 +31,14 @@ public class CartController {
     private CartRepository cartRepository;
 
     @GetMapping("/list")
-    public String getAllCarts(Model model) {
-        List<Cart> cartList = cartRepository.findAll();
+    public String getAllCarts(Model model, HttpSession session) {
+        User sessionUser = (User) session.getAttribute("user");
+        if (sessionUser == null) {
+            return "redirect:/signin";
+        }
+
+        User user = userRepository.findById(sessionUser.getUser_id()).orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다"));
+        List<Cart> cartList = cartRepository.findByUser(user);
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
@@ -64,6 +70,26 @@ public class CartController {
             cartList = new ArrayList<>();
         }
 
+        // 장바구니에 같은 product가 있는지 확인
+        Optional<Cart> existingCartItem = cartList.stream()
+                    .filter(cartItem -> cartItem.getProduct().getProductId().equals(productId))
+                    .findFirst();
+
+            if (existingCartItem.isPresent()) {
+                Cart cartItem = existingCartItem.get();
+                Cart.builder().amount(cartItem.getAmount() + 1).build();
+
+                cartRepository.save(cartItem);
+            } else {
+                Cart newCartItem = Cart.builder()
+                        .product(product)
+                        .amount(amount)
+                        .user(user)
+                        .build();
+                cartRepository.save(newCartItem);
+            }
+
+        // 총 합계 계산
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
@@ -83,11 +109,13 @@ public class CartController {
 
         cartRepository.save(cart);
 
-        return "market/Cart";
+        return "redirect:/cart/list";
     }
-    @DeleteMapping("/remove/{cartId}")
+
+//    @DeleteMapping("/remove/{cartId}")
+    @PostMapping("/remove/{cartId}")
     public String removeFromCart(@PathVariable Long cartId) {
-        productRepository.deleteById(cartId);
-        return "redirect:/cart";
+        cartRepository.deleteById(cartId);
+        return "redirect:/cart/list";
     }
 }
