@@ -35,8 +35,8 @@ public class ProductController {
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
-          List<Product> productList = productRepository.findAll();
-          model.addAttribute("productList", productList);
+        List<Product> productList = productRepository.findAll();
+        model.addAttribute("productList", productList);
 
         return "market/Market";
     }
@@ -57,15 +57,15 @@ public class ProductController {
                 .orElseThrow(() -> new RuntimeException("상품을 찾을 수 없습니다: " + productId));
 
         ProductScrap existingScrap = productScrapRepository.findByUserAndProduct(user, product);
-            if (existingScrap != null) {
-                redirectAttributes.addFlashAttribute("message", "이미 스크랩한 상품입니다.");
-                return "redirect:/market/list";
-            }
+        if (existingScrap != null) {
+            redirectAttributes.addFlashAttribute("message", "이미 스크랩한 상품입니다.");
+            return "redirect:/market/list";
+        }
 
         ProductScrap productScrap = ProductScrap.builder()
-                    .user(user)
-                    .product(product)
-                    .build();
+                .user(user)
+                .product(product)
+                .build();
 
         productScrapRepository.save(productScrap);
         redirectAttributes.addFlashAttribute("message", "상품을 스크랩하였습니다.");

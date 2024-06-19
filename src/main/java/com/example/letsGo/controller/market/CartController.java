@@ -32,12 +32,12 @@ public class CartController {
 
     @GetMapping("/list")
     public String getAllCarts(Model model) {
-         List<Cart> cartList = cartRepository.findAll();
+        List<Cart> cartList = cartRepository.findAll();
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
-                                        .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
-                                        .sum();
+                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
+                    .sum();
         }
         model.addAttribute("cartList", cartList);
         model.addAttribute("totalProductPrice", totalProductPrice);
@@ -67,8 +67,8 @@ public class CartController {
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
-                                        .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
-                                        .sum();
+                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
+                    .sum();
         }
         log.info("totalProductPrice: "+totalProductPrice);
 
