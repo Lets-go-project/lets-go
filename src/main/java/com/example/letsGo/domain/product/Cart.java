@@ -1,4 +1,4 @@
-package com.example.letsGo.domain.market;
+package com.example.letsGo.domain.product;
 
 import com.example.letsGo.domain.member.User;
 import jakarta.persistence.*;

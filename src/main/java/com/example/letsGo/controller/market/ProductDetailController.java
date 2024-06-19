@@ -1,8 +1,7 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.service.ProductService;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,19 +18,14 @@ import java.util.stream.Collectors;
 @RequestMapping("/market")
 @Log4j2
 public class ProductDetailController {
-    private final ProductService productService;
-
     @Autowired
     public ProductRepository productRepository;
 
-    @Autowired
-    public ProductDetailController(ProductService productService) {
-        this.productService = productService;
-    }
     @PostConstruct
     public void init() {
-        log.info("productDetailController: 호출 성공~");
+        log.info("[KYU] productDetailController: 호출 성공~");
     }
+
     @GetMapping("/detail")
     public String getDetailProduct(
             @RequestParam("productId") Long productId,

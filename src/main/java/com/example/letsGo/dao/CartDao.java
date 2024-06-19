@@ -1,6 +1,6 @@
 package com.example.letsGo.dao;
 
-import com.example.letsGo.domain.market.Cart;
+import com.example.letsGo.domain.product.Cart;
 
 import java.util.List;
 

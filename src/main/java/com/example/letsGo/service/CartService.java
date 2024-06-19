@@ -1,6 +1,6 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.market.Cart;
+import com.example.letsGo.domain.product.Cart;
 import com.example.letsGo.repository.CartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

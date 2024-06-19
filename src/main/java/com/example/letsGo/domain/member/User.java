@@ -1,13 +1,11 @@
 package com.example.letsGo.domain.member;
 
-import com.example.letsGo.domain.market.Cart;
-import com.example.letsGo.domain.market.SalesManager;
+import com.example.letsGo.domain.salesmanager.SalesManager;
 import jakarta.persistence.*;
 import lombok.*;
 
 import javax.validation.constraints.Email;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Getter
@@ -43,5 +41,4 @@ public class User {
 
     @OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private SalesManager salesManager;
-
 }

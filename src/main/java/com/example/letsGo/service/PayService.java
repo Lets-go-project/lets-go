@@ -1,6 +1,6 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.domain.product.Pay;
 
 import java.util.List;
 
