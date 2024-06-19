@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[ADD] market 상품 등록 구현 중...">
+    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[MOD] 에러 해결 중...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" afterDir="false" />
@@ -109,7 +109,7 @@
       <workItem from="1718692580314" duration="315000" />
       <workItem from="1718779715370" duration="13408000" />
       <workItem from="1718456698439" duration="2625000" />
-      <workItem from="1718809675442" duration="6627000" />
+      <workItem from="1718809675442" duration="6985000" />
     </task>
     <task id="LOCAL-00002" summary="[FEAT] 여자 남자 프로필사진 구현">
       <option name="closed" value="true" />
@@ -185,6 +185,7 @@
     <MESSAGE value="[ADD] 장바구니 삭제 구현 중..." />
     <MESSAGE value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
     <MESSAGE value="[FEAT] 여자 남자 프로필사진 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 여자 남자 프로필사진 구현" />
+    <MESSAGE value="[MOD] 에러 해결 중..." />
+    <option name="LAST_COMMIT_MESSAGE" value="[MOD] 에러 해결 중..." />
   </component>
 </project>
