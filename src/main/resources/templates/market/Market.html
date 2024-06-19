@@ -72,9 +72,19 @@
                             <span th:text="${product.productSellPrice}">원</span>
                         </div>
                         <!-- Product actions -->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${product.productId}, productType=${product.productType})}">상세 페이지</a>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between align-items-center">
+                            <!-- 스크랩 버튼 -->
+                            <form th:action="@{/market/scrap(productId=${product.productId})}" method="post">
+                                <button type="submit" class="btn btn-outline-danger">
+                                    <i class="bi bi-heart"></i> 스크랩
+                                </button>
+                            </form>
+                            <!-- 상세 페이지 버튼 -->
+                            <a class="btn btn-outline-dark" th:href="@{/market/detail(productId=${product.productId}, productType=${product.productType})}">상세 페이지</a>
                         </div>
+<!--                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${product.productId}, productType=${product.productType})}">상세 페이지</a>
+                        </div>-->
                     </div>
                 </div>
             </div>

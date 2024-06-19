@@ -4,6 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[FEAT] 여자 남자 프로필사진 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
@@ -22,8 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,6 +50,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.LetsGoApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -52,6 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.LetsGoApplication.executor": "Run",
+    "git-widget-placeholder": "market",
     "git-widget-placeholder": "my-page",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -62,6 +69,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.letsGo.service" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
@@ -89,6 +101,15 @@
       <updated>1718442723756</updated>
       <workItem from="1718442731566" duration="2094000" />
       <workItem from="1718454589333" duration="1957000" />
+      <workItem from="1718456698439" duration="5543000" />
+      <workItem from="1718469265999" duration="969000" />
+      <workItem from="1718501556320" duration="8253000" />
+      <workItem from="1718582661001" duration="2412000" />
+      <workItem from="1718620460561" duration="9780000" />
+      <workItem from="1718630627881" duration="1522000" />
+      <workItem from="1718633718201" duration="8944000" />
+      <workItem from="1718692580314" duration="315000" />
+      <workItem from="1718779715370" duration="13408000" />
       <workItem from="1718456698439" duration="2625000" />
     </task>
     <task id="LOCAL-00002" summary="[FEAT] 여자 남자 프로필사진 구현">
@@ -107,6 +128,39 @@
       <option name="project" value="LOCAL" />
       <updated>1718789295696</updated>
     </task>
+    <task id="LOCAL-00004" summary="[ADD] market 장바구니 구현 중...">
+      <option name="closed" value="true" />
+      <created>1718628565348</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718628565348</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[FEAT] 유저별로 다른 장바구니 기능 구현">
+      <option name="closed" value="true" />
+      <created>1718640969616</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718640969616</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[ADD] 장바구니 삭제 구현 중...">
+      <option name="closed" value="true" />
+      <created>1718692861630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718692861630</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현">
+      <option name="closed" value="true" />
+      <created>1718792674900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718792674900</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
@@ -115,6 +169,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[DEL] 오류로 인한 workspace.xml 삭제" />
+    <MESSAGE value="[FEAT] market 장바구니 버튼 클릭 시 구현" />
+    <MESSAGE value="[ADD] 판매 매니저 매핑" />
+    <MESSAGE value="[ADD] market 장바구니 구현 중..." />
+    <MESSAGE value="[FEAT] 유저별로 다른 장바구니 기능 구현" />
+    <MESSAGE value="[ADD] 장바구니 삭제 구현 중..." />
+    <MESSAGE value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
     <MESSAGE value="[FEAT] 여자 남자 프로필사진 구현" />
     <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 여자 남자 프로필사진 구현" />
   </component>

@@ -1,6 +1,6 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.domain.product.Pay;
 import com.example.letsGo.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

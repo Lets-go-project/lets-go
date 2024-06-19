@@ -2,7 +2,7 @@ package com.example.letsGo.dao.mybatis;
 
 import com.example.letsGo.dao.PayDao;
 import com.example.letsGo.dao.mybatis.mapper.OrderMapper;
-import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.domain.product.Pay;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.example.letsGo.dao.mybatis;
 
 import com.example.letsGo.dao.ProductDao;
 import com.example.letsGo.dao.mybatis.mapper.ProductMapper;
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Product;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
