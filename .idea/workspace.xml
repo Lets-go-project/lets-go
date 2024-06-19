@@ -4,51 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[ADD] 장바구니 삭제 구현 중...">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/ProductScrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductScrapRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/SalesManagerRepository.java" afterDir="false" />
+    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/SearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ManagerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/PayDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/PayDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisCartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisCartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisManagerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisManagerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisPayDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisPayDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/CartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/CartMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ManagerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ManagerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Pay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/market/SalesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/salesmanager/SalesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/PayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/PayRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/PayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/PayService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/PayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/PayServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/RegisterProductForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/RegisterProductForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +98,7 @@
       <workItem from="1718630627881" duration="1522000" />
       <workItem from="1718633718201" duration="8944000" />
       <workItem from="1718692580314" duration="315000" />
-      <workItem from="1718779715370" duration="12366000" />
+      <workItem from="1718779715370" duration="13408000" />
     </task>
     <task id="LOCAL-00002" summary="[FEAT] market 장바구니 버튼 클릭 시 구현">
       <option name="closed" value="true" />
@@ -182,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718692861630</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현">
+      <option name="closed" value="true" />
+      <created>1718792674900</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718792674900</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +172,7 @@
     <MESSAGE value="[ADD] market 장바구니 구현 중..." />
     <MESSAGE value="[FEAT] 유저별로 다른 장바구니 기능 구현" />
     <MESSAGE value="[ADD] 장바구니 삭제 구현 중..." />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] 장바구니 삭제 구현 중..." />
+    <MESSAGE value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
   </component>
 </project>
