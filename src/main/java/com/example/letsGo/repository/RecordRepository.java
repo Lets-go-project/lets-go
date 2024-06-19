@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface RecordRepository extends JpaRepository<Record, Long> {
-//    Record findByRecordId(Long recordId);
+    Record findByRecordId(Long recordId);
     List<Record> findByUserId(int userId);
 
     // 정렬 함수들

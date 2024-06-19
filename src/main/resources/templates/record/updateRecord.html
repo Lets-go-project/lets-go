@@ -37,9 +37,11 @@
         }
     </style>
     <script>
-        function deleteRecord() {
-            window.alert('기록이 삭제되었습니다.');
-            window.location.href = "/record/view";
+        function deleteRecord(recordId) {
+            if (confirm('기록을 삭제하시겠습니까?')) {
+                window.alert('기록이 삭제되었습니다.');
+                window.location.href = "/record/delete/" + recordId;
+            }
         }
     </script>
 </head>
@@ -63,28 +65,28 @@
     &nbsp;
     &nbsp;
     <div id="form">
-        <form action="/record/view" method="get">
+        <form th:action="@{/record/update/{recordId}(recordId=${record.recordId})}" method="post">
             <table>
                 <tr>
                     <th>날짜</th>
-                    <td><input type="date" max="2050-12-31" min="2000-01-01"></td>
+                    <td><input type="date" max="2050-12-31" min="2000-01-01" name="swimDate" th:value="${record.swimDate}"></td>
                 </tr>
                 <tr>
                     <th>수영장 이름</th>
-                    <td><input type="text"></td>
+                    <td><input type="text" name="swimName" th:value="${record.swimName}"></td>
                 </tr>
                 <tr>
                     <th>시간</th>
-                    <td><input type="time"></td>
+                    <td><input type="text" name="swimTime" size="1" th:value="${record.swimTime}">분</td>
                 </tr>
                 <tr>
                     <th>거리</th>
-                    <td><input type="text" size="1">KM</td>
+                    <td><input type="text" name="swimDist" size="1" th:value="${record.swimDist}">KM</td>
                 </tr>
                 <tr>
                     <td colspan="2" class="sub">
-                        <input type="submit" value="기록 수정" onclick="return alert('기록이 수정되었습니다.')" class="btn">
-                        <input type="button" value="기록 삭제" onclick="deleteRecord()" class="btn">
+                        <input type="submit" value="기록 수정" th:onclick="return alert('기록이 수정되었습니다.')" class="btn">
+                        <input type="button" value="기록 삭제" th:onclick="deleteRecord([[${record.recordId}]])" class="btn">
                     </td>
                 </tr>
             </table>

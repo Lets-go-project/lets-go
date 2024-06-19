@@ -125,7 +125,7 @@
 
     <div class="list">
         <div class="records" th:each="record : ${records}" th:if="${record != null}">
-            <a th:href="'/record/moveUpdate'">
+            <a th:href="@{/record/moveUpdate/{recordId}(recordId=${record.recordId})}">
                 <table class="center_text">
                     <tr>
                         <td width="30%" th:text="${record.swimDate}"></td>

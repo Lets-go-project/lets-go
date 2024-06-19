@@ -5,64 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[ADD] 판매 매니저 매핑">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/challenge/ChallengeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/record/RecordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ChallengeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/ChallengeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/RecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/RecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/MyBatisRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/dao/mybatis/mapper/RecordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/record/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/ChallengeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/RecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/RecordRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/RecordRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/RecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/challenge/challenge.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/challenge/challenge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/record/addRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/record/addRecord.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/record/updateRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/record/updateRecord.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/record/viewRecord.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/record/viewRecord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/challenge/ChallengeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/challenge/ChallengeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductDetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductDetailController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/SearchProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/SearchProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/record/RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/record/RecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/ChallengeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/ChallengeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/OrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/RecordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/RecordDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisChallengeDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisOrderDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisRecordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/MyBatisRecordDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ChallengeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/OrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/OrderMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/RecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/dao/mybatis/mapper/RecordMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Product$ProductBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/market/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/member/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/member/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record$RecordBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record$RecordBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/domain/record/Record.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/ChallengeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/MarketServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/OrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/OrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/service/RecordServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/market/Market.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/market/ProductDetailView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +122,7 @@
       <workItem from="1718620460561" duration="7520000" />
       <workItem from="1718678739787" duration="19109000" />
       <workItem from="1718780617079" duration="7243000" />
-      <workItem from="1718787914749" duration="5929000" />
+      <workItem from="1718787914749" duration="14727000" />
     </task>
     <task id="LOCAL-00002" summary="[FEAT] market 장바구니 버튼 클릭 시 구현">
       <option name="closed" value="true" />

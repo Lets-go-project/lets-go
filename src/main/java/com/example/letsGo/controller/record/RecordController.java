@@ -23,16 +23,12 @@ public class RecordController {
     private final RecordService recordService;
 
     @Autowired
-    UserRepository userRepository;
-
-    @Autowired
     RecordRepository recordRepository;
 
     @Autowired
     public RecordController(RecordService recordService) {
         this.recordService = recordService;
     }
-
 
     @GetMapping("/all")
     public String getAllRecords(HttpSession session, Model model) {
@@ -47,7 +43,7 @@ public class RecordController {
 //        int userId = user.getUserId();
         int userId = 1;
 
-        List<Record> records = recordService.getAllRecords(userId);
+        List<Record> records = recordRepository.findByUserId(userId);
 
         log.info("-----edfef");
 
@@ -138,27 +134,44 @@ public class RecordController {
         return "redirect:/record/all";
     }
 
-    @GetMapping("/moveUpdate")
-    public String showUpdateForm(HttpSession session) { //기록 수정 페이지로 이동
+    @GetMapping("/moveUpdate/{recordId}")
+    public String showUpdateForm(HttpSession session, Model model,
+                                 @PathVariable Long recordId) {
+        log.info("moveUpdate 들어옴");
+
         User user = (User) session.getAttribute("user");
         if (user == null) {
             return "redirect:/signin/signin";
         }
-
         log.info("[moveUpdate] user ID: {}", user.getId());
+
+        Record record = recordRepository.findByRecordId(recordId);
+        model.addAttribute("record", record);
+        log.info("[moveUpdate] recordId: {}", recordId);
+        log.info("[moveUpdate] record: {}", record);
+
         return "record/updateRecord";
     }
 
     @PostMapping("/update/{recordId}")
-    public String updateRecord(@PathVariable Long recordId, @ModelAttribute Record rec, Model model) {
-        recordService.updateRecord(recordId, rec);
-        model.addAttribute("record", rec);
+    public String updateRecord(@PathVariable Long recordId,
+                               @RequestParam("swimDate") String swimDate,
+                               @RequestParam("swimName") String swimName,
+                               @RequestParam("swimDist") float swimDist,
+                               @RequestParam("swimTime") float swimTime) {
+        Record record = recordRepository.findByRecordId(recordId);
+        record.setSwimDate(swimDate);
+        record.setSwimName(swimName);
+        record.setSwimDist(swimDist);
+        record.setSwimTime(swimTime);
+        recordRepository.save(record);
+        log.info("[Update] record: {}", record);
         return "redirect:/record/all";
     }
 
     @GetMapping("/delete/{recordId}")
     public String deleteRecord(@PathVariable Long recordId) {
-        recordService.deleteRecord(recordId);
-        return "redirect:/record/all"; // 기록 삭제 후 전체 기록 페이지로 리다이렉트
+        recordRepository.deleteById(recordId);
+        return "redirect:/record/all";
     }
 }
