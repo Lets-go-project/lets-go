@@ -1,4 +1,4 @@
-package com.example.letsGo.domain.market;
+package com.example.letsGo.domain.product;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -15,9 +15,10 @@ import java.util.Date;
 @Table
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Order implements Serializable {
+public class Pay implements Serializable {
     @Id
-    private Long orderId;
+    private Long payId;
+
     private Double price;
     private Date date;
     private int status;

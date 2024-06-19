@@ -1,13 +1,13 @@
-package com.example.letsGo.domain.market;
+package com.example.letsGo.domain.salesmanager;
 
 import com.example.letsGo.domain.common.BaseEntity;
 import com.example.letsGo.domain.member.User;
+import com.example.letsGo.domain.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-@Table(name = "SalesManager")
+@Table(name = "SALES_MANAGER")
 public class SalesManager extends BaseEntity implements Serializable {
 
     @Id
@@ -32,6 +32,6 @@ public class SalesManager extends BaseEntity implements Serializable {
     private List<Product> products = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "userId", referencedColumnName = "userId")
+    @JoinColumn(name = "user_id", referencedColumnName = "userId")
     private User member;
 }

@@ -1,8 +1,8 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.service.MarketService;
+import com.example.letsGo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,14 +15,14 @@ import java.util.List;
 @Controller
 @RequestMapping("/market")
 public class SearchProductController {
-    private final MarketService marketService;
+    private final ProductService productService;
 
     @Autowired
     public ProductRepository productRepository;
 
     @Autowired
-    public SearchProductController(MarketService marketService) {
-        this.marketService = marketService;
+    public SearchProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @GetMapping("/searchByName")

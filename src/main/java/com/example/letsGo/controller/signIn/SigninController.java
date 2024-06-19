@@ -2,6 +2,7 @@ package com.example.letsGo.controller.signIn;
 
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.service.UserService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
+@Log4j2
 public class SigninController {
 
     @Autowired
@@ -22,6 +24,8 @@ public class SigninController {
         if (user != null && user.getPassword().equals(password)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            /*System.out.println("")*/
+            session.setAttribute("profilePicture", user.getProfilePicture());
             return "redirect:/letsGo";  // 로그인 성공 시 리다이렉트할 경로
         } else {
             model.addAttribute("error", "Invalid ID or password");

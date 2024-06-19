@@ -26,9 +26,13 @@ public class UserService {
 package com.example.letsGo.service;
 
 import com.example.letsGo.domain.member.User;
-import org.springframework.web.multipart.MultipartFile;
+import com.example.letsGo.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface UserService {
+
     void saveUser(User user);
 
     User getUserById(String id);
@@ -39,8 +43,5 @@ public interface UserService {
 
     void updateUser(User user);
 
-    String uploadProfilePicture(User user, MultipartFile profilePictureFile);
-
-    void deleteProfilePicture(User user);
 }
 

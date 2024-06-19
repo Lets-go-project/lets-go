@@ -1,11 +1,13 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.market.Cart;
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Cart;
+import com.example.letsGo.domain.product.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface MarketService {
+@Service
+public interface ProductService {
     List<Product> getAllProducts(); // 모든 상품 조회
     Product getDetailProduct(int productId); // 상품 상세페이지 조회
     List<Product> searchProductByName(String productName); // 상품 검색

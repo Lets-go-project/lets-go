@@ -1,10 +1,7 @@
 package com.example.letsGo.domain.record;
 
 import com.example.letsGo.domain.common.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -12,6 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@Table(name = "Record")
 public class Record extends BaseEntity {
 
     @Setter
@@ -23,12 +21,7 @@ public class Record extends BaseEntity {
     private String swimName;
     private String swimTime;
     private float swimDist;
-    private int isPublic;
     private int userId;
-
-    public int getRecordId() {
-        return recordId;
-    }
 
     public void setRecordId(int recordId) {
         this.recordId = recordId;
@@ -56,14 +49,6 @@ public class Record extends BaseEntity {
 
     public void setSwimDist(float swimDist) {
         this.swimDist = swimDist;
-    }
-
-    public int getIsPublic() {
-        return isPublic;
-    }
-
-    public void setIsPublic(int isPublic) {
-        this.isPublic = isPublic;
     }
 
     public int getUserId() {

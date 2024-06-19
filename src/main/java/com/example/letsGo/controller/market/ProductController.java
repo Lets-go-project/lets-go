@@ -1,38 +1,37 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.domain.member.User;
+import com.example.letsGo.domain.product.ProductScrap;
 import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.service.MarketService;
-import jakarta.annotation.PostConstruct;
+import com.example.letsGo.repository.ProductScrapRepository;
+import com.example.letsGo.repository.UserRepository;
+import com.example.letsGo.service.ProductService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
 @Controller
+@SessionAttributes("user")
 @RequestMapping("/market")
 @Log4j2
 public class ProductController {
-    private final MarketService marketService;
+    @Autowired
+    private ProductScrapRepository productScrapRepository;
 
     @Autowired
     public ProductRepository productRepository;
 
     @Autowired
-    public ProductController(MarketService marketService) {
-        this.marketService = marketService;
-    }
-
-    @PostConstruct
-    public void init() {
-        log.info("ProductController initialized.");
-        log.info("ProductController: 호출 성공~");
-    }
+    public UserRepository userRepository;
 
     @GetMapping("/list")
     public String getAllProduct(Model model) {
@@ -44,15 +43,33 @@ public class ProductController {
 
     // 물품 스크랩
     @PostMapping("/scrap")
-    public String scrapProduct(@RequestParam("productId") int productId, HttpSession session) {
-        User currentUser = (User) session.getAttribute("user");
+    public String scrapProduct(@RequestParam("productId") Long productId,
+                               HttpSession session,
+                               RedirectAttributes redirectAttributes) {
+        User user = (User) session.getAttribute("user");
+        user = userRepository.findById(user.getId());
 
-        if (currentUser == null) {
+        if (user == null) {
             return "redirect:/login";
         }
 
-        marketService.scrapProduct(productId, currentUser.getUserId());
+        Product product = productRepository.findById(productId)
+                .orElseThrow(() -> new RuntimeException("상품을 찾을 수 없습니다: " + productId));
 
-        return "redirect:/market";
+        ProductScrap existingScrap = productScrapRepository.findByUserAndProduct(user, product);
+            if (existingScrap != null) {
+                redirectAttributes.addFlashAttribute("message", "이미 스크랩한 상품입니다.");
+                return "redirect:/market/list";
+            }
+
+        ProductScrap productScrap = ProductScrap.builder()
+                    .user(user)
+                    .product(product)
+                    .build();
+
+        productScrapRepository.save(productScrap);
+        redirectAttributes.addFlashAttribute("message", "상품을 스크랩하였습니다.");
+
+        return "redirect:/market/list";
     }
 }
