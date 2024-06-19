@@ -4,20 +4,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/admin/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/AdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/adminView.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +19,27 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sales-manager" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2huSxdDgeYXZZWP7rXR8wRxJxrG" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2i6jluRkbBeOhn2VCsSEK8mtKZi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.LetsGoApplication.executor": "Run",
+    "git-widget-placeholder": "market",
     "git-widget-placeholder": "ysBranch",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/소시개/newSwim/lets-go",
@@ -69,15 +68,11 @@
     "애플리케이션.LetsGoApplication.executor": "Run"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.letsGo.controller.admin" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="LetsGoApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
+    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="letsGo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -85,25 +80,11 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="[DEL] 오류로 인한 workspace.xml 삭제">
-      <option name="closed" value="true" />
-      <created>1718441624929</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718441624929</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제" />
-      <created>1718442723756</created>
+      <changelist id="10228099-54e9-4a33-808c-3c0d765ee6aa" name="Changes" comment="" />
+      <created>1718818079971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1718442723756</updated>
-      <workItem from="1718442731566" duration="2094000" />
-      <workItem from="1718454589333" duration="1957000" />
-      <workItem from="1718456698439" duration="2625000" />
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

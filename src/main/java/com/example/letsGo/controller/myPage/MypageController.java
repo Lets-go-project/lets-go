@@ -24,9 +24,6 @@ import java.nio.file.Paths;
 public class MypageController {
     private final UserService userService;
 
-    @Value("${upload.path}")
-    private String uploadPath;
-
     public MypageController(UserService userService) {
         this.userService = userService;
     }

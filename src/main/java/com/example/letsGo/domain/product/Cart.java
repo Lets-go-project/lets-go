@@ -26,6 +26,6 @@ public class Cart implements Serializable {
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "USER_ID")
     private User user;
 }
