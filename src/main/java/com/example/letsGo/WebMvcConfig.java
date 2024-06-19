@@ -10,7 +10,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")
-                .addResourceLocations("file:/C:/uploads/");
+                .addResourceLocations("file:/C:/uploads/"); // file:/ 또는 file:/// 으로 시작해야 함
     }
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {

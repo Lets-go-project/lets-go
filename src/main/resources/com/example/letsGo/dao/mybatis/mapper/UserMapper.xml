@@ -23,11 +23,15 @@
         ) WHERE ROWNUM = 1
     </select>
 
-    <!--<update id="update" parameterType="com.example.letsGo.domain.member.User">
-        UPDATE Member SET NAME = #{name}, ADDRESS = #{address} WHERE ID = #{id}
-    </update>-->
-
     <update id="update" parameterType="com.example.letsGo.domain.member.User">
-        UPDATE Member SET NAME = #{name}, ADDRESS = #{address}, PROFILE_PICTURE = #{profilePicture, jdbcType=VARCHAR} WHERE ID = #{id}
+    UPDATE Member SET NAME = #{name}, ADDRESS = #{address} WHERE ID = #{id}
+    </update>
+
+    <update id="updateProfilePicture" parameterType="com.example.letsGo.domain.member.User">
+        UPDATE Member SET profile_picture = #{profilePicture} WHERE id = #{id}
+    </update>
+
+    <update id="deleteProfilePicture" parameterType="string">
+        UPDATE Member SET profile_picture = NULL WHERE id = #{id}
     </update>
 </mapper>
