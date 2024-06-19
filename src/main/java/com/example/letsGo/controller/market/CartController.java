@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/cart")
@@ -31,12 +32,12 @@ public class CartController {
 
     @GetMapping("/list")
     public String getAllCarts(Model model) {
-         List<Cart> cartList = cartRepository.findAll();
+        List<Cart> cartList = cartRepository.findAll();
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
-                                        .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
-                                        .sum();
+                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
+                    .sum();
         }
         model.addAttribute("cartList", cartList);
         model.addAttribute("totalProductPrice", totalProductPrice);
@@ -51,7 +52,7 @@ public class CartController {
             Model model)
     {
         User sessionUser = (User) session.getAttribute("user");
-        Optional<User> user = userRepository.findById(sessionUser.getId());
+        User user = userRepository.findById(sessionUser.getId());
         Product product = productRepository.findByProductId(productId);
         if (product == null) {
             throw new RuntimeException("제품을 찾을 수 없습니다");
@@ -66,8 +67,8 @@ public class CartController {
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
-                                        .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
-                                        .sum();
+                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
+                    .sum();
         }
         log.info("totalProductPrice: "+totalProductPrice);
 
@@ -77,7 +78,7 @@ public class CartController {
         Cart cart = Cart.builder()
                 .product(product)
                 .amount(amount)
-                /*.user(user)*/
+                .user(user)
                 .build();
 
         cartRepository.save(cart);
