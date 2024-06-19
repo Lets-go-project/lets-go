@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -16,22 +16,22 @@
             padding: 10px;
             position: fixed;
             right: 10px;
-            bottom: 10px;
             z-index: 1000;
+        }
+
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        * {
+            font-family: 'Pretendard-Regular', 'sans-serif';
         }
     </style>
 </head>
 <body>
-    <div th:replace="~{common/navibar :: body}"></div>
-
-    <!-- 장바구니 -->
-    <form class="cart">
-        <button class="cart-detail btn btn-outline-dark bg-white" type="submit">
-            <i class="bi-cart-fill me-1"></i>
-            장바구니
-            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-    </form>
+    <div th:insert="~{common/navibar :: body}"></div>
 
     <!-- Header -->
     <header class="py-5" style="background-color: #0E46A3">
@@ -50,23 +50,34 @@
                     <img class="card-img-top mb-5 mb-md-0" th:src="@{${product.productImg}}" alt="Product Image" style="width: 300px; height: 300px; object-fit: cover;" />
                 </div>
                 <div class="col-md-6">
-    <!--                <div class="small mb-1" th:text="'SKU: ' + ${product.sku}">SKU: BST-498</div>-->
+<!--                    <div class="small mb-1" th:text="'갯수: ' + ${product.productQuantity}"></div>-->
                     <h1 class="display-7 fw-bolder" th:text="${product.productName}">Shop item template</h1>
                     <div class="fs-5 mb-5">
                         <span class="text-decoration-line-through" th:text="${product.productPrice}">$45.00</span>
                         <span th:text="${product.productSellPrice}">$40.00</span>
                     </div>
                     <p class="lead" th:text="${product.productDescription}">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi.
-                        Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam
-                        minima ea iste laborum vero?
+                        상품 설명
                     </p>
                     <div class="d-flex">
-                        <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
-                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <input class="form-control text-center me-3" name="amount" type="number" value="1" style="max-width: 3rem" />
+                        <button class="btn btn-outline-dark flex-shrink-0"
+                            type="button"
+                            th:if="${session.user == null}"
+                            onclick="alert('로그인 후 이용해 주세요.')">
                             <i class="bi-cart-fill me-1"></i>
-                            Add to cart
+                            장바구니 담기
                         </button>
+
+                        <form action="/cart/add" method="post">
+                            <input type="hidden" name="productId" th:value="${product.productId}"/>
+                            <button class="btn btn-outline-dark flex-shrink-0"
+                                    type="submit"
+                                    th:unless="${session.user == null}">
+                                <i class="bi-cart-fill me-1"></i>
+                                장바구니 담기
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -93,8 +104,11 @@
                         </div>
                         <!-- Product actions -->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" th:href="@{/market/detail(productId=${relatedProduct.productId})}">View options</a>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <a class="btn btn-outline-dark mt-auto"
+                                   th:href="@{/market/detail(productId=${relatedProduct.productId}, productType=${product.productType})}">
+                                    상세 페이지
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -107,5 +121,6 @@
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 </html>

@@ -26,7 +26,7 @@
             text-align: right;
         }
         .btn {
-            background-color: #6BBBD8;
+            background-color: #0E46A3;
             color: white;
         }
         div.list {
@@ -59,6 +59,9 @@
             border-bottom: solid 1px;
             height: 35px;
         }
+        .center_text {
+            text-align: center;
+        }
         .underline {
             margin: auto;
             width: 90%;
@@ -66,12 +69,19 @@
             height: 7px;
         }
     </style>
+
+    <script>
+        function selectFilter() {
+            location.href="/record/view";
+        }
+    </script>
 </head>
 <body>
 <div th:replace="~{common/Navibar :: body}"></div>
+<!--<div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>-->
 
 <!-- Header-->
-<header class="py-5" style="background-color: #BDCDD6">
+<header class="py-5" style="background-color: #0E46A3">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Let's Go Record</h1>
@@ -85,16 +95,16 @@
         <table>
             <tr>
                 <td id="left">
-                    <button type="button" class="btn" onclick="location.href='/record/add'">기록 추가</button>
+                    <button type="button" class="btn" onclick="location.href='/record/moveAdd'">기록 추가</button>
                 </td>
                 <td id="right">
                     <label>정렬</label>
                     <label>
-                        <select>
+                        <select name="filter" onchange="selectFilter()">
                             <option>기본</option>
-                            <option>날짜</option>
-                            <option>시간</option>
-                            <option>거리</option>
+                            <option value="date">날짜</option>
+                            <option value="time">시간</option>
+                            <option value="dist">거리</option>
                         </select>
                     </label>
                 </td>
@@ -105,23 +115,23 @@
     <div class="recTitle">
         <table class="title">
             <tr>
-                <td>날짜</td>
-                <td>수영장 이름</td>
-                <td>시간</td>
-                <td>거리</td>
+                <td width="30%">날짜</td>
+                <td width="40%">수영장 이름</td>
+                <td width="15%">시간(분)</td>
+                <td width="15%">거리(KM)</td>
             </tr>
         </table>
     </div>
 
     <div class="list">
-        <div class="records" th:each="record : ${records}">
-            <a th:href="'/record/update/' + ${record.recordId}">
-                <table>
+        <div class="records" th:each="record : ${records}" th:if="${record != null}">
+            <a th:href="'/record/moveUpdate'">
+                <table class="center_text">
                     <tr>
-                        <td th:text="${record.swimDate}">날짜</td>
-                        <td th:text="${record.swimName}">수영장 이름</td>
-                        <td th:text="${record.swimTime}">시간</td>
-                        <td th:text="${record.swimDist}">거리</td>
+                        <td width="30%" th:text="${record.swimDate}"></td>
+                        <td width="40%" th:text="${record.swimName}"></td>
+                        <td width="15%" th:text="${record.swimTime}"></td>
+                        <td width="15%" th:text="${record.swimDist}"></td>
                     </tr>
                 </table>
             </a>
@@ -133,7 +143,7 @@
 </div>
 
 <!-- Footer-->
-<footer class="py-5" style="background-color: #BDCDD6">
+<footer class="py-5" style="background-color: #0E46A3">
     <div class="container"><p class="m-0 text-center text-white">Software System &copy; 240105 marin-girls</p></div>
 </footer>
 </body>

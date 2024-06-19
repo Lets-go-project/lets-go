@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Lets go Record</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+          rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/marketMenu.css">
     <style>
         body {
             text-align: center;
@@ -32,23 +38,46 @@
             text-align: center;
         }
         .btn {
-            background-color: #6BBBD8;
+            background-color: #0E46A3;
             color: white;
         }
     </style>
 
-    <script>
-        function addRecord() {
-            window.alert('기록이 추가되었습니다.');
-            window.location.href = "/record/view";
+    <script type="text/javascript">
+        function writeCheck() {
+            const swimDate = document.getElementsByName("swimDate")[0].value;
+            const swimName = document.getElementsByName("swimName")[0].value;
+            const swimTime = document.getElementsByName("swimTime")[0].value;
+            const swimDist = document.getElementsByName("swimDist")[0].value;
+
+            if (swimDate === "") {
+                alert('날짜를 입력하세요.');
+                return false;
+            }
+            if (swimName === "") {
+                alert('수영장 이름을 입력하세요.');
+                return false;
+            }
+            if (swimTime === "") {
+                alert('수영 시간을 입력하세요.');
+                return false;
+            }
+            if (swimDist === "") {
+                alert('수영 거리를 입력하세요.');
+                return false
+            }
+
+            alert('기록이 추가되었습니다.');
+            return true;
         }
     </script>
 </head>
 <body>
-<div th:insert="common/Navibar :: navibar"></div>
+<div th:replace="~{common/Navibar :: body}"></div>
+<!--<div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>-->
 
 <!-- Header-->
-<header class="py-5" style="background-color: #BDCDD6">
+<header class="py-5" style="background-color: #0E46A3">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Let's Go Record</h1>
@@ -64,27 +93,27 @@
     &nbsp;
     &nbsp;
     <div id="form">
-        <form action="/record/view" method="get">
+        <form action="/record/add" method="post" onsubmit="return writeCheck()">
             <table>
                 <tr>
                     <th>날짜</th>
-                    <td><input type="date" max="2050-12-31" min="2000-01-01"></td>
+                    <td><input type="date" name="swimDate" max="2050-12-31" min="2000-01-01"></td>
                 </tr>
                 <tr>
                     <th>수영장 이름</th>
-                    <td><input type="text"></td>
+                    <td><input type="text" name="swimName"></td>
                 </tr>
                 <tr>
                     <th>시간</th>
-                    <td><input type="time"></td>
+                    <td><input type="text" name="swimTime" size="1">분</td>
                 </tr>
                 <tr>
                     <th>거리</th>
-                    <td><input type="text" size="1">KM</td>
+                    <td><input type="text" name="swimDist" size="1">KM</td>
                 </tr>
                 <tr>
                     <td colspan="2" class="sub">
-                        <input type="submit" value="기록 추가" onclick="addRecord()" class="btn">
+                        <input type="submit" value="기록 추가" class="btn">
                     </td>
                 </tr>
             </table>
@@ -93,7 +122,7 @@
 </div>
 
 <!-- Footer-->
-<footer class="py-5" style="background-color: #BDCDD6">
+<footer class="py-5" style="background-color: #0E46A3">
     <div class="container"><p class="m-0 text-center text-white">Software System &copy; 240105 marin-girls</p></div>
 </footer>
 </body>

@@ -1,6 +1,7 @@
 package com.example.letsGo.service;
 
 import com.example.letsGo.dao.mybatis.MyBatisChallengeDao;
+import com.example.letsGo.domain.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

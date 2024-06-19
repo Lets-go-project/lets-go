@@ -17,7 +17,7 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public Record getRecord(int recordId) {
+    public Record getRecord(Long recordId) {
         return recordDao.getRecord(recordId);
     }
 
@@ -32,12 +32,12 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
-    public Record updateRecord(int recordId, Record record) {
+    public Record updateRecord(Long recordId, Record record) {
         return recordDao.updateRecord(recordId, record);
     }
 
     @Override
-    public void deleteRecord(int recordId) {
+    public void deleteRecord(Long recordId) {
         recordDao.deleteRecord(recordId);
     }
 }

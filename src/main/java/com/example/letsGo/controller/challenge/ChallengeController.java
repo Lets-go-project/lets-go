@@ -1,9 +1,13 @@
 package com.example.letsGo.controller.challenge;
 
+import com.example.letsGo.domain.record.Record;
+import com.example.letsGo.repository.RecordRepository;
 import com.example.letsGo.service.ChallengeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -12,6 +16,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/challenge")
 public class ChallengeController {
+
+    @Autowired
+    RecordRepository recordRepository;
+
     private final ChallengeService challengeService;
 
     @Autowired
@@ -20,8 +28,12 @@ public class ChallengeController {
     }
 
     @GetMapping("/all")
-    public String getAllRecords() {
-        challengeService.getAllRecords();
+    public String getAllRecords(Model model) {
+
+        List<Record> allRecords = recordRepository.findAll();
+
+        model.addAttribute("records", allRecords);
+
         return "challenge/challenge";
     }
 

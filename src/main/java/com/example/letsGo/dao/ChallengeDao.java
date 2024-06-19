@@ -1,5 +1,7 @@
 package com.example.letsGo.dao;
 
+import com.example.letsGo.domain.record.Record;
+
 import java.util.List;
 
 public interface ChallengeDao {

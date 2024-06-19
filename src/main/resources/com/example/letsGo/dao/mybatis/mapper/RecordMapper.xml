@@ -9,9 +9,17 @@
         <result property="name" column="name"/>
     </resultMap>
 
+    <select id="getRecord" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
+        SELECT * FROM record WHERE record_id = #{recordId}
+    </select>
+
+    <select id="getAllRecords" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
+        SELECT * FROM record WHERE user_id = #{userId}
+    </select>
+
     <insert id="addRecord" parameterType="com.example.letsGo.domain.record.Record">
-        INSERT INTO record (date, pool_name, time, distance, user_id)
-        VALUES (#{date}, #{poolName}, #{time}, #{distance}, #{userId})
+        INSERT INTO record (record_id, swim_date, swim_name, swim_time, swim_dist, user_id, id, gender)
+        VALUES (#{recordID}, #{swimDate}, #{swimName}, #{swimTime}, #{swimDist}, #{userId}, #{id}, #{gender})
     </insert>
 
     <update id="updateRecord" parameterType="com.example.letsGo.domain.record.Record">
@@ -21,15 +29,7 @@
     </update>
 
     <delete id="deleteRecord" parameterType="int">
-        DELETE FROM record WHERE id = #{recordId}
+        DELETE FROM record WHERE recordId = #{recordId}
     </delete>
-
-    <select id="getRecord" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
-        SELECT * FROM record WHERE id = #{recordId}
-    </select>
-
-    <select id="getAllRecords" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
-        SELECT * FROM record WHERE user_id = #{userId}
-    </select>
 
 </mapper>

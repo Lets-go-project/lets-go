@@ -3,6 +3,7 @@ package com.example.letsGo.dao.mybatis;
 import com.example.letsGo.dao.RecordDao;
 import com.example.letsGo.dao.mybatis.mapper.RecordMapper;
 import com.example.letsGo.domain.record.Record;
+import lombok.extern.flogger.Flogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -25,18 +26,18 @@ public class MyBatisRecordDao implements RecordDao {
     }
 
     @Override
-    public Record updateRecord(int recordId, Record record) {
+    public Record updateRecord(Long recordId, Record record) {
         recordMapper.updateRecord(recordId, record);
         return record;
     }
 
     @Override
-    public void deleteRecord(int recordId) {
+    public void deleteRecord(Long recordId) {
         recordMapper.deleteRecord(recordId);
     }
 
     @Override
-    public Record getRecord(int recordId) {
+    public Record getRecord(Long recordId) {
         return recordMapper.getRecord(recordId);
     }
 

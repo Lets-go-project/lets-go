@@ -3,6 +3,7 @@ package com.example.letsGo.dao.mybatis;
 import com.example.letsGo.dao.ChallengeDao;
 import com.example.letsGo.dao.mybatis.mapper.ChallengeMapper;
 import com.example.letsGo.dao.mybatis.mapper.ProductMapper;
+import com.example.letsGo.domain.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

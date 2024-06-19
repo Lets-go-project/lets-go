@@ -4,8 +4,9 @@
 <mapper namespace="com.example.letsGo.dao.mybatis.mapper.ChallengeMapper">
 
   <cache />
-    <select id="getAllRecords" resultType="String">
-        select userId, r.swimDist, r.swimTime, u.gender
-        from Record r join User u on r.userId = u.userId
+
+    <select id="getAllRecords" resultType="com.example.letsGo.domain.record.Record">
+        SELECT * FROM record
     </select>
+
 </mapper>

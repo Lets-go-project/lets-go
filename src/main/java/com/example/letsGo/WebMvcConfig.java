@@ -34,9 +34,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
         */
         registry.addViewController("/record/view").setViewName("/record/viewRecord");
         registry.addViewController("/record/all").setViewName("/record/viewRecord");
-        registry.addViewController("/record/add").setViewName("/record/addRecord");
-        registry.addViewController("/record/update").setViewName("/record/updateRecord");
-        registry.addViewController("/record/delete").setViewName("/record/updateRecord");
+        registry.addViewController("/record/moveAdd").setViewName("/record/addRecord");
+        registry.addViewController("/record/add").setViewName("/record/viewRecord");
+        registry.addViewController("/record/update").setViewName("/record/viewRecord");
+        registry.addViewController("/record/moveUpdate").setViewName("/record/updateRecord");
+        registry.addViewController("/record/delete").setViewName("/record/viewRecord");
 
         registry.addViewController("/challenge/all").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/woman").setViewName("/challenge/challenge");
