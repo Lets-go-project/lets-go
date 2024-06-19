@@ -3,7 +3,7 @@ package com.example.letsGo.controller.market;
 import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.service.MarketService;
+import com.example.letsGo.service.ProductService;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
@@ -51,7 +51,7 @@ public class ProductController {
             return "redirect:/login";
         }
 
-        marketService.scrapProduct(productId, currentUser.getUserId());
+        /*marketService.scrapProduct(productId, currentUser.getUserId());*/
 
         return "redirect:/market";
     }

@@ -39,8 +39,5 @@ public interface UserService {
 
     void updateUser(User user);
 
-    String uploadProfilePicture(User user, MultipartFile profilePictureFile);
-
-    void deleteProfilePicture(User user);
 }
 
