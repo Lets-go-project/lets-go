@@ -15,8 +15,10 @@ import java.util.Date;
 @Table(name = "Member")
 public class User {
     @Id
-    private int userId;
-
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_sequence")
+    @SequenceGenerator(name = "member_sequence", sequenceName = "member_sequence", allocationSize = 1)
+    @Column(name = "USER_ID")
+    private int user_Id;
     private String id;
     private String password;
     private String name;

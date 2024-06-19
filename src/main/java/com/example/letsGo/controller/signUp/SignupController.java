@@ -88,7 +88,9 @@ public class SignupController {
             }
 
             userService.saveUser(user);
-            System.out.println(user.getUserId());
+
+            User savedUser = userService.getUserById(id);
+            System.out.println(savedUser.getUser_Id());
             // 회원가입 완료 후 리다이렉트할 페이지 설정
             return "redirect:/letsGo";
         } catch (Exception e) {
