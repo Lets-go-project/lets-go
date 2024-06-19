@@ -22,6 +22,8 @@ public class SigninController {
         if (user != null && user.getPassword().equals(password)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
+            /*System.out.println("")*/
+            session.setAttribute("profilePicture", user.getProfilePicture());
             return "redirect:/letsGo";  // 로그인 성공 시 리다이렉트할 경로
         } else {
             model.addAttribute("error", "Invalid ID or password");

@@ -1,9 +1,7 @@
 package com.example.letsGo.dao.mybatis.mapper;
 
 import com.example.letsGo.domain.member.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
@@ -15,4 +13,7 @@ public interface UserMapper {
     User findByPassword(String password);
 
     void update(User user);
+
+    void deleteProfilePicture(String id);
+
 }

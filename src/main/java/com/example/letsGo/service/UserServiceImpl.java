@@ -2,15 +2,15 @@ package com.example.letsGo.service;
 
 import com.example.letsGo.dao.UserDao;
 import com.example.letsGo.domain.member.User;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -21,7 +21,6 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
-
 
     @Override
     public void saveUser(User user) {
@@ -49,44 +48,42 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String uploadProfilePicture(User user, MultipartFile profilePictureFile) {
-        if (profilePictureFile.isEmpty()) {
-            return "파일을 선택해주세요.";
+    @Transactional
+    public String updateProfilePicture(String userId, MultipartFile profilePicture) throws IOException {
+        User user = userDao.findById(userId);
+        if (user == null) {
+            throw new IllegalArgumentException("User not found with id: " + userId);
         }
-        try {
-            // 업로드할 파일의 경로를 설정합니다. 여기서는 사용자의 홈 디렉토리를 기준으로 설정합니다.
-            String uploadDir = System.getProperty("user.home") + "/uploads/";
-            File dir = new File(uploadDir);
-            if (!dir.exists()) {
-                dir.mkdirs(); // 디렉토리가 없으면 생성합니다.
-            }
 
-            byte[] bytes = profilePictureFile.getBytes();
-            Path path = Paths.get(uploadDir + profilePictureFile.getOriginalFilename());
-            Files.write(path, bytes);
+        // 프로필 사진이 업로드되었는지 확인
+        if (profilePicture != null && !profilePicture.isEmpty()) {
+            // Save profile picture to a location (e.g., file system or cloud storage)
+            String profilePictureUrl = saveProfilePicture(profilePicture);
 
-            user.setProfilePicture(profilePictureFile.getOriginalFilename());
-            updateUser(user);
+            // Update user's profile picture URL in the database
+            user.setProfilePicture(profilePictureUrl);
+            userDao.update(user);
 
-            return "프로필 사진이 성공적으로 업로드되었습니다.";
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "파일 업로드 중 오류가 발생했습니다.";
+            return profilePictureUrl; // 업데이트된 프로필 사진 경로 반환
+        } else {
+            throw new IllegalArgumentException("Profile picture is empty or null");
         }
     }
 
-    @Override
-    public void deleteProfilePicture(User user) {
-        String fileName = user.getProfilePicture();
-        if (fileName != null) {
-            String uploadDir = System.getProperty("user.home") + "/uploads/";
-            Path path = Paths.get(uploadDir + fileName);
-            File file = new File(path.toString());
-            if (file.exists()) {
-                file.delete();
-            }
-            user.setProfilePicture(null);
-            updateUser(user);
+    private String saveProfilePicture(MultipartFile profilePicture) throws IOException {
+        // 프로필 사진을 저장하는 로직 구현
+        // 예시로 파일을 임시로 저장하는 방법을 보여줍니다. 실제로는 파일 시스템이나 클라우드 스토리지에 저장해야 합니다.
+        Path tempFilePath = Files.createTempFile("profile-", ".jpg");
+        try (OutputStream os = Files.newOutputStream(tempFilePath)) {
+            os.write(profilePicture.getBytes());
         }
+
+        // 실제 프로필 이미지 URL을 리턴합니다. 이 예제에서는 임시 파일의 경로를 사용합니다.
+        return tempFilePath.toString();
+    }
+
+    @Override
+    public void deleteProfilePicture(String id) {
+        userDao.deleteProfilePicture(id);
     }
 }

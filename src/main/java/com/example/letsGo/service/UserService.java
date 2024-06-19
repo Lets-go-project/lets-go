@@ -26,7 +26,10 @@ public class UserService {
 package com.example.letsGo.service;
 
 import com.example.letsGo.domain.member.User;
+import jakarta.transaction.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 public interface UserService {
     void saveUser(User user);
@@ -39,8 +42,8 @@ public interface UserService {
 
     void updateUser(User user);
 
-    String uploadProfilePicture(User user, MultipartFile profilePictureFile);
+    String updateProfilePicture(String userId, MultipartFile profilePicture) throws IOException;
 
-    void deleteProfilePicture(User user);
+    void deleteProfilePicture(String id);
 }
 

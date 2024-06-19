@@ -51,7 +51,7 @@ public class ProductController {
             return "redirect:/login";
         }
 
-        marketService.scrapProduct(productId, currentUser.getUserId());
+        /*marketService.scrapProduct(productId, currentUser.getUserId());*/
 
         return "redirect:/market";
     }
