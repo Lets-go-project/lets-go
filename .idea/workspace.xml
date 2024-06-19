@@ -4,78 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[MOD] 에러 해결 중...">
+    <list default="true" id="10228099-54e9-4a33-808c-3c0d765ee6aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/ProductScrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/ProductScrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/salesmanager/SalesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/salesmanager/SalesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/myPage/MypageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sales-manager" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2huSxdDgeYXZZWP7rXR8wRxJxrG" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2i6jluRkbBeOhn2VCsSEK8mtKZi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.LetsGoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.LetsGoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;market&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.LetsGoApplication.executor": "Run",
+    "git-widget-placeholder": "market",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.letsGo.service" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="LetsGoApplication" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
+    <configuration name="LetsGoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="letsGo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.letsGo.LetsGoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,109 +73,17 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="[DEL] 오류로 인한 workspace.xml 삭제">
-      <option name="closed" value="true" />
-      <created>1718441624929</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1718441624929</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[DEL] 오류로 인한 workspace.xml 삭제" />
-      <created>1718442723756</created>
+      <changelist id="10228099-54e9-4a33-808c-3c0d765ee6aa" name="Changes" comment="" />
+      <created>1718818079971</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1718442723756</updated>
-      <workItem from="1718442731566" duration="2094000" />
-      <workItem from="1718454589333" duration="1957000" />
-      <workItem from="1718456698439" duration="5543000" />
-      <workItem from="1718469265999" duration="969000" />
-      <workItem from="1718501556320" duration="8253000" />
-      <workItem from="1718582661001" duration="2412000" />
-      <workItem from="1718620460561" duration="9780000" />
-      <workItem from="1718630627881" duration="1522000" />
-      <workItem from="1718633718201" duration="8944000" />
-      <workItem from="1718692580314" duration="315000" />
-      <workItem from="1718779715370" duration="13408000" />
-      <workItem from="1718456698439" duration="2625000" />
-      <workItem from="1718809675442" duration="6985000" />
+      <updated>1718818079971</updated>
+      <workItem from="1718818081733" duration="650000" />
     </task>
-    <task id="LOCAL-00002" summary="[FEAT] 여자 남자 프로필사진 구현">
-      <option name="closed" value="true" />
-      <created>1718788984131</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1718788984131</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[FEAT] 여자 남자 프로필사진 구현">
-      <option name="closed" value="true" />
-      <created>1718789295696</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1718789295696</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[ADD] market 장바구니 구현 중...">
-      <option name="closed" value="true" />
-      <created>1718628565348</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1718628565348</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[FEAT] 유저별로 다른 장바구니 기능 구현">
-      <option name="closed" value="true" />
-      <created>1718640969616</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1718640969616</updated>
-    </task>
-    <task id="LOCAL-00006" summary="[ADD] 장바구니 삭제 구현 중...">
-      <option name="closed" value="true" />
-      <created>1718692861630</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1718692861630</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현">
-      <option name="closed" value="true" />
-      <created>1718792674900</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1718792674900</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="[DEL] 오류로 인한 workspace.xml 삭제" />
-    <MESSAGE value="[FEAT] market 장바구니 버튼 클릭 시 구현" />
-    <MESSAGE value="[ADD] 판매 매니저 매핑" />
-    <MESSAGE value="[ADD] market 장바구니 구현 중..." />
-    <MESSAGE value="[FEAT] 유저별로 다른 장바구니 기능 구현" />
-    <MESSAGE value="[ADD] 장바구니 삭제 구현 중..." />
-    <MESSAGE value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
-    <MESSAGE value="[FEAT] 여자 남자 프로필사진 구현" />
-    <MESSAGE value="[MOD] 에러 해결 중..." />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] 에러 해결 중..." />
   </component>
 </project>
