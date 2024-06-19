@@ -16,8 +16,9 @@ import java.util.Date;
 @Table(name = "Member")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_sequence")
-    @SequenceGenerator(name = "member_sequence", sequenceName = "member_sequence", allocationSize = 1)
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "member_sequence")
+//    @SequenceGenerator(name = "member_sequence", sequenceName = "member_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private int user_id;
 
