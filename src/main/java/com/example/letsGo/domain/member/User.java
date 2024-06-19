@@ -4,6 +4,7 @@ import com.example.letsGo.domain.salesmanager.SalesManager;
 import jakarta.persistence.*;
 import lombok.*;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 
 @Entity
@@ -21,13 +22,23 @@ public class User {
     private int user_id;
 
     private String id;
+
     private String password;
+
     private String name;
+
     private String gender;
+
+    @Email
     private String email;
+
     private Date birth;
+
     private String address;
-    private boolean isSalesManager;
+
+    @Column(name = "ISSALESMANAGER", columnDefinition = "int default 0")
+    private int isSalesManager;
+
     private String profilePicture;
 
     @OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
