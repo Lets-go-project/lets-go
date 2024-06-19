@@ -98,15 +98,18 @@
                     <button type="button" class="btn" onclick="location.href='/record/moveAdd'">기록 추가</button>
                 </td>
                 <td id="right">
-                    <label>정렬</label>
-                    <label>
-                        <select name="filter" onchange="selectFilter()">
-                            <option>기본</option>
-                            <option value="date">날짜</option>
-                            <option value="time">시간</option>
-                            <option value="dist">거리</option>
-                        </select>
-                    </label>
+                    <form th:action="@{/record/view}" method="get">
+                        <label>정렬</label>
+                        <label>
+                            <select name="filter" required onchange="this.form.submit()">
+                                <option value="0" th:selected="${selectedFilter == 0}">기본</option>
+                                <option value="1" th:selected="${selectedFilter == 1}">날짜</option>
+                                <option value="2" th:selected="${selectedFilter == 2}">시간</option>
+                                <option value="3" th:selected="${selectedFilter == 3}">거리</option>
+                            </select>
+                        </label>
+                    </form>
+
                 </td>
             </tr>
         </table>

@@ -56,7 +56,8 @@ public class RecordController {
     }
 
     @GetMapping("/view")
-    public String moveViewRecords(HttpSession session, Model model) {
+    public String moveViewRecords(HttpSession session, Model model,
+                                  @RequestParam(value = "filter", required = false, defaultValue = "0") int filter) {
         User user = (User) session.getAttribute("user");
         if (user == null) {
             return "redirect:/signin/signin";
@@ -66,28 +67,28 @@ public class RecordController {
 //        int userId = user.getUserId();
         int userId = 1;
 
-//        String filter = (String)model.getAttribute("filter");
-//        log.info("[moveView] filter: {}", filter);
-//
-//        if (Objects.equals(filter, "date")) {
-//            List<Record> records = recordRepository.findByUserIdOrderBySwimDateDesc(userId);
-//            model.addAttribute("records", records);
-//        } else if (Objects.equals(filter, "time")) {
-//            List<Record> records = recordRepository.findByUserIdOrderBySwimTimeDesc(userId);
-//            model.addAttribute("records", records);
-//        } else if (Objects.equals(filter, "dist")) {
-//            List<Record> records = recordRepository.findByUserIdOrderBySwimDistDesc(userId);
-//            model.addAttribute("records", records);
-//        } else {
-//            List<Record> records = recordRepository.findByUserId(userId);
-//            model.addAttribute("records", records);
-//        }
+        log.info("[moveView] filter: {}", filter);
 
-        List<Record> records = recordRepository.findByUserId(userId);
-        model.addAttribute("records", records);
+        if (filter == 1) {
+            List<Record> records = recordRepository.findByUserIdOrderBySwimDateDesc(userId);
+            model.addAttribute("records", records);
+            model.addAttribute("selectedFilter", filter);
+        } else if (filter == 2) {
+            List<Record> records = recordRepository.findByUserIdOrderBySwimTimeDesc(userId);
+            model.addAttribute("records", records);
+            model.addAttribute("selectedFilter", filter);
+        } else if (filter == 3) {
+            List<Record> records = recordRepository.findByUserIdOrderBySwimDistDesc(userId);
+            model.addAttribute("records", records);
+            model.addAttribute("selectedFilter", filter);
+        } else {
+            List<Record> records = recordRepository.findByUserId(userId);
+            model.addAttribute("records", records);
+            model.addAttribute("selectedFilter", 0);
+        }
 
-        log.info("[moveView] Records: {}", records);
-        log.info("[moveView] record: {}", records.toString());
+//        log.info("[moveView] Records: {}", records);
+//        log.info("[moveView] record: {}", records.toString());
         return "record/viewRecord";
     }
     @GetMapping("/moveAdd")
