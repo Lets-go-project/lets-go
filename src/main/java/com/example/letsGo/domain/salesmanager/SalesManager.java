@@ -32,6 +32,6 @@ public class SalesManager extends BaseEntity implements Serializable {
     private List<Product> products = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "userId")
+    @JoinColumn(name = "USER_ID", referencedColumnName = "USER_ID")
     private User member;
 }

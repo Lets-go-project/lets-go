@@ -19,7 +19,7 @@ public class ProductScrap {
     private Long scrapId;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "USER_ID")
     private User user;
 
     @OneToOne(fetch = FetchType.LAZY)
