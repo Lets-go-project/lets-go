@@ -18,14 +18,14 @@ import java.util.List;
 @RequestMapping("/market")
 @Log4j2
 public class ProductController {
-    private final MarketService marketService;
+    private final ProductService productService;
 
     @Autowired
     public ProductRepository productRepository;
 
     @Autowired
-    public ProductController(MarketService marketService) {
-        this.marketService = marketService;
+    public ProductController(ProductService productService) {
+        this.productService = productService;
     }
 
     @PostConstruct
@@ -51,7 +51,7 @@ public class ProductController {
             return "redirect:/login";
         }
 
-        /*marketService.scrapProduct(productId, currentUser.getUserId());*/
+        marketService.scrapProduct(productId, currentUser.getUserId());
 
         return "redirect:/market";
     }

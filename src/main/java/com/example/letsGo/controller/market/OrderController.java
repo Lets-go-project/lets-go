@@ -1,7 +1,7 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.market.Order;
-import com.example.letsGo.service.OrderService;
+import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.service.PayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,17 +12,17 @@ import java.util.List;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
-    private OrderService orderService;
+    private PayService payService;
 
     @Autowired
-    public OrderController(OrderService orderService) {
-        this.orderService = orderService;
+    public OrderController(PayService payService) {
+        this.payService = payService;
     }
 
     @GetMapping
     public String getAllOrders(Model model) {
-        List<Order> orderList = orderService.getAllOrders();
-        model.addAttribute("orderList", orderList);
+        List<Pay> payList = payService.getAllOrders();
+        model.addAttribute("orderList", payList);
         return "/market/Order";
     }
 
@@ -37,20 +37,20 @@ public class OrderController {
 
     @PostMapping
     public String addOrder(@RequestBody int orderId) {
-        orderService.addOrder(orderId);
+        payService.addOrder(orderId);
         return "redirect:/orders";
     }
 
     @PutMapping("/{oId}")
     public String updateOrder(@PathVariable int oId, @RequestBody int orderId) {
 //        order.setOrderId(orderId);
-        orderService.updateOrder(orderId);
+        payService.updateOrder(orderId);
         return "redirect:/orders";
     }
 
     @DeleteMapping("/{orderId}")
     public String cancelOrder(@PathVariable int orderId) {
-        orderService.cancelOrder(orderId);
+        payService.cancelOrder(orderId);
         return "redirect:/orders";
     }
 }

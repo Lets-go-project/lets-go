@@ -2,6 +2,7 @@ package com.example.letsGo.controller.signIn;
 
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.service.UserService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
+@Log4j2
 public class SigninController {
 
     @Autowired
