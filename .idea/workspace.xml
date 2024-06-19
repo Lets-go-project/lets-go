@@ -8,6 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
+    <list default="true" id="ce48a8a9-1cb4-4b16-b054-3998fd00d4a7" name="Changes" comment="[FEAT] 여자 남자 프로필사진 구현">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/signUp/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/member/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/letsGo/dao/mybatis/mapper/UserMapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.LetsGoApplication.executor": "Run",
     "git-widget-placeholder": "market",
+    "git-widget-placeholder": "my-page",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,22 +110,23 @@
       <workItem from="1718633718201" duration="8944000" />
       <workItem from="1718692580314" duration="315000" />
       <workItem from="1718779715370" duration="13408000" />
+      <workItem from="1718456698439" duration="2625000" />
     </task>
-    <task id="LOCAL-00002" summary="[FEAT] market 장바구니 버튼 클릭 시 구현">
+    <task id="LOCAL-00002" summary="[FEAT] 여자 남자 프로필사진 구현">
       <option name="closed" value="true" />
-      <created>1718465789262</created>
+      <created>1718788984131</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1718465789262</updated>
+      <updated>1718788984131</updated>
     </task>
-    <task id="LOCAL-00003" summary="[ADD] 판매 매니저 매핑">
+    <task id="LOCAL-00003" summary="[FEAT] 여자 남자 프로필사진 구현">
       <option name="closed" value="true" />
-      <created>1718465825374</created>
+      <created>1718789295696</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1718465825374</updated>
+      <updated>1718789295696</updated>
     </task>
     <task id="LOCAL-00004" summary="[ADD] market 장바구니 구현 중...">
       <option name="closed" value="true" />
@@ -149,21 +161,11 @@
       <updated>1718792674900</updated>
     </task>
     <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[DEL] 오류로 인한 workspace.xml 삭제" />
@@ -174,5 +176,7 @@
     <MESSAGE value="[ADD] 장바구니 삭제 구현 중..." />
     <MESSAGE value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
     <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 로그인 시 장바구니 이동 및 상품 스크랩 기능 구현" />
+    <MESSAGE value="[FEAT] 여자 남자 프로필사진 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 여자 남자 프로필사진 구현" />
   </component>
 </project>

@@ -19,7 +19,8 @@ public class SignupController {
     private UserService userService;
 
     // 프로필 사진 기본 경로
-    private static final String DEFAULT_PROFILE_PICTURE = "/images/default-profile.jpeg";
+    private static final String MAN_PROFILE_PICTURE = "/images/man.jpg";
+    private static final String WOMAN_PROFILE_PICTURE = "/images/woman.jpg";
 
     @PostMapping("/signup")
     public String register(
@@ -34,7 +35,6 @@ public class SignupController {
                            @RequestParam("day") int day,
                            @RequestParam(value = "profilepicture", required = false) String profilePicture,
                            Model model) {
-
         try {
             // 아이디 중복 확인
             User existingIdUser = userService.getUserById(id);
@@ -80,15 +80,17 @@ public class SignupController {
                     .birth(birthDate)
                     .build();
 
-            // 프로필 사진 설정
-            if (profilePicture == null || profilePicture.isEmpty()) {
-                user.setProfilePicture(DEFAULT_PROFILE_PICTURE);
+            // 성별에 따라 프로필 사진 설정
+            if ("여자".equals(gender)) {
+                user.setProfilePicture(WOMAN_PROFILE_PICTURE);
             } else {
-                user.setProfilePicture(profilePicture);
+                user.setProfilePicture(MAN_PROFILE_PICTURE);
             }
 
             userService.saveUser(user);
 
+            User savedUser = userService.getUserById(id);
+            System.out.println(savedUser.getUser_Id());
             // 회원가입 완료 후 리다이렉트할 페이지 설정
             return "redirect:/letsGo";
         } catch (Exception e) {

@@ -51,7 +51,7 @@ public class CartController {
             Model model)
     {
         User sessionUser = (User) session.getAttribute("user");
-        User user = userRepository.findById(sessionUser.getId());
+        Optional<User> user = userRepository.findById(sessionUser.getId());
         Product product = productRepository.findByProductId(productId);
         if (product == null) {
             throw new RuntimeException("제품을 찾을 수 없습니다");
@@ -77,7 +77,7 @@ public class CartController {
         Cart cart = Cart.builder()
                 .product(product)
                 .amount(amount)
-                .user(user)
+                /*.user(user)*/
                 .build();
 
         cartRepository.save(cart);
