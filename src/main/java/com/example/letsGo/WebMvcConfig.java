@@ -50,7 +50,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         */
         registry.addViewController("/swimpool/search").setViewName("/swimpool/Search");
         registry.addViewController("/signin/adminLogin").setViewName("/signin/adminLogin");
-        registry.addViewController("/adminPage").setViewName("/market/AdminPage");
+        registry.addViewController("/admin/list").setViewName("/market/AdminPage");
         /*
         민주: 로그인 & 회원가입 & 마이페이지
         */

@@ -66,6 +66,9 @@ public class Product extends BaseEntity implements Serializable {
     @JoinColumn(name = "sales_manager_id")
     private SalesManager salesManager;
 
+    @Column(name = "is_accept", nullable = false)
+    private int isAccept;
+
 //    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //    private ProductScrap productScrap;
 }
