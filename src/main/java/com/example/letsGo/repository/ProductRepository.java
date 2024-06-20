@@ -1,6 +1,7 @@
 package com.example.letsGo.repository;
 
 import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.salesmanager.SalesManager;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +14,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Product findByProductId(Long productId);
 
     List<Product> findByIsAccept(int isAccept);
+    List<Product> findBySalesManager(SalesManager salesManager);
 
 }

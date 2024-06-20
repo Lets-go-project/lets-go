@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Builder
@@ -55,6 +56,9 @@ public class Product extends BaseEntity implements Serializable {
     @Column(name = "product_state", nullable = false, length = 50)
     private String productState;
 
+//    @Column(name = "is_accept", columnDefinition = "int default 0")
+//    private int isAccept;
+
     @NotNull
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
@@ -68,7 +72,4 @@ public class Product extends BaseEntity implements Serializable {
 
     @Column(name = "is_accept", nullable = false)
     private int isAccept;
-
-//    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    private ProductScrap productScrap;
 }

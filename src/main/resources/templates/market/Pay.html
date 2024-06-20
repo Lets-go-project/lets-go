@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lets go market - 주문 페이지</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div th:replace="~{common/Navibar :: body}"></div>
+
+    <!-- Header -->
+    <header class="py-5" style="background-color: #0E46A3">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Let's Go 주문 페이지</h1>
+                <p class="lead fw-normal text-white-50 mb-0">수영 물품 중고 마켓</p>
+            </div>
+        </div>
+    </header>
+	<div th:if="${message}" class="alert alert-success" role="alert">
+	        <strong th:text="${message}"></strong>
+    </div>
+    <div th:if="${error}" class="alert alert-danger" role="alert">
+        <strong th:text="${error}"></strong>
+    </div>
+<!-- Main Content -->
+    <div class="container py-5">
+        <form action="/pay/confirm" method="post">
+            <!-- 배송 정보 입력 -->
+            <div class="mb-3">
+                <h3 class="mb-4">배송 정보 입력</h3>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">수령인 이름</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">연락처</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="zipcode" class="form-label">우편번호</label>
+                        <input type="text" class="form-control" id="zipcode" name="zipcode" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">주소</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address2" class="form-label">상세 주소</label>
+                        <input type="text" class="form-control" id="address2" name="address2">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="req" class="form-label">배송 요청 사항</label>
+                        <textarea class="form-control" id="req" name="req" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 상품 목록 -->
+            <div class="mb-5">
+                <h3 class="mb-4">주문 상품 목록</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>상품명</th>
+                            <th>가격</th>
+                            <th>수량</th>
+                            <th>합계</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="cartItem : ${cartList}">
+                            <td th:text="${cartItem.product.productName}"></td>
+                            <td th:text="${cartItem.product.productSellPrice} + '원'"></td>
+                            <td th:text="${cartItem.amount}"></td>
+                            <td th:text="${cartItem.product.productSellPrice * cartItem.amount} + '원'"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 주문 버튼 -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">주문하기</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS 및 기타 스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-TBIeVhLVo4oGx4rjLwEwSlvQIEn5A/hOz8sjRa1+3Nq4eJzy4hJER6WA+5RypCjP" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,6 +1,5 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.dao.PayDao;
 import com.example.letsGo.domain.product.Pay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,22 +8,18 @@ import java.util.List;
 
 @Service
 public class PayServiceImpl implements PayService {
-    @Autowired
-    private PayDao payDao;
-
+    @Override
     public List<Pay> getAllOrders() {
-        return payDao.getAllOrders();
+        return null;
     }
 
-    public Pay addOrder(int orderId) {
-        return payDao.addOrder(orderId);
+    @Override
+    public Pay payProduct(Long orderId) {
+        return null;
     }
 
-    public Boolean updateOrder(int orderId) {
-        return payDao.updateOrder(orderId);
-    }
-
-    public Boolean cancelOrder(int orderId) {
-        return payDao.cancelOrder(orderId);
+    @Override
+    public Boolean cancelOrder(Long orderId) {
+        return null;
     }
 }

@@ -28,8 +28,11 @@
         <li>
             <a href="#">wish</a>
         </li>
-        <li>
+        <li th:if="${session.user != null}">
             <a th:href="@{/market/manager}">go to manager's page</a>
+        </li>
+        <li th:if="${session.user == null}">
+            <a th:href="@{/signin/signin}">go to manager's page</a>
         </li>
     </ul>
 </aside>
