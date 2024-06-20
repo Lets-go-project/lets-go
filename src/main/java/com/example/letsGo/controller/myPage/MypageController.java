@@ -92,20 +92,5 @@ public class MypageController {
         }
     }
 
-    @GetMapping("/postscrap")
-    public String getPostScrap(HttpSession session, Model model) {
-        // 세션에서 사용자 정보 가져오기
-        User user = (User) session.getAttribute("user");
-
-        // 사용자 정보를 모델에 추가
-        if (user != null) {
-            model.addAttribute("user", user);
-            return "mypage/postscrap";
-        } else {
-            // 사용자 정보가 없는 경우 로그인 페이지로 리디렉션
-            return "redirect:/signin";
-        }
-    }
-
 
 }

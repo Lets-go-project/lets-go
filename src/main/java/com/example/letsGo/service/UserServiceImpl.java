@@ -32,6 +32,8 @@ public class UserServiceImpl implements UserService {
         return userDao.findById(id);
     }
 
+
+
     @Override
     public User getUserByEmail(String email) {
         return userDao.findByEmail(email);
@@ -47,4 +49,8 @@ public class UserServiceImpl implements UserService {
         userDao.update(user);
     }
 
+    @Override
+    public User getUserByUserId(int userId) {
+       return userDao.findByUserId(userId);
+    }
 }

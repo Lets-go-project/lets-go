@@ -217,12 +217,7 @@
         <div class="text">내 정보 수정하기</div>
         <div class="right">></div>
     </a>
-    <a th:href="@{/mypage/poolscrap}" class="item">
-        <div class="icon">ii</div>
-        <div class="text">수영장 스크랩</div>
-        <div class="right">></div>
-    </a>
-    <a th:href="@{/mypage/postscrap}" class="item">
+    <a th:href="@{/scraps(user_id=${user.user_id})}" class="item">
         <div class="icon">ii</div>
         <div class="text">게시물 스크랩</div>
         <div class="right">></div>

@@ -40,4 +40,9 @@ public class MyBatisUserDao implements UserDao {
     public void update(User user) {
         userMapper.update(user);
     }
+
+    @Override
+    public User findByUserId(int userId) {
+        return userMapper.findByUserId(userId);
+    }
 }

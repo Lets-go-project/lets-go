@@ -44,4 +44,5 @@ public class User {
 
     @OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private SalesManager salesManager;
+
 }
