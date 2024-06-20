@@ -2,8 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Scraps</title>
+    <title>User Scrap Posts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -72,21 +71,10 @@
 </head>
 <body>
 <div class="container">
-    <h1>Web Scraps</h1>
-    <div class="image-grid">
-        <div class="image-item">
-            <img src="https://via.placeholder.com/150" alt="Image 1">
-            <div class="overlay">
-                <div class="overlay-content">게시물 1</div>
-            </div>
-        </div>
-        <div class="image-item">
-            <img src="https://via.placeholder.com/150" alt="Image 2">
-            <div class="overlay">
-                <div class="overlay-content">게시물 2</div>
-            </div>
-        </div>
-        <!-- 여러 개의 이미지를 추가하고 각각에 대한 게시물 정보를 입력하세요 -->
+    <h1>User Scrap Posts</h1>
+    <div th:if="${user != null}">
+        <p>Welcome, <span th:text="${user.name}"></span></p>
+        <p th:text="${product?.productName}"></p>
     </div>
 </div>
 </body>

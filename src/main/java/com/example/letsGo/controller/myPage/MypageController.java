@@ -106,6 +106,4 @@ public class MypageController {
             return "redirect:/signin";
         }
     }
-
-
 }
