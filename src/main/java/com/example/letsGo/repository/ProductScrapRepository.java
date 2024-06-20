@@ -12,4 +12,5 @@ import java.util.List;
 public interface ProductScrapRepository extends JpaRepository<ProductScrap, Integer> {
     ProductScrap findByUserAndProduct(User user, Product product);
     List<ProductScrap> findByUser(User user);
+
 }

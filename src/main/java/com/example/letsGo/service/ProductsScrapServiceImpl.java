@@ -1,5 +1,6 @@
 package com.example.letsGo.service;
 
+import com.example.letsGo.dao.UserDao;
 import com.example.letsGo.domain.member.User;
 import com.example.letsGo.domain.product.ProductScrap;
 import com.example.letsGo.domain.record.Record;
@@ -12,12 +13,16 @@ import java.util.List;
 
 @Service
 public class ProductsScrapServiceImpl implements ProductsScrapService {
-
+    private final UserDao userDao;
     @Autowired
     private ProductScrapRepository productScrapRepository;
 
     @Autowired
     private UserRepository userRepository;
+
+    public ProductsScrapServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public List<ProductScrap> getProductScrapsByUser(int userId) {

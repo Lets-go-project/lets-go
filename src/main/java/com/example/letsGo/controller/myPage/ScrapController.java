@@ -4,10 +4,13 @@ import com.example.letsGo.domain.member.User;
 import com.example.letsGo.domain.product.ProductScrap;
 import com.example.letsGo.service.ProductsScrapService;
 import com.example.letsGo.service.UserService;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -17,7 +20,8 @@ public class ScrapController {
 
     @Autowired
     private ProductsScrapService productsScrapService;
-
+    @Autowired
+    private HttpSession httpSession;
     @Autowired
     private UserService userService;
 
@@ -29,7 +33,7 @@ public class ScrapController {
             return "error";
         }
 
-        List<ProductScrap> scraps = productsScrapService.getProductScrapsByUser(user.getUser_id());
+        List<ProductScrap> scraps = productsScrapService.getProductScrapsByUser(userId);
         model.addAttribute("user", user);
         model.addAttribute("scraps", scraps);
 
