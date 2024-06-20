@@ -32,10 +32,10 @@ public class AdminController {
         if (isValidAdmin) {
             HttpSession session = request.getSession();
             session.setAttribute("admin", "admin");  // 관리자 세션 속성 설정
-            return "redirect:/admin/list";  // 로그인 성공 시 리다이렉트할 경로
+            return "redirect:/admin/list";  // 로그인 성공
         } else {
             model.addAttribute("error", "Invalid Name or password");
-            return "signin/adminLogin";  // 로그인 실패 시 리턴할 템플릿 경로
+            return "signin/adminLogin";  // 로그인 실패
         }
     }
 
