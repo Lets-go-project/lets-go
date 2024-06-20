@@ -1,9 +1,8 @@
 package com.example.letsGo.controller.myPage;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.domain.product.ProductScrap;
-import com.example.letsGo.service.ProductScrapService;
+import com.example.letsGo.service.ProductsScrapService;
 import com.example.letsGo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +16,7 @@ import java.util.List;
 public class ScrapController {
 
     @Autowired
-    private ProductScrapService productScrapService;
+    private ProductsScrapService productsScrapService;
 
     @Autowired
     private UserService userService;
@@ -30,7 +29,7 @@ public class ScrapController {
             return "error";
         }
 
-        List<ProductScrap> scraps = productScrapService.getProductScrapsByUser(user);
+        List<ProductScrap> scraps = productsScrapService.getProductScrapsByUser(user);
         model.addAttribute("user", user);
         model.addAttribute("scraps", scraps);
 
@@ -38,4 +37,3 @@ public class ScrapController {
         return "postscrap";
     }
 }
-

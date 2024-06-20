@@ -74,7 +74,16 @@
     <h1>User Scrap Posts</h1>
     <div th:if="${user != null}">
         <p>Welcome, <span th:text="${user.name}"></span></p>
-        <p th:text="${product?.productName}"></p>
+    </div>
+    <div class="image-grid">
+        <div th:each="scrap : ${scraps}" class="image-item">
+            <a th:href="@{/product/{id}(id=${scrap.product.productId})}">
+                <img th:src="@{${scrap.product.productImg}}" th:alt="${scrap.product.productName}"/>
+                <div class="overlay">
+                    <div class="overlay-content" th:text="${scrap.product.productName}"></div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 </body>
