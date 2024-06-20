@@ -21,7 +21,7 @@
 <div th:if="${session.user == null}">
     <script>
         alert("로그인 후 이용해주세요");
-        window.close(); // 로그인 상태가 아니면 페이지 닫기
+        window.close();
     </script>
 </div>
 <div th:if="${f != null}">
@@ -38,6 +38,22 @@
             <th><label for="productName">상품명</label></th>
             <td><input type="text" name="productName" id="productName" placeholder="상품명 입력해주세요"></td>
         </tr>
+         <tr>
+            <th><label for="productType">상품 종류</label></th>
+            <td>
+                <select name="productType" id="productType">
+                    <option value="0">종류</option>
+                    <option value="1">수영복</option>
+                    <option value="2">수경</option>
+                    <option value="3">가방</option>
+                    <option value="4">기타</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="productQuantity">수량</label></th>
+            <td><input type="number" name="productQuantity" id="productQuantity" placeholder="수량을 입력해주세요"></td>
+        </tr>
         <tr>
             <th><label for="productPrice">원가</label></th>
             <td><input type="text" name="productPrice" id="productPrice" placeholder="원가를 적어주세요"></td>
@@ -52,7 +68,7 @@
         </tr>
         <tr>
             <th><label for="nickName">작성자</label></th>
-            <td><input type="text" name="nickName" id="nickName" th:value="${user.id}" readonly></td>
+            <td><input type="text" name="nickName" id="nickName" th:value="${session.user.id}" readonly></td>
         </tr>
         <tr>
             <th><label for="files"> 이미지 파일</label></th>

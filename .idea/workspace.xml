@@ -4,21 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[MOD] market 상품 스크랩 userId 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/market/AdminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" afterDir="false" />
+    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[FEAT] 판매 매니저 상품 등록 후 이동 페이지">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/pool/SearchPoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/pool/SearchPoolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/salesManager/SalesManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Pay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/MarketMenubar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,20 +49,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.LetsGoApplication.executor": "Debug",
+    "Application.LetsGoApplication.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.LetsGoApplication.executor": "Run",
-    "git-widget-placeholder": "pool",
+    "git-widget-placeholder": "market",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/kyxxx/Desktop/kyu/2024/4-1/ss-letsGo/src/main/resources/templates/salesManager",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true",
     "애플리케이션.LetsGoApplication.executor": "Run"
   },
@@ -67,7 +76,12 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.LetsGoApplication">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kyxxx\Desktop\kyu\2024\4-1\ss-letsGo\src\main\resources\templates\salesManager" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LetsGoApplication">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
@@ -84,13 +98,6 @@
       </method>
     </configuration>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -100,6 +107,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718822704856</updated>
       <workItem from="1718822711655" duration="644000" />
+      <workItem from="1718891911621" duration="3606000" />
+      <workItem from="1718895557835" duration="6695000" />
     </task>
     <task id="LOCAL-00001" summary="[MOD] market 상품 스크랩 userId 수정">
       <option name="closed" value="true" />
@@ -109,7 +118,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718822736166</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="[FEAT] market 승인된 물품만 조회 구현">
+      <option name="closed" value="true" />
+      <created>1718889669164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718889669164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[FEAT] market 주문 기능 구현">
+      <option name="closed" value="true" />
+      <created>1718896381217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718896381217</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[FEAT] 판매 매니저 상품 등록 후 이동 페이지">
+      <option name="closed" value="true" />
+      <created>1718898807163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718898807163</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +162,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[FEAT] 예슬 수영장 api 조회 구현" />
     <MESSAGE value="[MOD] market 상품 스크랩 userId 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] market 상품 스크랩 userId 수정" />
+    <MESSAGE value="[MOD] user 엔티티 수정" />
+    <MESSAGE value="[FEAT] 장바구니 삭제 기능 구현" />
+    <MESSAGE value="[FEAT] market 로그인 안 했을 경우 redirect 설정" />
+    <MESSAGE value="[FEAT] salesManager 물품 등록 기능 구현" />
+    <MESSAGE value="[ADD] salesManager 어노테이션 추가" />
+    <MESSAGE value="[FEAT] market 승인된 물품만 조회 구현" />
+    <MESSAGE value="[FEAT] market 주문 기능 구현" />
+    <MESSAGE value="[FEAT] 판매 매니저 상품 등록 후 이동 페이지" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 판매 매니저 상품 등록 후 이동 페이지" />
   </component>
 </project>

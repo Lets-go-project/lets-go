@@ -79,8 +79,8 @@
                             </td>
                             <td><span th:text="${cartItem.product.productSellPrice}">0</span>원</td>
                             <td style="width: 80px;">
-                                <input type="number" th:value="${cartItem.amount}" style="text-align: right; margin-bottom: 5px; width: 43px;">
-                                <button class="btn default" style="border-radius: 3px; size: 10px;">변경</button>
+                                <input type="number" id="amount-${cartItem.cartId}" th:value="${cartItem.amount}" style="text-align: right; margin-bottom: 5px; width: 43px;">
+                                <button class="btn default" style="border-radius: 3px; size: 10px;" onclick="updateCartItem(${cartItem.cartId})">변경</button>
                             </td>
                             <td>-</td>
                             <td>기본 배송</td>
@@ -89,7 +89,11 @@
                             <td>
                                 <button class="btn default" style="border-radius: 3px; width: 90px; margin-bottom: 3px; font-size: 11px; background-color: #e0e0eb">주문하기</button>
                                 <button class="btn default" style="border-radius: 3px; width: 90px; margin-bottom: 3px; font-size: 11px;">관심 상품 등록</button>
-                                <button class="btn default btnfloat" style="background-color: gray; color: #fff" onclick="removeFromCart(${cartItem.product.id})">X 삭제하기</button>
+<!--                                <button class="btn default btnfloat" style="background-color: gray; color: #fff" type="button" onclick="deleteCartItem([[${cartItem.cartId}]])">삭제</button>-->
+                                <form th:action="@{/cart/remove/{cartId}(cartId=${cartItem.cartId})}" method="post">
+                                    <input type="hidden" name="_method" value="delete"/>
+                                    <button type="submit" class="btn default btnfloat" style="background-color: gray; color: #fff">삭제</button>
+                                </form>
                             </td>
                         </tr>
                     </tbody>
@@ -108,13 +112,15 @@
                     <span style="font-size: 10pt; color:gray;">할인 적용 금액은 주문서 작성의 결제 예정 금액에서 확인 가능합니다.</span>
                 </div>
             </div>
-            <div style="margin: 10px 0;">
+            <!--<div style="margin: 10px 0;">
                 <span style="margin: 0 10px;" class="btnfloat">선택 상품을</span>
-                <button class="btn default btnfloat" style="background-color: gray; color: #fff" onclick="removeFromCart(${cartItem.product.id})">X 삭제하기</button>
-
+                <form th:action="@{/cart/remove/{cartId}(cartId=${cartItem.cartId})}" method="post">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <button type="submit" class="btn default btnfloat" style="background-color: gray; color: #fff">삭제</button>
+                </form>
                 <button class="btn default btnfloat2">장바구니 비우기</button>
                 <span class="clearboth"></span>
-            </div>
+            </div>-->
             <br/><br/>
 
             <table class="calculation2">
@@ -132,30 +138,41 @@
             <br/><br/>
 
             <div align="center">
-                <button class="btn default" id="allProduct">전체 상품 주문</button>
-                <button class="btn default backBtn" id="productClear">선택 상품 주문</button>
-                <button class="btn default footerbtn" id="footerbtn">쇼핑 계속하기</button>
+                <form action="/pay/confirm" method="get">
+                    <button type="submit" class="btn default" id="allProduct">전체 상품 주문</button>
+                    <button type="submit" class="btn default backBtn" id="productClear">선택 상품 주문</button>
+                </form>
+                <button class="btn default footerbtn" id="footerbtn" th:href="@{/market/list}">쇼핑 계속하기</button>
                 <span class="clearboth"></span>
             </div>
         </form>
         </div>
 </body>
 <script>
-    function removeFromCart(cartId) {
+    function updateCartItem(cartId) {
+        var newAmount = document.getElementById('amount-' + cartId).value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/cart/update", true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                location.reload();
+            }
+        };
+        xhr.send("cartId=" + encodeURIComponent(cartId) + "&amount=" + encodeURIComponent(newAmount));
+    }
+
+    function deleteCartItem(cartId) {
         if (confirm("정말로 삭제하시겠습니까?")) {
-            fetch('/remove/' + cartId, {
-                method: 'DELETE'
-            })
-            .then(response => {
-                if (response.ok) {
-                    location.reload(); // 예시로 페이지 리로드
-                } else {
-                    alert('삭제 실패');
+            $.ajax({
+                url: '/cart/remove/' + cartId,
+                type: 'DELETE',
+                success: function (result) {
+                    window.location.reload();
+                },
+                error: function (error) {
+                    alert("삭제 실패");
                 }
-            })
-            .catch(error => {
-                console.error('삭제 중 오류 발생:', error);
-                alert('삭제 중 오류 발생');
             });
         }
     }
