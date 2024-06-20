@@ -146,9 +146,7 @@
 </body>
 
 <!-- script -->
-<!--<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fa248ac11d026fa1559837ea5bbfbd97"></script>-->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fa248ac11d026fa1559837ea5bbfbd97&libraries=services,clusterer,drawing"></script>
-
 <script type="text/javascript">
   //변수 선언
   var mapContainer = document.getElementById('map'), // 지도를 표시할 div
@@ -226,13 +224,16 @@
       }
   }
 
+
+  //쿼리 받고 장소검색 -> 콜백함수에 전달
   function searchPlaces(query) {
     ps.keywordSearch(query, placesSearchCB);
   }
 
+
+  //검색 결과 처리 함수
   function placesSearchCB (data, status, pagination) {
     if (status === kakao.maps.services.Status.OK) {
-
       // 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
       // LatLngBounds 객체에 좌표를 추가합니다
       var bounds = new kakao.maps.LatLngBounds();
@@ -249,9 +250,8 @@
     }
   }
 
-  //함수: 마커생성
+  //함수: 검색된 장소에 마커생성 + 마커 클릭이벤트: 인포윈도우
   function displayMarker(place) {
-    // 마커를 생성하고 지도에 표시합니다
     var marker = new kakao.maps.Marker({
       map: map,
       position: new kakao.maps.LatLng(place.y, place.x)
@@ -259,17 +259,22 @@
 
     var n = place.place_name;
     var p = new kakao.maps.LatLng(place.y, place.x);
+    var placeId = place.id;
+    var placePhone = place.phone;
+
 
     iwPosition = new kakao.maps.LatLng(place.y, place.x);
 
-    // 비동기 작업을 처리하는 함수
+    // 비동기 작업을 처리
     function handleAsyncResults(result, status) {
+      //인포윈도우 생성: 주소 + 즐겨찾기 + 찜 수
       if (status === kakao.maps.services.Status.OK) {
         var detailAddr = !!result[0].road_address ? result[0].road_address.address_name : '';
+
         var iwContent = '<div style="padding:5px;">' +
                 place.place_name + '<br>'+ detailAddr +
                 '<br><a href="https://map.kakao.com/link/to/' + n + ',' + place.y + ',' + place.x + '"style="color:blue" target="_blank">길찾기</div></a>'
-                + '<button onclick="bookMark(\'' + n + '\',\'' + detailAddr + '\')">즐겨찾기 추가</button>';
+                + '<button onclick="bookMark(\'' + placeId + '\',\'' + n + '\',\'' + detailAddr + '\',\'' + placePhone + '\')">즐겨찾기 추가</button>';
 
         var infowindow = new kakao.maps.InfoWindow({
           position: iwPosition,
@@ -277,9 +282,8 @@
           removable: true
         });
 
-        // 마커에 클릭이벤트를 등록합니다
+        // 마커 클릭 -> 인포윈도우
         kakao.maps.event.addListener(marker, 'click', function () {
-          // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
           infowindow.setContent(iwContent);
           infowindow.open(map, marker);
         });
@@ -289,8 +293,34 @@
     geocoder.coord2Address(p.getLng(), p.getLat(), handleAsyncResults);
   }
 
-  //함수->북마크 버튼 클릭시 회원의 동아리의 즐겨찾기에 추가
-
+  // //함수: 북마크 버튼 클릭시 회원의 즐겨찾기에 추가
+  // function bookMark(placeId, placeName, addr, placePhone) {
+  //   var comm_num = '<%= session.getAttribute("comm_num") %>';
+  //   var comm_title = '<%= session.getAttribute("comm_title") %>';
+  //   if (comm_num == 0) {
+  //     alert("동아리를 먼저 등록하세요");
+  //   } else {
+  //     var dataToSend = {
+  //       placeId: placeId,
+  //       placeName: placeName,
+  //       placeLoc: addr,
+  //       placePhone: placePhone,
+  //       comm_num: comm_num
+  //     };
+  //     $.ajax({
+  //       type: "POST",
+  //       url: "<c:url value='/map/search/json'/>",
+  //       contentType: "application/json; charset=utf-8",
+  //       data: JSON.stringify(dataToSend),
+  //       success: function(response) {
+  //         alert(placeName + "을(를) " + comm_title + "의 즐겨찾기에 추가하였습니다.");
+  //       },
+  //       error: function(jqXHR, textStatus, errorThrown) {
+  //         alert("Error! Request status is " + jqXHR.status);
+  //       }
+  //     });
+  //   }
+  // }
 
 
 
