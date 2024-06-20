@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface PayRepository extends JpaRepository<Pay, Long> {
     List<Pay> findByName(String name);
-    Pay findByOrderId(Long orderId);
+    Pay findByPayId(Long payId);
 }

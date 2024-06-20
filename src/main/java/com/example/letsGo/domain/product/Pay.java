@@ -19,7 +19,7 @@ public class Pay implements Serializable {
     @Id
     private Long payId;
 
-    private Double price;
+    private int price;
     private Date date;
     private int status;
     private String name;

@@ -16,12 +16,8 @@ public class PayServiceImpl implements PayService {
         return payDao.getAllOrders();
     }
 
-    public Pay addOrder(int orderId) {
-        return payDao.addOrder(orderId);
-    }
-
-    public Boolean updateOrder(int orderId) {
-        return payDao.updateOrder(orderId);
+    public Pay payProduct(int orderId) {
+        return payDao.payProduct(orderId);
     }
 
     public Boolean cancelOrder(int orderId) {

@@ -5,6 +5,7 @@ import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.domain.salesmanager.SalesManager;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.SalesManagerRepository;
+import com.example.letsGo.repository.UserRepository;
 import com.example.letsGo.service.SalesManagerService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
@@ -37,6 +38,9 @@ public class SalesManagerController {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @Value("${file.upload-dir}")
     private String uploadDir;
 
@@ -48,19 +52,21 @@ public class SalesManagerController {
     @GetMapping("/add")
     public String getProductForm(HttpSession session, Model model) {
         User user = (User) session.getAttribute("user");
-         if (user != null) {
-             model.addAttribute("user", user);
-         }
-
-        return "salesManager/RegisterProductForm";
+        if (user == null) {
+            return "redirect:/signin/signin";
+        } else {
+            model.addAttribute("user", user);
+            return "salesManager/RegisterProductForm";
+        }
     }
 
-   @PostMapping("/add")
+    @PostMapping("/add")
     public String addProduct(@RequestParam("productName") String productName,
+                             @RequestParam("productType") int productType,
+                             @RequestParam("productQuantity") int productQuantity,
                              @RequestParam("productPrice") int productPrice,
                              @RequestParam("productSellPrice") int productSellPrice,
                              @RequestParam("productDescription") String productDescription,
-                             @RequestParam("files") MultipartFile[] files,
                              HttpSession session,
                              RedirectAttributes redirectAttributes) {
 
@@ -70,36 +76,39 @@ public class SalesManagerController {
         }
 
         try {
-            // 파일 업로드 처리
-            StringBuilder fileNames = new StringBuilder();
-            for (MultipartFile file : files) {
-                // 파일 이름 생성
-                String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
-                // 파일 저장 경로 설정
-                Path path = Paths.get(uploadDir + fileName);
-                Files.write(path, file.getBytes());
-                fileNames.append(fileName).append(" ");
-            }
-            log.info("업로드된 파일: " + fileNames);
-
             // Product 객체 생성 및 저장
             Product product = Product.builder()
                     .productName(productName)
+                    .productType(productType)
                     .productPrice(productPrice)
+                    .productState("판매중")
+                    .productQuantity(productQuantity)
                     .productSellPrice(productSellPrice)
                     .productDescription(productDescription)
-                    .productImg(fileNames.toString()) // 파일 이름들을 문자열로 저장
+                    .isAccept(0)
+                    .salesManager(user.getSalesManager())
+                    .productImg("")
                     .build();
 
+            User.builder().isSalesManager(1).build(); // 물품 등록 시 판매 매니저로 변경
+
+            SalesManager salesManager = SalesManager.builder()
+                            .name(user.getName())
+                                    .member(user)
+                                            .build();
+
             productRepository.save(product);
+            salesManagerRepository.save(salesManager);
+            userRepository.save(user);
 
             redirectAttributes.addFlashAttribute("message", "상품 등록 성공");
 
             return "redirect:/market/manager";
-        } catch (IOException e) {
-            log.error("파일 업로드 실패: " + e.getMessage());
-            redirectAttributes.addFlashAttribute("error", "파일 업로드 실패");
+        } catch (Exception e) {
+            log.error("상품 등록 실패: " + e.getMessage());
+            redirectAttributes.addFlashAttribute("error", "상품 등록 실패");
             return "redirect:/market/manager"; // 실패 시 관리자 페이지로 리다이렉트
         }
-   }
+    }
+
 }

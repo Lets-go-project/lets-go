@@ -1,16 +1,16 @@
 package com.example.letsGo.dao.mybatis;
 
-import com.example.letsGo.dao.ManagerDao;
+import com.example.letsGo.dao.SalesManagerDao;
 import com.example.letsGo.dao.mybatis.mapper.ManagerMapper;
 import com.example.letsGo.domain.product.Product;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MyBatisManagerDao implements ManagerDao {
+public class MyBatisSalesManagerDao implements SalesManagerDao {
 
     private final ManagerMapper managerMapper;
 
-    public MyBatisManagerDao(ManagerMapper managerMapper) {
+    public MyBatisSalesManagerDao(ManagerMapper managerMapper) {
         this.managerMapper = managerMapper;
     }
 

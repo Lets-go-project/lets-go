@@ -2,12 +2,10 @@
 package com.example.letsGo.service;
 
 import com.example.letsGo.dao.mybatis.MyBatisCartDao;
-import com.example.letsGo.dao.mybatis.MyBatisManagerDao;
+import com.example.letsGo.dao.mybatis.MyBatisSalesManagerDao;
 import com.example.letsGo.dao.mybatis.MyBatisProductDao;
-import com.example.letsGo.domain.product.Cart;
 import com.example.letsGo.domain.product.Product;
 //import com.example.letsGo.repository.ProductRepository;
-import com.example.letsGo.domain.product.ProductScrap;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.ProductScrapRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,7 @@ import java.util.List;
 @Service
 public class ProductServiceImpl implements ProductService {
     private final MyBatisProductDao productDao;
-    private final MyBatisManagerDao managerDao;
+    private final MyBatisSalesManagerDao managerDao;
     private final MyBatisCartDao cartDao;
 
     @Autowired
@@ -28,7 +26,7 @@ public class ProductServiceImpl implements ProductService {
 
 
     @Autowired
-    public ProductServiceImpl(MyBatisProductDao productDao, MyBatisManagerDao managerDao, MyBatisCartDao cartDao) {
+    public ProductServiceImpl(MyBatisProductDao productDao, MyBatisSalesManagerDao managerDao, MyBatisCartDao cartDao) {
         this.productDao = productDao;
         this.managerDao = managerDao;
         this.cartDao = cartDao;
@@ -55,42 +53,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<Product> getProductByProductType(int productType) {
-        return productDao.getProductByProductType(productType);
-    }
-
-    @Override
     public Boolean scrapProduct(int productId, int userId) {
         return productDao.scrapProduct(productId, userId);
     }
 
-    @Override
-    public Product addProduct(Product product) {
-        return managerDao.addProduct(product);
-    }
-
-    @Override
-    public Boolean updateProduct(int productId) {
-        return managerDao.updateProduct(productId);
-    }
-
-    @Override
-    public Boolean deleteProduct(int productId) {
-        return managerDao.deleteProduct(productId);
-    }
-
-    @Override
-    public List<Cart> getAllCarts() {
-        return cartDao.getAllCarts();
-    }
-
-    @Override
-    public Cart addToCart(int cartId) {
-        return cartDao.addToCart(cartId);
-    }
-
-    @Override
-    public Boolean removeFromCart(int cartId) {
-        return cartDao.removeFromCart(cartId);
-    }
 }

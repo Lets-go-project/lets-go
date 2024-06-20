@@ -27,14 +27,10 @@ public class MyBatisPayDao implements PayDao {
     }
 
     @Override
-    public Pay addOrder(int orderId) {
+    public Pay payProduct(int orderId) {
         return orderMapper.addOrder(orderId);
     }
 
-    @Override
-    public Boolean updateOrder(int orderId) {
-        return orderMapper.updateOrder(orderId);
-    }
 
     @Override
     public Boolean cancelOrder(int orderId) {

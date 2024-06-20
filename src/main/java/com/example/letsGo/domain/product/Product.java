@@ -55,7 +55,7 @@ public class Product extends BaseEntity implements Serializable {
     @Column(name = "product_state", nullable = false, length = 50)
     private String productState;
 
-    @Column(name = "is_accept")
+    @Column(name = "is_accept", columnDefinition = "int default 0")
     private int isAccept;
 
     @NotNull

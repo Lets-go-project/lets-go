@@ -33,9 +33,6 @@ public class MyBatisProductDao implements ProductDao {
     public List<Product> searchProductByType(int productType) {
         return productMapper.searchProductByType(productType);
     }
-    public List<Product> getProductByProductType(int productType) {
-        return productMapper.getProductByProductType(productType);
-    }
 
     public Boolean scrapProduct(int productId, int userId) {
         return productMapper.scrapProduct(productId, userId);
