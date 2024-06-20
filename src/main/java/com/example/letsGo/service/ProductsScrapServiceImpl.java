@@ -1,9 +1,8 @@
 package com.example.letsGo.service;
 
 import com.example.letsGo.dao.UserDao;
+import com.example.letsGo.domain.market.ProductScrap;
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.ProductScrap;
-import com.example.letsGo.domain.record.Record;
 import com.example.letsGo.repository.ProductScrapRepository;
 import com.example.letsGo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

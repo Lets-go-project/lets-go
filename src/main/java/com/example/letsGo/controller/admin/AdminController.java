@@ -1,6 +1,6 @@
 package com.example.letsGo.controller.admin;
 
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.service.AdminService;
 import jakarta.servlet.http.HttpServletRequest;

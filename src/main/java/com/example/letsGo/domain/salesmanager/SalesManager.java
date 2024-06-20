@@ -2,7 +2,7 @@ package com.example.letsGo.domain.salesmanager;
 
 import com.example.letsGo.domain.common.BaseEntity;
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import jakarta.persistence.*;
 import lombok.*;
 

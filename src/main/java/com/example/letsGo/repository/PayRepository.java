@@ -1,7 +1,7 @@
 package com.example.letsGo.repository;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Pay;
+import com.example.letsGo.domain.market.Pay;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

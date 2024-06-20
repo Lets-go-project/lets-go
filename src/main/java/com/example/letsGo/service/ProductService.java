@@ -1,7 +1,6 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.product.Cart;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

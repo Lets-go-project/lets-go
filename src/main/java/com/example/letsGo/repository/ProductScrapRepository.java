@@ -1,8 +1,8 @@
 package com.example.letsGo.repository;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Product;
-import com.example.letsGo.domain.product.ProductScrap;
+import com.example.letsGo.domain.market.Product;
+import com.example.letsGo.domain.market.ProductScrap;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

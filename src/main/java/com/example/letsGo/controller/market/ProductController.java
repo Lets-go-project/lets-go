@@ -1,17 +1,17 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.ProductScrap;
+import com.example.letsGo.domain.market.ProductScrap;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.ProductScrapRepository;
 import com.example.letsGo.repository.UserRepository;
-import com.example.letsGo.service.ProductService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -41,17 +41,17 @@ public class ProductController {
         return "market/Market";
     }
 
-    // 물품 스크랩
     @PostMapping("/scrap")
+    @Transactional(propagation = Propagation.REQUIRED, noRollbackFor = DataIntegrityViolationException.class)
     public String scrapProduct(@RequestParam("productId") Long productId,
                                HttpSession session,
                                RedirectAttributes redirectAttributes) {
         User user = (User) session.getAttribute("user");
-        user = userRepository.findByUser_id(user.getUser_id());
-
         if (user == null) {
             return "redirect:/signin/signin";
         }
+
+        user = userRepository.findByUser_id(user.getUser_id());
 
         Product product = productRepository.findById(productId)
                 .orElseThrow(() -> new RuntimeException("상품을 찾을 수 없습니다: " + productId));
@@ -62,13 +62,16 @@ public class ProductController {
             return "redirect:/market/list";
         }
 
-        ProductScrap productScrap = ProductScrap.builder()
-                .user(user)
-                .product(product)
-                .build();
-
-        productScrapRepository.save(productScrap);
-        redirectAttributes.addFlashAttribute("message", "상품을 스크랩하였습니다.");
+        try {
+            ProductScrap productScrap = ProductScrap.builder()
+                    .user(user)
+                    .product(product)
+                    .build();
+            productScrapRepository.save(productScrap);
+            redirectAttributes.addFlashAttribute("message", "상품을 스크랩하였습니다.");
+        } catch (DataIntegrityViolationException e) {
+            redirectAttributes.addFlashAttribute("message", "이미 스크랩한 상품입니다.");
+        }
 
         return "redirect:/market/list";
     }
