@@ -1,12 +1,11 @@
 package com.example.letsGo.domain.product;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.example.letsGo.domain.member.User;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Builder
@@ -17,10 +16,10 @@ import java.util.Date;
 @AllArgsConstructor
 public class Pay implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long payId;
 
     private int price;
-    private Date date;
     private int status;
     private String name;
     private int zipcode;
@@ -28,4 +27,14 @@ public class Pay implements Serializable {
     private String address2;
     private String phone;
     private String req;
+    private LocalDate created_at;
+    private LocalDate updated_at;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 }

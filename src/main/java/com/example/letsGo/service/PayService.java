@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface PayService {
     List<Pay> getAllOrders(); // 모든 주문 조회
-    Pay payProduct(int orderId); // 주문 추가
-    Boolean cancelOrder(int orderId); // 주문 취소
+    Pay payProduct(Long orderId); // 주문 추가
+    Boolean cancelOrder(Long orderId); // 주문 취소
 }
