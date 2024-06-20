@@ -30,9 +30,17 @@
 </head>
 <body>
 <!-- 상단 내비바 -->
-<div th:replace="~{common/Navibar :: body}"></div>
-<!-- 우측 메뉴바-->
-<div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>
+<nav class="navbar navbar-expand-lg" style="background-color: #ffffff">
+    <div class="container px-4 px-lg-5">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+    <li class="nav-item" th:if="${session.admin}">
+        <a class="nav-link" th:href="@{/logout}">관리자 로그아웃</a>
+    </li>
+</ul>
+</div>
+    </div>
+</nav>
 <!-- Header -->
 <header class="py-5" style="background-color: #0E46A3">
     <div class="container px-4 px-lg-5 my-5">
@@ -47,7 +55,7 @@
     <div class="d-flex justify-content-between align-items-center my-3">
     <!-- 대기중인 물품 수-->
     <div>
-        <p>대기 물품 수: <span id="pendingCount">3</span></p>
+        <p>대기 물품 수: <span id="pendingCount" th:text="${pendingProductList.size()}">0</span></p>
     </div>
 
     <div class="button-group">
@@ -66,51 +74,20 @@
     <div class="container my-4">
         <div class="row" id="pendingItemsList">
             <!-- 예시 박스 1-->
-            <div class="col-md-4 mb-3">
-                <div class="card">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4" th:if="${pendingProduct != null}" th:each="pendingProduct : ${pendingProductList}">
+                <div class="card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">물품이름</h5>
-                        <p class="card-text">설명하시오.</p>
+                        <h5 class="fw-bolder" th:text="${pendingProduct.productName}">Product Name</h5>
+                        <p class="fw-bolder" th:text="${pendingProduct.salesManager}">Sales Manager</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="item1">
-                            <label class="form-check-label" for="item1">
+                            <input class="form-check-input" type="checkbox" th:value="${pendingProduct.productId}" id="item">
+                            <label class="form-check-label" for="item">
                                 선택
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 예시 박스 2-->
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">물품 이름</h5>
-                        <p class="card-text">설명부분(작성자..?)</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="item2">
-                            <label class="form-check-label" for="item2">
-                                선택
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 예시 박스 3-->
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">물품 이름</h5>
-                        <p class="card-text">설명 부분</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="item3">
-                            <label class="form-check-label" for="item3">
-                                선택
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -122,11 +99,61 @@
 
 <!-- script -->
 <script>
+
+    //버튼 1. 모든 체크박스 선택
     document.getElementById('selectAllBtn').addEventListener('click', function() {
-        // 모든 체크박스 선택
         var checkboxes = document.querySelectorAll('#pendingItemsList .form-check-input');
         checkboxes.forEach(function(checkbox) {
             checkbox.checked = true;
+        });
+    });
+
+
+    //버튼 2. 승인 하기
+    document.getElementById('approveSelectedBtn').addEventListener('click', function() {
+        var selectedProductIds = [];
+        var checkboxes = document.querySelectorAll('#pendingItemsList .form-check-input:checked');
+        checkboxes.forEach(function(checkbox) {
+            selectedProductIds.push(checkbox.value);
+        });
+
+        // AJAX: 선택된 제품 ID를 서버로 전송
+        $.ajax({
+            type: 'POST',
+            url: '/admin/approve',
+            contentType: 'application/json',
+            data: JSON.stringify(selectedProductIds),
+            success: function(response) {
+                // 요청 성공: 페이지를 새로고침하여 변경 사항을 반영
+                location.reload();
+            },
+            error: function(error) {
+                console.error('Error approving products:', error);
+            }
+        });
+    });
+
+    //버튼 3. 반려 하기
+    document.getElementById('rejectSelectedBtn').addEventListener('click', function() {
+        var selectedProductIds = [];
+        var checkboxes = document.querySelectorAll('#pendingItemsList .form-check-input:checked');
+        checkboxes.forEach(function(checkbox) {
+            selectedProductIds.push(checkbox.value);
+        });
+
+        // AJAX: 선택된 제품 ID를 서버로 전송
+        $.ajax({
+            type: 'POST',
+            url: '/admin/reject',
+            contentType: 'application/json',
+            data: JSON.stringify(selectedProductIds),
+            success: function(response) {
+                // 요청 성공: 페이지를 새로고침하여 변경 사항을 반영
+                location.href = '/admin/list';
+            },
+            error: function(error) {
+                console.error('Error rejecting products:', error);
+            }
         });
     });
 </script>
