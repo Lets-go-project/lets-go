@@ -132,7 +132,7 @@
       </form>
     </div>
     <div class="button-box">
-      <button class="view-scrap-button">스크랩 보기</button>
+      <button class="view-scrap-button" id="viewScrapBtn">스크랩 보기</button>
     </div>
   </div>
   <!-- 검색어 표시와 지도 -->
@@ -158,6 +158,7 @@
   var geocoder = new kakao.maps.services.Geocoder(); // 주소-좌표 변환 객체를 생성
   var ps = new kakao.maps.services.Places();
 
+  var markers = [];
   // 함수: 처음 주소-> 동덕여대
   addressSearchAndCenterMap(geocoder, map);
   function addressSearchAndCenterMap(geocoder, map) {
@@ -174,6 +175,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     const viewMyLocBtn = document.getElementById('viewMyLocBtn');
     const areaSelect = document.getElementById('areaSelect');
+    const viewScrapBtn = document.getElementById('viewScrapBtn');
 
     //1. 내 위치 버튼
     viewMyLocBtn.addEventListener('click', function () {
@@ -182,8 +184,9 @@
         viewMyLocBtn.classList.remove('clicked');
         addressSearchAndCenterMap(geocoder, map);
       }
-      //내 위치 버튼 활성화& Select 요소 비활성화 처리
+      //내 위치 버튼 활성화& 다른 버튼 비활성화
       else {
+          viewScrapBtn.classList.remove('clicked')
         viewMyLocBtn.classList.add('clicked');
         areaSelect.selectedIndex = 0;
         areaSelect.classList.remove('active');
@@ -193,7 +196,8 @@
 
     //2. 장소 선택 버튼
     areaSelect.addEventListener('change', function () {
-      // 내 위치 버튼 비활성화 & Select 요소 활성화 처리
+      //  Select 요소 활성화 처리 &다른버튼 비활성화
+        viewScrapBtn.classList.remove('clicked')
       viewMyLocBtn.classList.remove('clicked');
       areaSelect.classList.add('active');
       // Select된 장소 처리
@@ -202,6 +206,18 @@
       // displayDiv.textContent = `검색어: ${selectedArea}`;
       searchPlaces(selectedArea + ' 수영장');
     });
+
+
+    //3. 스크랩 보기 버튼
+    viewScrapBtn.addEventListener('click', function () {
+        viewMyLocBtn.classList.remove('clicked');
+        viewScrapBtn.classList.add('clicked')
+        areaSelect.selectedIndex = 0;
+        areaSelect.classList.remove('active');
+      fetchScrapPools();
+    });
+
+
   });
 
   //함수: 현재위치 기반으로 검색어 만들기
@@ -227,6 +243,7 @@
 
   //쿼리 받고 장소검색 -> 콜백함수에 전달
   function searchPlaces(query) {
+      removeMarkers();
     ps.keywordSearch(query, placesSearchCB);
   }
 
@@ -257,6 +274,7 @@
       position: new kakao.maps.LatLng(place.y, place.x)
     });
 
+      markers.push(marker);
     var n = place.place_name;
     var p = new kakao.maps.LatLng(place.y, place.x);
     var placeId = place.id;
@@ -293,36 +311,98 @@
     geocoder.coord2Address(p.getLng(), p.getLat(), handleAsyncResults);
   }
 
-  // //함수: 북마크 버튼 클릭시 회원의 즐겨찾기에 추가
-  // function bookMark(placeId, placeName, addr, placePhone) {
-  //   var comm_num = '<%= session.getAttribute("comm_num") %>';
-  //   var comm_title = '<%= session.getAttribute("comm_title") %>';
-  //   if (comm_num == 0) {
-  //     alert("동아리를 먼저 등록하세요");
-  //   } else {
-  //     var dataToSend = {
-  //       placeId: placeId,
-  //       placeName: placeName,
-  //       placeLoc: addr,
-  //       placePhone: placePhone,
-  //       comm_num: comm_num
-  //     };
-  //     $.ajax({
-  //       type: "POST",
-  //       url: "<c:url value='/map/search/json'/>",
-  //       contentType: "application/json; charset=utf-8",
-  //       data: JSON.stringify(dataToSend),
-  //       success: function(response) {
-  //         alert(placeName + "을(를) " + comm_title + "의 즐겨찾기에 추가하였습니다.");
-  //       },
-  //       error: function(jqXHR, textStatus, errorThrown) {
-  //         alert("Error! Request status is " + jqXHR.status);
-  //       }
-  //     });
-  //   }
-  // }
+  // 기존 마커 제거 함수
+  function removeMarkers() {
+      for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(null);
+      }
+      markers = [];
+  }
 
+  //함수: 북마크 버튼 클릭시 회원의 즐겨찾기에 추가
+  function bookMark(placeId, placeName, addr, placePhone) {
+    var dataToSend = {
+      placeId: placeId,
+      placeName: placeName,
+      placeLoc: addr,
+      placePhone: placePhone
+    };
 
+    $.ajax({
+      type: "POST",
+      url: '/map/search/json',
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(dataToSend),
+      success: function(response) {
+        alert(placeName + "을(를) 즐겨찾기에 추가하였습니다.");
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        if (jqXHR.status === 401) {
+          alert("로그인 해주세요");
+        } else {
+          alert("Error! Request status is " + jqXHR.status);
+        }
+      }
+    });
+  }
+
+  // 함수: 스크랩된 수영장 가져오기
+  function fetchScrapPools() {
+      removeMarkers();
+      $.ajax({
+          type: "GET",
+          url: '/map/scrap',
+          contentType: "application/json; charset=utf-8",
+          success: function(response) {
+              if (response.error) {
+                  alert(response.error);
+              } else {
+                  displayScrapMarkers(response);
+              }
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              if (jqXHR.status === 401) {
+                  alert("로그인 해주세요");
+              } else {
+                  alert("Error! Request status is " + jqXHR.status);
+              }
+          }
+      });
+  }
+
+  // 함수: 스크랩된 수영장 마커 표시
+  function displayScrapMarkers(pools) {
+      var bounds = new kakao.maps.LatLngBounds();
+
+      pools.forEach(function(pool) {
+          geocoder.addressSearch(pool.poolLoc, function(result, status) {
+              if (status === kakao.maps.services.Status.OK) {
+                  var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                  var marker = new kakao.maps.Marker({
+                      map: map,
+                      position: coords
+                  });
+
+                  // 마커의 위치를 LatLngBounds에 추가
+                  bounds.extend(coords);
+
+                  var iwContent = '<div style="padding:5px;">' + pool.poolName + '<br>' + pool.poolLoc + '</div>';
+                  var infowindow = new kakao.maps.InfoWindow({
+                      position: coords,
+                      content: iwContent,
+                      removable: true
+                  });
+                  kakao.maps.event.addListener(marker, 'click', function() {
+                      infowindow.open(map, marker);
+                  });
+
+                markers.push(marker);
+                  // 모든 마커가 추가된 후 지도의 범위를 설정
+                  map.setBounds(bounds);
+              }
+          });
+      });
+  }
 
 </script>
 </html>
