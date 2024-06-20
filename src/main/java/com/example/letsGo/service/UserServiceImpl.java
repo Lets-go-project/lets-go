@@ -22,6 +22,8 @@ public class UserServiceImpl implements UserService {
         this.userDao = userDao;
     }
 
+
+
     @Override
     public void saveUser(User user) {
         userDao.save(user);
@@ -31,6 +33,8 @@ public class UserServiceImpl implements UserService {
     public User getUserById(String id) {
         return userDao.findById(id);
     }
+
+
 
     @Override
     public User getUserByEmail(String email) {
@@ -47,4 +51,8 @@ public class UserServiceImpl implements UserService {
         userDao.update(user);
     }
 
+    @Override
+    public User getUserByUserId(int userId) {
+       return userDao.findByUserId(userId);
+    }
 }

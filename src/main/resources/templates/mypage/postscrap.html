@@ -2,8 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Scraps</title>
+    <title>User Scrap Posts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,7 +22,7 @@
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted min-width to 100px */
             grid-gap: 20px;
         }
 
@@ -33,6 +32,8 @@
         }
 
         .image-item img {
+            max-width: 150px; /* Set maximum width for the images */
+            max-height: 150px; /* Set maximum height for the images */
             width: 100%;
             height: auto;
             border-radius: 8px;
@@ -66,27 +67,24 @@
         .overlay-content {
             text-align: center;
             color: #fff;
-            font-size: 20px;
+            font-size: 16px; /* Adjusted font size */
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Web Scraps</h1>
+    <h1>User Scrap Posts</h1>
+    <input type="hidden" name="user_id" th:value="${user.user_id}" />
     <div class="image-grid">
-        <div class="image-item">
-            <img src="https://via.placeholder.com/150" alt="Image 1">
-            <div class="overlay">
-                <div class="overlay-content">게시물 1</div>
-            </div>
+        <div th:each="scrap : ${scraps}" class="image-item">
+            <a th:href="@{/market/detail(productId=${scrap.product.productId}, productType=${scrap.product.productType})}">
+                <img th:src="@{${scrap.product.productImg}}" th:alt="${scrap.product.productName}"/>
+                <div class="overlay">
+                    <div class="overlay-content" th:text="${scrap.product.productName}"></div>
+                </div>
+            </a>
         </div>
-        <div class="image-item">
-            <img src="https://via.placeholder.com/150" alt="Image 2">
-            <div class="overlay">
-                <div class="overlay-content">게시물 2</div>
-            </div>
         </div>
-        <!-- 여러 개의 이미지를 추가하고 각각에 대한 게시물 정보를 입력하세요 -->
     </div>
 </div>
 </body>

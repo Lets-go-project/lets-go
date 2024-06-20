@@ -37,11 +37,13 @@ public interface UserService {
 
     User getUserById(String id);
 
+
     User getUserByEmail(String email);
 
     User getUserByPassword(String password);
 
     void updateUser(User user);
 
+    User getUserByUserId(int userId);
 }
 

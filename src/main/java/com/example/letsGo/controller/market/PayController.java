@@ -105,7 +105,7 @@ public class PayController {
             return "redirect:/signin/signin";
         }
 
-        payRepository.deleteById(orderId);
+       /* payRepository.deleteById(orderId);*/
 
         return "redirect:/pay/orders";
     }
@@ -113,5 +113,19 @@ public class PayController {
     @GetMapping("/complete")
     public String orderComplete() {
         return "market/CompletePayment";
+    }
+    /*민주 추가 부분*/
+    @GetMapping("/cancel/{orderId}")
+    public String cancelOrder(@PathVariable Long orderId, HttpSession session, Model model) {
+        User user = (User) session.getAttribute("user");
+        if (user == null) {
+            return "redirect:/signin/signin";
+        }
+
+        // 주문 취소 로직 수행 (여기서는 단순히 삭제)
+        payRepository.deleteById(orderId);
+
+        // 다시 주문 조회 페이지로 리다이렉트
+        return "redirect:/orders";
     }
 }
