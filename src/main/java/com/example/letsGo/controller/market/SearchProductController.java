@@ -44,19 +44,4 @@ public class SearchProductController {
         model.addAttribute("selectedProductType", productType);
         return "market/Market";
     }
-
-    private String convertProductTypeToString(int productType) {
-        switch (productType) {
-            case 1:
-                return "수영복";
-            case 2:
-                return "수경";
-            case 3:
-                return "가방";
-            case 4:
-                return "기타";
-            default:
-                return "알 수 없음";
-        }
-    }
 }

@@ -90,25 +90,31 @@ public class SalesManagerController {
                     .productImg("")
                     .build();
 
-            User.builder().isSalesManager(1).build(); // 물품 등록 시 판매 매니저로 변경
+             if (user.getIsSalesManager() == 0) {
+                user.setIsSalesManager(1);
+                SalesManager salesManager = SalesManager.builder()
+                        .name(user.getName())
+                        .member(user)
+                        .build();
 
-            SalesManager salesManager = SalesManager.builder()
-                            .name(user.getName())
-                                    .member(user)
-                                            .build();
-
+                salesManagerRepository.save(salesManager);
+            }
             productRepository.save(product);
-            salesManagerRepository.save(salesManager);
             userRepository.save(user);
 
             redirectAttributes.addFlashAttribute("message", "상품 등록 성공");
 
-            return "redirect:/market/manager";
+            return "redirect:/market/manager/complete";
         } catch (Exception e) {
             log.error("상품 등록 실패: " + e.getMessage());
             redirectAttributes.addFlashAttribute("error", "상품 등록 실패");
             return "redirect:/market/manager"; // 실패 시 관리자 페이지로 리다이렉트
         }
+    }
+
+    @GetMapping("/complete")
+    public String orderComplete() {
+        return "salesManager/CompleteRegisterProduct";
     }
 
 }
