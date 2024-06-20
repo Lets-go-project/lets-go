@@ -28,14 +28,11 @@
         <li>
             <a href="#">wish</a>
         </li>
-        <li>
-            <div th:if="${session == null}">
-                <div style="text-align: center; margin-top: 50px;">
-                    <p>로그인이 필요한 서비스입니다.</p>
-                    <a th:href="@{/signin/signin}" class="btn btn-primary">로그인 하러 가기</a>
-                </div>
-            </div>
-            <a th:href="@{/market/manager}" th:if="${session != null}">go to manager's page</a>
+        <li th:if="${session.user != null}">
+            <a th:href="@{/market/manager}">go to manager's page</a>
+        </li>
+        <li th:if="${session.user == null}">
+            <a th:href="@{/signin/signin}">go to manager's page</a>
         </li>
     </ul>
 </aside>

@@ -1,13 +1,11 @@
 package com.example.letsGo.controller.salesManager;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Cart;
 import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.domain.salesmanager.SalesManager;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.SalesManagerRepository;
 import com.example.letsGo.repository.UserRepository;
-import com.example.letsGo.service.SalesManagerService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,16 +16,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Controller
 @Log4j2
