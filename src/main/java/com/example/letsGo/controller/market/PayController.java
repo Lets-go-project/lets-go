@@ -53,11 +53,9 @@ public class PayController {
         }
 
         // 주문 정보 저장
-//        List<Cart> cartList = (List<Cart>) session.getAttribute("cartList");
         List<Cart> cartList = cartRepository.findByUser(user);
         model.addAttribute("cartList", cartList);
 
-        log.info(cartList.get(0).getProduct());
         for (Cart cart : cartList) {
             Product product = cart.getProduct();
             int totalPrice = product.getProductSellPrice() * cart.getAmount();
@@ -76,56 +74,43 @@ public class PayController {
 
             payRepository.save(pay);
         }
-
-        session.removeAttribute("cartList");
+//        session.removeAttribute("cartList");
 
         redirectAttributes.addFlashAttribute("message", "주문이 완료되었습니다.");
         return "redirect:/pay/complete";
 
     }
 
-    @GetMapping("/payment")
+    @GetMapping("/list")
     public String getAllOrders(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
         if (user == null) {
             return "redirect:/signin/signin";
         }
 
-        // 해당 유저의 모든 주문 조회
         List<Pay> orderList = payRepository.findByUser(user);
         model.addAttribute("orderList", orderList);
 
-        return "market/UserOrders";
+        return "mypage/order";
     }
 
-    @DeleteMapping("/pay/{orderId}")
-    public String cancelOrder(@PathVariable Long orderId, HttpSession session) {
-        User user = (User) session.getAttribute("user");
-        if (user == null) {
-            return "redirect:/signin/signin";
-        }
-
-       /* payRepository.deleteById(orderId);*/
-
-        return "redirect:/pay/orders";
-    }
-
+    // 주문 완료 시 이동
     @GetMapping("/complete")
     public String orderComplete() {
         return "market/CompletePayment";
     }
+
     /*민주 추가 부분*/
-    @GetMapping("/cancel/{orderId}")
-    public String cancelOrder(@PathVariable Long orderId, HttpSession session, Model model) {
+    // 주문 취소
+    @GetMapping("/cancel/{payId}")
+    public String cancelOrder(@PathVariable Long payId, HttpSession session, Model model) {
         User user = (User) session.getAttribute("user");
         if (user == null) {
             return "redirect:/signin/signin";
         }
 
-        // 주문 취소 로직 수행 (여기서는 단순히 삭제)
-        payRepository.deleteById(orderId);
+        payRepository.deleteById(payId);
 
-        // 다시 주문 조회 페이지로 리다이렉트
         return "redirect:/orders";
     }
 }

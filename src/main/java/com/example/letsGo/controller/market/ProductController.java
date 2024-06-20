@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,7 @@ public class ProductController {
     }
 
     @PostMapping("/scrap")
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED, noRollbackFor = DataIntegrityViolationException.class)
     public String scrapProduct(@RequestParam("productId") Long productId,
                                HttpSession session,
                                RedirectAttributes redirectAttributes) {
@@ -69,7 +70,6 @@ public class ProductController {
             productScrapRepository.save(productScrap);
             redirectAttributes.addFlashAttribute("message", "상품을 스크랩하였습니다.");
         } catch (DataIntegrityViolationException e) {
-            // 중복 스크랩시 예외 처리
             redirectAttributes.addFlashAttribute("message", "이미 스크랩한 상품입니다.");
         }
 

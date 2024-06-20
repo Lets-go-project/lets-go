@@ -1,7 +1,7 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.ProductScrap;
+
+import com.example.letsGo.domain.market.ProductScrap;
 
 import java.util.List;
 
