@@ -1,6 +1,7 @@
 package com.example.letsGo.controller.salesManager;
 
 import com.example.letsGo.domain.member.User;
+import com.example.letsGo.domain.product.Cart;
 import com.example.letsGo.domain.product.Product;
 import com.example.letsGo.domain.salesmanager.SalesManager;
 import com.example.letsGo.repository.ProductRepository;
@@ -45,7 +46,15 @@ public class SalesManagerController {
     private String uploadDir;
 
     @GetMapping("/")
-    public String getSalesManagerPage(Model model) {
+    public String getSalesManagerPage(HttpSession session, Model model) {
+        User sessionUser = (User) session.getAttribute("user");
+        if (sessionUser == null) {
+            return "redirect:/signin/signin";
+        }
+        User user = userRepository.findById(sessionUser.getId());
+        List<Product> registeredProductList = productRepository.findBySalesManager(user.getSalesManager());
+        model.addAttribute("registeredProductList", registeredProductList);
+
         return "salesManager/SalesManager";
     }
 
@@ -86,7 +95,6 @@ public class SalesManagerController {
                     .productSellPrice(productSellPrice)
                     .productDescription(productDescription)
                     .isAccept(0)
-                    .salesManager(user.getSalesManager())
                     .productImg("")
                     .build();
 
@@ -99,6 +107,8 @@ public class SalesManagerController {
 
                 salesManagerRepository.save(salesManager);
             }
+             product.setSalesManager(user.getSalesManager());
+
             productRepository.save(product);
             userRepository.save(user);
 
