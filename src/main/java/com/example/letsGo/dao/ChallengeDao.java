@@ -1,11 +1,13 @@
 package com.example.letsGo.dao;
 
+import com.example.letsGo.domain.record.Record;
+
 import java.util.List;
 
 public interface ChallengeDao {
-    List<Record> getPubAllRecords(int isPublic);
-    List<Record> getPubWomanRecords(int isPublic, int gender);
-    List<Record> getPubManRecords(int isPublic, int gender);
+    List<Record> getAllRecords();
+    List<Record> getWomanRecords(int gender);
+    List<Record> getManRecords(int gender);
 
     void filteringRecords(List<Record> records, int filter);
     void sortRecordsByDist(List<Record> records);

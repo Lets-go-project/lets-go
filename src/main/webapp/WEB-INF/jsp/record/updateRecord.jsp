@@ -4,30 +4,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>UpdateRecord</title>
+    <title>Lets go Record</title>
     <style>
         body {
             text-align: center;
         }
-
         div.main {
-            background-color: white;
             width: 80%;
             height: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            /*border: 1px solid black;*/
-            padding-bottom: 30px;
+            margin: 50px auto;
         }
-
-        hr {
-            width: 90%;
-        }
-
         #form {
             display: inline-block;
         }
-
         th, td {
             height: 50px;
             text-align: left;
@@ -41,14 +30,18 @@
         td.sub {
             text-align: center;
         }
-
         .btn {
             background-color: #6BBBD8;
             color: white;
 
         }
     </style>
-    <script src="deleteRecord.js"></script>
+    <script>
+        function deleteRecord() {
+            window.alert('기록이 삭제되었습니다.');
+            window.location.href = "/record/view";
+        }
+    </script>
 </head>
 <body>
 <%@ include file="../common/Navibar.jsp" %>
@@ -88,7 +81,8 @@
                 <td><input type="text" size=1>KM</td>
             </tr>
             <tr>
-                <td colspan="2" class="sub"><input type="submit" value="기록 수정" class="btn">
+                <td colspan="2" class="sub">
+                    <input type="submit" value="기록 수정" onclick="return alert('기록이 수정되었습니다.')" class="btn">
                     <input type="button" value="기록 삭제" onclick="deleteRecord()" class="btn"></td>
             </tr>
         </table>
