@@ -49,7 +49,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         예슬: 수영장 정보 & 관리자
         */
         registry.addViewController("/swimpool/search").setViewName("/swimpool/Search");
-
+        registry.addViewController("/signin/adminLogin").setViewName("/signin/adminLogin");
+        registry.addViewController("/adminPage").setViewName("/market/AdminPage");
         /*
         민주: 로그인 & 회원가입 & 마이페이지
         */
