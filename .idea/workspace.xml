@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[MOD] market 상품 스크랩 userId 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/market/AdminPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" afterDir="false" />
+    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[ADD] salesManager 어노테이션 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/pool/SearchPoolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/pool/SearchPoolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/swimpool/Search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/letsGo/controller/market/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/market/Market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/market/ProductDetailView.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.LetsGoApplication.executor": "Debug",
+    "Application.LetsGoApplication.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -52,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.LetsGoApplication.executor": "Run",
-    "git-widget-placeholder": "pool",
+    "git-widget-placeholder": "market",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,7 +65,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.LetsGoApplication">
+  <component name="RunManager" selected="Application.LetsGoApplication">
     <configuration name="LetsGoApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.letsGo.LetsGoApplication" />
       <module name="letsGo" />
@@ -129,6 +127,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[FEAT] 예슬 수영장 api 조회 구현" />
     <MESSAGE value="[MOD] market 상품 스크랩 userId 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] market 상품 스크랩 userId 수정" />
+    <MESSAGE value="[MOD] user 엔티티 수정" />
+    <MESSAGE value="[FEAT] 장바구니 삭제 기능 구현" />
+    <MESSAGE value="[FEAT] market 로그인 안 했을 경우 redirect 설정" />
+    <MESSAGE value="[FEAT] salesManager 물품 등록 기능 구현" />
+    <MESSAGE value="[ADD] salesManager 어노테이션 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] salesManager 어노테이션 추가" />
   </component>
 </project>
