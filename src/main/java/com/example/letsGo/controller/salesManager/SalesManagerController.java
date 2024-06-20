@@ -1,7 +1,7 @@
 package com.example.letsGo.controller.salesManager;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.domain.salesmanager.SalesManager;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.SalesManagerRepository;

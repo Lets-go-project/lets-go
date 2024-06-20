@@ -1,6 +1,6 @@
 package com.example.letsGo.controller.market;
 
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.repository.ProductRepository;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.log4j.Log4j2;

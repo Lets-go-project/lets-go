@@ -1,4 +1,4 @@
-package com.example.letsGo.domain.product;
+package com.example.letsGo.domain.market;
 
 import com.example.letsGo.domain.common.BaseEntity;
 import com.example.letsGo.domain.salesmanager.SalesManager;
@@ -9,7 +9,6 @@ import org.antlr.v4.runtime.misc.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Builder

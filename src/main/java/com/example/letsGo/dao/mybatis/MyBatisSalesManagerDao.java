@@ -2,7 +2,7 @@ package com.example.letsGo.dao.mybatis;
 
 import com.example.letsGo.dao.SalesManagerDao;
 import com.example.letsGo.dao.mybatis.mapper.ManagerMapper;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import org.springframework.stereotype.Repository;
 
 @Repository

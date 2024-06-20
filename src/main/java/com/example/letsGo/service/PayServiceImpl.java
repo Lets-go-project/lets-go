@@ -1,7 +1,6 @@
 package com.example.letsGo.service;
 
-import com.example.letsGo.domain.product.Pay;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.letsGo.domain.market.Pay;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

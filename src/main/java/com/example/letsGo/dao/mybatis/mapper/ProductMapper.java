@@ -1,6 +1,6 @@
 package com.example.letsGo.dao.mybatis.mapper;
 
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -4,7 +4,7 @@ package com.example.letsGo.service;
 import com.example.letsGo.dao.mybatis.MyBatisCartDao;
 import com.example.letsGo.dao.mybatis.MyBatisSalesManagerDao;
 import com.example.letsGo.dao.mybatis.MyBatisProductDao;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Product;
 //import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.ProductRepository;
 import com.example.letsGo.repository.ProductScrapRepository;

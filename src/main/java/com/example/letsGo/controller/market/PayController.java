@@ -1,13 +1,12 @@
 package com.example.letsGo.controller.market;
 
 import com.example.letsGo.domain.member.User;
-import com.example.letsGo.domain.product.Cart;
-import com.example.letsGo.domain.product.Pay;
-import com.example.letsGo.domain.product.Product;
+import com.example.letsGo.domain.market.Cart;
+import com.example.letsGo.domain.market.Pay;
+import com.example.letsGo.domain.market.Product;
 import com.example.letsGo.repository.CartRepository;
 import com.example.letsGo.repository.PayRepository;
 import jakarta.servlet.http.HttpSession;
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

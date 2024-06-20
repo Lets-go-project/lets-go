@@ -5,7 +5,7 @@
 
   <cache />
 
-  <select id="getAllProducts" resultType="com.example.letsGo.domain.product.Product">
+  <select id="getAllProducts" resultType="com.example.letsGo.domain.market.Product">
     SELECT
       PRODUCT_ID,
       PRODUCT_NAME,
@@ -16,14 +16,14 @@
     FROM PRODUCT
   </select>
 
-  <select id="getDetailProduct" resultType="com.example.letsGo.domain.product.Product">
+  <select id="getDetailProduct" resultType="com.example.letsGo.domain.market.Product">
     SELECT
       *
     FROM PRODUCT
     WHERE PRODUCT_ID = #{productId}
   </select>
 
-  <select id="getProductByProductType" resultType="com.example.letsGo.domain.product.Product">
+  <select id="getProductByProductType" resultType="com.example.letsGo.domain.market.Product">
     SELECT
       PRODUCT_ID,
       PRODUCT_NAME,
