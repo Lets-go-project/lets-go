@@ -95,7 +95,7 @@ public class SalesManagerController {
                     .productSellPrice(productSellPrice)
                     .productDescription(productDescription)
                     .isAccept(0)
-                    .productImg("")
+                    .productImg("https://ifh.cc/g/Tya3nl.jpg")
                     .build();
 
              if (user.getIsSalesManager() == 0) {
