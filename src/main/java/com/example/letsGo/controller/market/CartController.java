@@ -36,7 +36,7 @@ public class CartController {
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
             totalProductPrice = cartList.stream()
-                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
+                    .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductSellPrice() * cartItem.getAmount()))
                     .sum();
         }
         model.addAttribute("cartList", cartList);

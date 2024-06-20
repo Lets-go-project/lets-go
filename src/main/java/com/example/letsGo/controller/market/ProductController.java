@@ -47,7 +47,7 @@ public class ProductController {
                                HttpSession session,
                                RedirectAttributes redirectAttributes) {
         User user = (User) session.getAttribute("user");
-        user = userRepository.findById(user.getId());
+        user = userRepository.findByUser_id(user.getUser_id());
 
         if (user == null) {
             return "redirect:/login";
