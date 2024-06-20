@@ -4,58 +4,40 @@ import com.example.letsGo.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Table(name = "Record")
-public class Record extends BaseEntity {
+public class Record extends BaseEntity implements Serializable {
 
-    @Setter
-    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int recordId;
+    private Long recordId;
 
+    private String swimDate;
     private String swimName;
-    private String swimTime;
+    private float swimTime;
     private float swimDist;
     private int userId;
+    private String id;
+    private String gender;
 
-    public void setRecordId(int recordId) {
-        this.recordId = recordId;
-    }
-
-    public String getSwimName() {
-        return swimName;
-    }
-
-    public void setSwimName(String swimName) {
-        this.swimName = swimName;
-    }
-
-    public String getSwimTime() {
-        return swimTime;
-    }
-
-    public void setSwimTime(String swimTime) {
-        this.swimTime = swimTime;
-    }
-
-    public float getSwimDist() {
-        return swimDist;
-    }
-
-    public void setSwimDist(float swimDist) {
-        this.swimDist = swimDist;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
+    @Override
+    public String toString() {
+        return "Record{" +
+                "recordId=" + recordId +
+                ", swimDate='" + swimDate + '\'' +
+                ", swimName='" + swimName + '\'' +
+                ", swimTime=" + swimTime +
+                ", swimDist=" + swimDist +
+                ", userId=" + userId +
+                ", id='" + id + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
     }
 }

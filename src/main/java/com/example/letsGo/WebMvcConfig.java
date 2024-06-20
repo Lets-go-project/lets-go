@@ -36,14 +36,16 @@ public class WebMvcConfig implements WebMvcConfigurer {
         진희: 기록 & 챌린지
         */
         registry.addViewController("/record/view").setViewName("/record/viewRecord");
-        registry.addViewController("/record/add").setViewName("/record/addRecord");
-        registry.addViewController("/record/update").setViewName("/record/updateRecord");
-        registry.addViewController("/record/delete").setViewName("/record/updateRecord");
+        registry.addViewController("/record/all").setViewName("/record/viewRecord");
+        registry.addViewController("/record/moveAdd").setViewName("/record/addRecord");
+        registry.addViewController("/record/add").setViewName("/record/viewRecord");
+        registry.addViewController("/record/update").setViewName("/record/viewRecord");
+        registry.addViewController("/record/moveUpdate").setViewName("/record/updateRecord");
+        registry.addViewController("/record/delete").setViewName("/record/viewRecord");
 
         registry.addViewController("/challenge/all").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/woman").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/man").setViewName("/challenge/challenge");
-        registry.addViewController("/challenge/filtering").setViewName("/challenge/challenge");
 
         /*
         예슬: 수영장 정보 & 관리자

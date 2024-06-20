@@ -1,6 +1,7 @@
 package com.example.letsGo.service;
 
 import com.example.letsGo.dao.mybatis.MyBatisChallengeDao;
+import com.example.letsGo.domain.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,18 +17,18 @@ public class ChallengeServiceImpl implements ChallengeService {
     }
 
     @Override
-    public List<Record> getPubAllRecords(int isPublic) {
-        return challengeDao.getPubAllRecords(isPublic);
+    public List<Record> getAllRecords() {
+        return challengeDao.getAllRecords();
     }
 
     @Override
-    public List<Record> getPubWomanRecords(int isPublic, int gender) {
-        return challengeDao.getPubWomanRecords(isPublic, gender);
+    public List<Record> getWomanRecords(int gender) {
+        return challengeDao.getWomanRecords(gender);
     }
 
     @Override
-    public List<Record> getPubManRecords(int isPublic, int gender) {
-        return challengeDao.getPubManRecords(isPublic, gender);
+    public List<Record> getManRecords(int gender) {
+        return challengeDao.getManRecords(gender);
     }
 
     @Override

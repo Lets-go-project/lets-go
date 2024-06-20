@@ -3,6 +3,7 @@ package com.example.letsGo.dao.mybatis;
 import com.example.letsGo.dao.ChallengeDao;
 import com.example.letsGo.dao.mybatis.mapper.ChallengeMapper;
 import com.example.letsGo.dao.mybatis.mapper.ProductMapper;
+import com.example.letsGo.domain.record.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -18,17 +19,17 @@ public class MyBatisChallengeDao implements ChallengeDao {
     }
 
     @Override
-    public List<Record> getPubAllRecords(int isPublic) {
-        return challengeMapper.getPubAllRecords(isPublic);
+    public List<Record> getAllRecords() {
+        return challengeMapper.getAllRecords();
     }
 
     @Override
-    public List<Record> getPubWomanRecords(int isPublic, int gender) {
+    public List<Record> getWomanRecords(int gender) {
         return null;
     }
 
     @Override
-    public List<Record> getPubManRecords(int isPublic, int gender) {
+    public List<Record> getManRecords(int gender) {
         return null;
     }
 
