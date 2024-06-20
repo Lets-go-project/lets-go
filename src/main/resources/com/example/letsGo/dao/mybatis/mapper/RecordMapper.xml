@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.letsGo.dao.mybatis.mapper.RecordMapper">
+    <cache />
+
+    <resultMap id="RecordResultMap" type="com.example.letsGo.domain.record.Record">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <select id="getRecord" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
+        SELECT * FROM record WHERE record_id = #{recordId}
+    </select>
+
+    <select id="getAllRecords" parameterType="int" resultType="com.example.letsGo.domain.record.Record">
+        SELECT * FROM record WHERE user_id = #{userId}
+    </select>
+
+    <insert id="addRecord" parameterType="com.example.letsGo.domain.record.Record">
+        INSERT INTO record (record_id, swim_date, swim_name, swim_time, swim_dist, user_id, id, gender)
+        VALUES (#{recordID}, #{swimDate}, #{swimName}, #{swimTime}, #{swimDist}, #{userId}, #{id}, #{gender})
+    </insert>
+
+    <update id="updateRecord" parameterType="com.example.letsGo.domain.record.Record">
+        UPDATE record
+        SET swim_date = #{swimDate}, swim_name = #{swimName}, swim_time = #{swimTime}, swim_dist = #{swimDist}
+        WHERE record_id = #{recordID}
+    </update>
+
+    <delete id="deleteRecord" parameterType="int">
+        DELETE FROM record WHERE record_id = #{recordId}
+    </delete>
+
+</mapper>

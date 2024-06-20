@@ -1,16 +1,25 @@
 package com.example.letsGo.controller.challenge;
 
+import com.example.letsGo.domain.record.Record;
+import com.example.letsGo.repository.RecordRepository;
 import com.example.letsGo.service.ChallengeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("/challenge")
 public class ChallengeController {
+
+    @Autowired
+    RecordRepository recordRepository;
+
     private final ChallengeService challengeService;
 
     @Autowired
@@ -19,26 +28,44 @@ public class ChallengeController {
     }
 
     @GetMapping("/all")
-    public String getPubAllRecords(int isPublic) {
-        challengeService.getPubAllRecords(isPublic);
+    public String getAllRecords(Model model) {
+
+        List<Record> records = recordRepository.findAllByOrderBySwimDistDesc();
+
+        model.addAttribute("records", records);
+
         return "challenge/challenge";
     }
 
-/*    @GetMapping
-    public String getPubWomanRecords(int isPublic, int gender) {
-        challengeService.getPubWomanRecords(isPublic, gender);
-        return "challenge/woman";
+    @GetMapping("/woman")
+    public String getAllRecordsByWoman(Model model) {
+        List<Record> records = recordRepository.findByGenderOrderBySwimDistDesc("여자");
+        model.addAttribute("records", records);
+        return "challenge/challenge";
     }
 
-    @GetMapping
-    public String getPubManRecords(int ispublic, int gender) {
-        challengeService.getPubManRecords(ispublic, gender);
-        return "challenge/man";
+    @GetMapping("/man")
+    public String getAllRecordsByMan(Model model) {
+        List<Record> records = recordRepository.findByGenderOrderBySwimDistDesc("남자");
+        model.addAttribute("records", records);
+        return "challenge/challenge";
     }
 
-    @GetMapping
-    public String filteringRecords(List<Record> records, int filter) {
-        challengeService.filteringRecords(records, filter);
-        return "challenge/filtering";
-    }*/
+//    @GetMapping
+//    public String getWomanRecords(int gender) {
+//        challengeService.getWomanRecords(isPublic, gender);
+//        return "challenge/woman";
+//    }
+//
+//    @GetMapping
+//    public String getManRecords(int gender) {
+//        challengeService.getManRecords(isPublic, gender);
+//        return "challenge/man";
+//    }
+//
+//    @GetMapping
+//    public String filteringRecords(List<Record> records, int filter) {
+//        challengeService.filteringRecords(records, filter);
+//        return "challenge/filtering";
+//    }
 }
