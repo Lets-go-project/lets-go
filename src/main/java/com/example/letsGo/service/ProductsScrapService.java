@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface ProductsScrapService {
     List<ProductScrap> getProductScrapsByUser(int userId);
+
 }
