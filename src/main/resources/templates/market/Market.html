@@ -21,6 +21,11 @@
             width: auto;
             height: 200px;
         }
+        .btn-red {
+            color: white;
+            background-color: red;
+            border-color: red;
+        }
     </style>
 </head>
 <body>
@@ -74,8 +79,8 @@
                         <!-- Product actions -->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent d-flex justify-content-between align-items-center">
                             <!-- 스크랩 버튼 -->
-                            <form th:action="@{/market/scrap(productId=${product.productId})}" method="post">
-                                <button type="submit" class="btn btn-outline-danger">
+                            <form th:action="@{/market/scrap(productId=${product.productId})}" method="post" id="scrapForm">
+                                <button type="submit" id="scrapButton" class="btn btn-outline-danger btn-scrap">
                                     <i class="bi bi-heart"></i> 스크랩
                                 </button>
                             </form>
@@ -91,10 +96,15 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer class="py-5" style="background-color: #0E46A3">
         <div class="container"><p class="m-0 text-center text-white">Software System &copy; 240105 marin-girls</p></div>
     </footer>
+    <script th:if="${loginRequired}">
+        $(document).ready(function() {
+            alert("로그인이 필요합니다.");
+            window.location.href = '/market/list';
+        });
+    </script>
 </body>
 </html>

@@ -31,13 +31,15 @@ public class CartController {
     private CartRepository cartRepository;
 
     @GetMapping("/list")
-    public String getAllCarts(Model model, HttpSession session) {
+    public String getCartList(Model model, HttpSession session) {
         User sessionUser = (User) session.getAttribute("user");
         if (sessionUser == null) {
-            return "redirect:/signin";
+//            model.addAttribute("loginRequired", true);
+            return "redirect:/signin/signin";
         }
 
-        User user = userRepository.findById(sessionUser.getUser_id()).orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다"));
+        User user = userRepository.findById(sessionUser.getUser_id())
+                .orElseThrow(() -> new RuntimeException("사용자를 찾을 수 없습니다"));
         List<Cart> cartList = cartRepository.findByUser(user);
         int totalProductPrice = 0;
         if (!cartList.isEmpty()) {
@@ -55,8 +57,7 @@ public class CartController {
             @RequestParam("productId") Long productId,
             @RequestParam(value = "amount", required = false, defaultValue = "1") int amount,
             HttpSession session,
-            Model model)
-    {
+            Model model) {
         User sessionUser = (User) session.getAttribute("user");
         User user = userRepository.findById(sessionUser.getId());
         Product product = productRepository.findByProductId(productId);
@@ -72,22 +73,22 @@ public class CartController {
 
         // 장바구니에 같은 product가 있는지 확인
         Optional<Cart> existingCartItem = cartList.stream()
-                    .filter(cartItem -> cartItem.getProduct().getProductId().equals(productId))
-                    .findFirst();
+                .filter(cartItem -> cartItem.getProduct().getProductId().equals(productId))
+                .findFirst();
 
-            if (existingCartItem.isPresent()) {
-                Cart cartItem = existingCartItem.get();
-                Cart.builder().amount(cartItem.getAmount() + 1).build();
+        if (existingCartItem.isPresent()) {
+            Cart cartItem = existingCartItem.get();
+            Cart.builder().amount(cartItem.getAmount() + 1).build();
 
-                cartRepository.save(cartItem);
-            } else {
-                Cart newCartItem = Cart.builder()
-                        .product(product)
-                        .amount(amount)
-                        .user(user)
-                        .build();
-                cartRepository.save(newCartItem);
-            }
+            cartRepository.save(cartItem);
+        } else {
+            Cart newCartItem = Cart.builder()
+                    .product(product)
+                    .amount(amount)
+                    .user(user)
+                    .build();
+            cartRepository.save(newCartItem);
+        }
 
         // 총 합계 계산
         int totalProductPrice = 0;
@@ -96,7 +97,7 @@ public class CartController {
                     .mapToInt(cartItem -> (int) (cartItem.getProduct().getProductPrice() * cartItem.getAmount()))
                     .sum();
         }
-        log.info("totalProductPrice: "+totalProductPrice);
+        log.info("totalProductPrice: " + totalProductPrice);
 
         model.addAttribute("totalProductPrice", totalProductPrice);
         model.addAttribute("cartList", cartList);
@@ -112,10 +113,25 @@ public class CartController {
         return "redirect:/cart/list";
     }
 
-//    @DeleteMapping("/remove/{cartId}")
+    //    @DeleteMapping("/remove/{cartId}")
     @PostMapping("/remove/{cartId}")
     public String removeFromCart(@PathVariable Long cartId) {
         cartRepository.deleteById(cartId);
         return "redirect:/cart/list";
     }
+
+    @PostMapping("/update")
+    public String updateCart(
+            @RequestParam("cartId") Long cartId,
+            @RequestParam("amount") int newAmount,
+            Model model) {
+        Cart cartItem = cartRepository.findById(cartId)
+                .orElseThrow(() -> new RuntimeException("장바구니 항목을 찾을 수 없습니다"));
+
+        Cart.builder().amount(newAmount).build();
+        cartRepository.save(cartItem);
+
+        return "redirect:/cart/list";
+    }
 }
+

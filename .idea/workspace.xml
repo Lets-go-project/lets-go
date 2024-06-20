@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[MOD] user 엔티티 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_42__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-22__6_47__________.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/2024-05-29__7_27__________.xml" afterDir="false" />
+    <list default="true" id="43b19397-12fd-43ed-a1da-643441e8a938" name="Changes" comment="[FEAT] 장바구니 삭제 기능 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/controller/market/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/domain/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/PayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/letsGo/repository/PayRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/ProductDetailView.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/market/Market.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/salesManager/SalesManager.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718822704856</updated>
       <workItem from="1718822711655" duration="817000" />
-      <workItem from="1718836778890" duration="2997000" />
+      <workItem from="1718836778890" duration="4279000" />
+      <workItem from="1718863294755" duration="5759000" />
     </task>
     <task id="LOCAL-00001" summary="[MOD] market 상품 스크랩 userId 수정">
       <option name="closed" value="true" />
@@ -93,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718823414317</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[FEAT] 장바구니 삭제 기능 구현">
+      <option name="closed" value="true" />
+      <created>1718840278607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718840278607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +125,7 @@
     <MESSAGE value="[FEAT] 예슬 수영장 api 조회 구현" />
     <MESSAGE value="[MOD] market 상품 스크랩 userId 수정" />
     <MESSAGE value="[MOD] user 엔티티 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] user 엔티티 수정" />
+    <MESSAGE value="[FEAT] 장바구니 삭제 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] 장바구니 삭제 기능 구현" />
   </component>
 </project>

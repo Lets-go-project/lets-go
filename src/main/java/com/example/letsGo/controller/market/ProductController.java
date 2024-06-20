@@ -50,7 +50,7 @@ public class ProductController {
         user = userRepository.findByUser_id(user.getUser_id());
 
         if (user == null) {
-            return "redirect:/login";
+            return "redirect:/signin/signin";
         }
 
         Product product = productRepository.findById(productId)
