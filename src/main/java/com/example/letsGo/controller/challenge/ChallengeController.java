@@ -30,10 +30,24 @@ public class ChallengeController {
     @GetMapping("/all")
     public String getAllRecords(Model model) {
 
-        List<Record> allRecords = recordRepository.findAll();
+        List<Record> records = recordRepository.findAllByOrderBySwimDistDesc();
 
-        model.addAttribute("records", allRecords);
+        model.addAttribute("records", records);
 
+        return "challenge/challenge";
+    }
+
+    @GetMapping("/woman")
+    public String getAllRecordsByWoman(Model model) {
+        List<Record> records = recordRepository.findByGenderOrderBySwimDistDesc("여자");
+        model.addAttribute("records", records);
+        return "challenge/challenge";
+    }
+
+    @GetMapping("/man")
+    public String getAllRecordsByMan(Model model) {
+        List<Record> records = recordRepository.findByGenderOrderBySwimDistDesc("남자");
+        model.addAttribute("records", records);
         return "challenge/challenge";
     }
 

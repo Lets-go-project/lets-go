@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lets go Record</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -69,16 +70,9 @@
             height: 7px;
         }
     </style>
-
-    <script>
-        function selectFilter() {
-            location.href="/record/view";
-        }
-    </script>
 </head>
 <body>
 <div th:replace="~{common/Navibar :: body}"></div>
-<!--<div class="market-menu" th:include="~{/market/MarketMenubar :: body}"></div>-->
 
 <!-- Header-->
 <header class="py-5" style="background-color: #0E46A3">

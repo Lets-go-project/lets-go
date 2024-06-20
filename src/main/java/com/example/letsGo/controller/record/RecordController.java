@@ -40,8 +40,7 @@ public class RecordController {
             return "redirect:/signin/signin";
         }
 
-//        int userId = user.getUserId();
-        int userId = 1;
+        int userId = user.getUser_id();
 
         List<Record> records = recordRepository.findByUserId(userId);
 
@@ -64,8 +63,7 @@ public class RecordController {
         }
         log.info("[moveView] user ID: {}", user.getId());
 
-//        int userId = user.getUserId();
-        int userId = 1;
+        int userId = user.getUser_id();
 
         log.info("[moveView] filter: {}", filter);
 
@@ -87,8 +85,6 @@ public class RecordController {
             model.addAttribute("selectedFilter", 0);
         }
 
-//        log.info("[moveView] Records: {}", records);
-//        log.info("[moveView] record: {}", records.toString());
         return "record/viewRecord";
     }
     @GetMapping("/moveAdd")
@@ -123,8 +119,7 @@ public class RecordController {
                 .swimName(swimName)
                 .swimTime(swimTime)
                 .swimDist(swimDist)
-//                .userId(user.getUserId())
-                .userId(1)
+                .userId(user.getUser_id())
                 .id(user.getId())
                 .gender(user.getGender())
                 .build();

@@ -46,7 +46,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/challenge/all").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/woman").setViewName("/challenge/challenge");
         registry.addViewController("/challenge/man").setViewName("/challenge/challenge");
-        registry.addViewController("/challenge/filtering").setViewName("/challenge/challenge");
 
         /*
         예슬: 수영장 정보 & 관리자
