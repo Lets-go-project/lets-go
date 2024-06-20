@@ -22,7 +22,7 @@
 
         .image-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusted min-width to 100px */
             grid-gap: 20px;
         }
 
@@ -32,6 +32,8 @@
         }
 
         .image-item img {
+            max-width: 150px; /* Set maximum width for the images */
+            max-height: 150px; /* Set maximum height for the images */
             width: 100%;
             height: auto;
             border-radius: 8px;
@@ -65,19 +67,17 @@
         .overlay-content {
             text-align: center;
             color: #fff;
-            font-size: 20px;
+            font-size: 16px; /* Adjusted font size */
         }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>User Scrap Posts</h1>
-    <div th:if="${user != null}">
-        <p>Welcome, <span th:text="${user.name}"></span></p>
-    </div>
+    <input type="hidden" name="user_id" th:value="${user.user_id}" />
     <div class="image-grid">
         <div th:each="scrap : ${scraps}" class="image-item">
-            <a th:href="@{/product/{id}(id=${scrap.product.productId})}">
+            <a th:href="@{/market/detail(productId=${scrap.product.productId}, productType=${scrap.product.productType})}">
                 <img th:src="@{${scrap.product.productImg}}" th:alt="${scrap.product.productName}"/>
                 <div class="overlay">
                     <div class="overlay-content" th:text="${scrap.product.productName}"></div>

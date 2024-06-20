@@ -34,6 +34,6 @@ public class ScrapController {
         model.addAttribute("scraps", scraps);
 
         // Thymeleaf 템플릿 postscrap.html로 포워딩
-        return "postscrap";
+        return "mypage/postscrap";
     }
 }
