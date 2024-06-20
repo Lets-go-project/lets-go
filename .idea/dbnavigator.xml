@@ -37,14 +37,17 @@
     <connection id="6c5c0a68-b5db-4be2-b12c-ab0c9295791e">
       <console name="5team" type="STANDARD" schema="" session="Main"><![CDATA[select * from member;
 select * from product;
-select * from product_scrap;]]></console>
+select * from product_scrap;
+select * from admin;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="6c5c0a68-b5db-4be2-b12c-ab0c9295791e" object-ref="consoles/5team" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="6c5c0a68-b5db-4be2-b12c-ab0c9295791e" />

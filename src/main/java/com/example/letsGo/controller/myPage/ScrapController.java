@@ -23,13 +23,13 @@ public class ScrapController {
 
     @GetMapping("/scraps")
     public String getUserScraps(Model model, @RequestParam("user_id") int userId) {
-        User user = userService.getUserById(String.valueOf(userId));  // ID는 String으로 변환하여 사용
+        User user = userService.getUserByUserId(userId);
         if (user == null) {
             // 사용자가 없는 경우 에러 페이지로 리다이렉트 또는 에러 처리
             return "error";
         }
 
-        List<ProductScrap> scraps = productsScrapService.getProductScrapsByUser(user);
+        List<ProductScrap> scraps = productsScrapService.getProductScrapsByUser(user.getUser_id());
         model.addAttribute("user", user);
         model.addAttribute("scraps", scraps);
 

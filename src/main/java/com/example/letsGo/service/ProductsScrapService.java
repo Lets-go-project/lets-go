@@ -6,5 +6,5 @@ import com.example.letsGo.domain.product.ProductScrap;
 import java.util.List;
 
 public interface ProductsScrapService {
-    List<ProductScrap> getProductScrapsByUser(User user);
+    List<ProductScrap> getProductScrapsByUser(int userId);
 }

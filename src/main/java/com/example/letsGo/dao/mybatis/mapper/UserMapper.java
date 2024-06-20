@@ -15,4 +15,6 @@ public interface UserMapper {
     User findByPassword(String password);
 
     void update(User user);
+
+    User findByUserId(int userId);
 }

@@ -17,6 +17,7 @@
         SELECT * FROM Member WHERE EMAIL = #{email}
     </select>
 
+
     <select id="findByPassword" resultType="User">
         SELECT * FROM (
         SELECT * FROM Member WHERE PASSWORD = #{password}
