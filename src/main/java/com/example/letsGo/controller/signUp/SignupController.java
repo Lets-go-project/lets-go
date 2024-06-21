@@ -45,12 +45,12 @@ public class SignupController {
             }
 
             // 비밀번호 중복 확인
-            User existingPasswordUser = userService.getUserByPassword(password);
-            if (existingPasswordUser != null) {
-                model.addAttribute("error", "이미 사용 중인 비밀번호입니다.");
-                System.out.println("이미 사용 중인 비밀번호입니다: " + password);
-                return "signup/signup";
-            }
+//            User existingPasswordUser = userService.getUserByPassword(password);
+//            if (existingPasswordUser != null) {
+//                model.addAttribute("error", "이미 사용 중인 비밀번호입니다.");
+//                System.out.println("이미 사용 중인 비밀번호입니다: " + password);
+//                return "signup/signup";
+//            }
 
             // 이메일 중복 확인
             User existingEmailUser = userService.getUserByEmail(email);
