@@ -108,9 +108,8 @@ public class PayController {
         if (user == null) {
             return "redirect:/signin/signin";
         }
-
         payRepository.deleteById(payId);
 
-        return "redirect:/orders";
+        return "redirect:/mypage/orders";
     }
 }
